@@ -712,22 +712,30 @@ export default function PersonalLoans() {
 
     }
   ];
+const [loanAmount, setLoanAmount] = useState(30000);
+  const [interestRate, setInterestRate] = useState(12);
+  const [tenure, setTenure] = useState(12);
 
-  // // EMI Calculator State
-  // const [loanAmount, setLoanAmount] = useState(500000);
-  // const [tenure, setTenure] = useState(24);
-  // const [interestRate, setInterestRate] = useState(11.25);
+  const [emi, setEmi] = useState(0);
+  const [totalPayment, setTotalPayment] = useState(0);
+  const [totalInterest, setTotalInterest] = useState(0);
 
-  // // EMI Calculation Formula
-  // const calculateEMI = (P: number, r: number, n: number): number => {
-  //   const monthlyRate = r / (12 * 100);
-  //   return (P * monthlyRate * Math.pow(1 + monthlyRate, n)) /
-  //     (Math.pow(1 + monthlyRate, n) - 1);
-  // };
+  useEffect(() => {
+    const principal = loanAmount;
+    const monthlyRate = interestRate / 12 / 100;
+    const months = tenure;
 
-  // const emi = calculateEMI(loanAmount, interestRate, tenure);
-  // const totalPayment = emi * tenure;
-  // const totalInterest = totalPayment - loanAmount;
+    const emiValue =
+      (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+      (Math.pow(1 + monthlyRate, months) - 1);
+
+    const total = emiValue * months;
+    const interest = total - principal;
+
+    setEmi(emiValue);
+    setTotalPayment(total);
+    setTotalInterest(interest);
+  }, [loanAmount, interestRate, tenure]);
 
 
 
@@ -962,54 +970,94 @@ export default function PersonalLoans() {
           <Col></Col>
         </Row>
       </Container>
-      {/* <Container className="p-5">
-        <h2 className="text-success fw-bold">EMI Calculator</h2>
+           <Container className="p-5 px-2" >
+        <h2 className="text-success fw-bold">Loan EMI Calculator</h2>
         <Row>
           <Col md={7}>
             <Form>
               <Form.Group className="mb-4">
                 <Form.Label className="fw-bold">Select the required Loan Amount</Form.Label>
-                <Form.Range min="30000" max="500000" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} />
-                <div className="d-flex justify-content-between text-success">
-                  <span>₹ 30,000</span>
-                  <span className="fw-bold">₹ {loanAmount.toLocaleString('en-IN')}</span>
-                  <span>₹ 5,00,000</span>
+                <Form.Range
+                  min="200000"
+                  max="7500000"
+                  step="100000"
+                  value={loanAmount}
+                  onChange={(e) => setLoanAmount(Number(e.target.value))}
+                  className="flex-grow-1 me-2"
+                />
+                <div className="d-flex justify-content-between text-muted px-1">
+                  <span>2L</span>
+                  <span>16L</span>
+                  <span>31L</span>
+                  <span>45L</span>
+                  <span>60L</span>
+                  <span>75L</span>
                 </div>
               </Form.Group>
+      
               <Form.Group className="mb-4">
-                <Form.Label className="fw-bold">Select the interest rate (p.a)</Form.Label>
-                <Form.Range min="12" max="21" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} />
-                <div className="d-flex justify-content-between text-success">
-                  <span>12%</span>
-                  <span className="fw-bold">{interestRate}%</span>
-                  <span>21%</span>
-                </div>
-              </Form.Group>
-              <Form.Group className="mb-4">
-                <Form.Label className="fw-bold">Select EMI in Months</Form.Label>
-                <Form.Range min="12" max="48" value={tenure} onChange={(e) => setTenure(Number(e.target.value))} />
-                <div className="d-flex justify-content-between text-success">
-                  <span>12</span>
-                  <span className="fw-bold">{tenure}</span>
-                  <span>48</span>
-                </div>
-              </Form.Group>
-            </Form>
-          </Col>
-          <Col md={5}>
-            <Card className="p-4 shadow" style={{ backgroundColor: "#4B5EAA" }}>
-              <h5 className="fw-bold" style={{color:"white"}}>Your monthly Personal Loan EMI</h5>
-              <div className="mt-3">
-                <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
-                <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
-                <p><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p>
-                <p><strong>Tenure (Months):</strong> <span className="fw-bold">{tenure}</span></p>
-                <h4 className="text-white fw-bold">Monthly EMI: ₹ {emi.toFixed(0)}</h4>
-              </div>
-            </Card>
-          </Col>
-        </Row>
-      </Container> */}
+        <Form.Label className="fw-bold">Interest Rate (p.a)</Form.Label>
+        <div className="d-flex justify-content-between align-items-center">
+          <Form.Range
+            min="12"
+            max="21"
+            step="1"
+            value={interestRate}
+            onChange={(e) => setInterestRate(Number(e.target.value))}
+            className="flex-grow-1 me-2"
+          />
+          <span className="fw-bold">{interestRate}%</span>
+        </div>
+        <div className="d-flex justify-content-between text-muted px-1 mt-1">
+          <span>12%</span>
+          <span>14%</span>
+          <span>16%</span>
+          <span>18%</span>
+          <span>20%</span>
+          <span>22%</span>
+        </div>
+      </Form.Group>
+      
+      
+                  <Form.Group className="mb-4">
+        <Form.Label className="fw-bold">Tenure (in months)</Form.Label>
+        <div className="d-flex justify-content-between align-items-center">
+          <Form.Range
+            min="12"
+            max="96"
+            step="1"
+            value={tenure}
+            onChange={(e) => setTenure(Number(e.target.value))}
+            className="flex-grow-1 me-2"
+          />
+          <span className="fw-bold">{tenure}</span>
+        </div>
+        <div className="d-flex justify-content-between text-muted px-1 mt-1">
+          <span>12</span>
+          <span>29</span>
+          <span>46</span>
+          <span>62</span>
+          <span>79</span>
+          <span>96</span>
+        </div>
+      </Form.Group>
+                </Form>
+              </Col>
+      
+              <Col xs={12} md={5} className="p-0 gap-5">  {/* Full width on small screens */}
+        <Card className="p-4 shadow h-100 px-5 " style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
+          <h5 className="fw-bold text-white">Your Loan EMI</h5>
+          <div className="mt-3">
+            <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
+            <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
+            <p><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p>
+            <p><strong>Tenure (Months):</strong> <span className="fw-bold">{tenure}</span></p>
+            <h4 className="text-white fw-bold">Monthly EMI: ₹ {emi.toFixed(0)}</h4>
+          </div>
+        </Card>
+      </Col>
+            </Row>
+          </Container>
        
       <div className="text-center mb-14">
             
