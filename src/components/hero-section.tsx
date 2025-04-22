@@ -222,7 +222,7 @@ import { Home, Wallet, Building2, Landmark, Briefcase } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-white py-10 md:py-16">
+    <div className="bg-white py-5 md:py-16">
       <div className="container mx-auto px-4">
         {/* Main Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -234,15 +234,15 @@ const HeroSection = () => {
                   We are Prefinn,
                 </span>
               </h1>
-              <h3>India’s Preferred Loan Distribution Platform</h3>
+              <h3 className="fw-bold">India’s Preferred Loan Distribution Platform</h3>
             </div>
 
-            <p className="fs-5 text-dark">
+            {/* <p className="text-gray-500 mt-6 fs-5 text-sm">
               Connect with Prefinn to explore digital lending solutions and
               nationwide distribution opportunities to join a network that’s
               shaping the future of finance.
-            </p>
-            <ul className=" text-lg text-base text-gray-700 space-y-1.5 ">
+            </p> 
+             <ul className=" text-sm text-base text-gray-700 space-y-1.5 ">
               <li style={{ color: "#28a745" }}>
                 ➡ Customized Lending Solutions for Housing & MSMEs
               </li>
@@ -252,23 +252,34 @@ const HeroSection = () => {
               <li style={{ color: "#28a745" }}>
                 ➡ Financial Inclusion for Rural & Urban Markets
               </li>
-            </ul>
+            </ul>  */}
+     
+     <p className="text-dark mt-4 fs-5 ">
+  Prefinn streamlines the loan process by blending traditional finance with agile fintech, ensuring faster and more efficient disbursements.
+</p>
+<ul className="text-base text-gray-700 space-y-2.5">
+  <li style={{ color: "#041184" }}>➡ Tailored Loans for Housing & MSMEs</li>
+  <li style={{ color: "#041184" }}>➡ Partnered Bank & NBFC Offerings</li>
+  <li style={{ color: "#041184" }}>➡ Driving Financial Inclusion Nationwide</li>
+</ul>
 
-            <p className=" text-gray-700 mt-6 fs-5 text-dark">
+
+            {/* <p className=" text-gray-500 mt-6 fs-5 text-sm">
               Prefinn empowers clients through a seamless loan process by
               uniting conventional financial frameworks with agile fintech
               products for faster and more efficient disbursements.
-            </p>
+            </p> */}
           </div>
 
           {/* Right Section: Image */}
           <div className="relative flex justify-center">
             <Image
-              src="https://www.konnectplugins.com/loanica/images/banner.svg"
+              // src="https://www.konnectplugins.com/loanica/images/banner.svg"
+              src="https://img.freepik.com/free-vector/fintech-isometric-composition-with-3d-text-surrounded-by-isolated-banking-cash-payments-icons-with-people-vector-illustration_1284-72232.jpg?ga=GA1.1.64248757.1745000936&semt=ais_hybrid&w=740"
               alt="Fintech Dashboard"
               width={600}
               height={350}
-              className="rounded-lg border-4 border-grey-400"
+              className="rounded-lg  border-grey-400"
               priority
             />
           </div>

@@ -72,11 +72,26 @@ const EMICalculator = ({
   };
 
   return (
+    <div className="mt-16"> {/* Added spacing between calculators */}
+    {/* <h2 className="text-2xl md:text-3xl font-bold text-success text-center mb-4 py-2">
+      Compare with Another EMI Calculator
+    </h2> */}
     <div className="bg-white p-4 md:p-10 rounded-xl shadow-sm border border-gray-100">
-      <h2 className="text-2xl md:text-3xl font-bold text-primary text-center mb-6 ">
-     
-        EMI Calculator
-      </h2>
+    <h2 className="fw-semibold text-center">
+  <span style={{ 
+    background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    padding: "0.2rem 0.5rem",
+    fontWeight: "600"
+  }}>
+   EMI CALCULATOR
+  </span>
+</h2>
+    
 
       <p className="text-center text-muted-success mb-3">
         {/* Your EMI is going to be */}
@@ -182,7 +197,7 @@ const EMICalculator = ({
 
             <div>
               <p className="text-muted-foreground text-sm mb-1">Interest Amount</p>
-              <p className="text-xl font-bold text-danger">
+              <p className="text-xl font-bold text-primary">
                 {formatCurrency(totalInterest)}
               </p>
             </div>
@@ -197,23 +212,23 @@ const EMICalculator = ({
         </div>
       </div>
         <div className="text-center mb-10 mt-5">
-        <h4 className="text-primary text-lg md:text-xl font-semibold mb-3">
+        <h4 className=" text-lg md:text-xl font-semibold mb-3"style={{color:"#041184"}}>
   From Application to Disbursement, Prefinn Ensures Success at Every Step.
 </h4>
-          <h6 className="text-primary text-xl font-medium mt-1">
-            {/* Happiness Delivered, Always */}
+          <h6 className=" text-xl font-medium mt-1"style={{color:"#041184"}}>
              Your Loan is Just a Click Away
           </h6>
           <div className="mt-6">
             <Link
               href="/loan-apply"
-              className=" text-decoration-none inline-block bg-primary text-white py-2 px-6 rounded-md font-medium hover:bg-secondary/90 transition-colors"
-            >
+             className="text-decoration-none inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium hover:bg-green-600 transition-colors">
               Apply Now
             </Link>
           </div>
         </div>
     </div>
+    </div>
+
   );
 };
 

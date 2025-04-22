@@ -142,13 +142,15 @@ const OfferBanner = () => {
             {/* Email */}
             <div className="d-flex align-items-center gap-2">
               <div className="icon-circle"><FaEnvelope /></div>
-              <span className="text-nowrap">support@prefinn.com</span>
+              <span className="text-nowrap">info@prefinn.com</span>
             </div>
             {/* Location */}
             <div className="d-flex align-items-center gap-2">
               <div className="icon-circle"><FaMapMarkerAlt /></div>
               <span className="text-nowrap">
-                Plot No.77, Sector-37, Gurugram, Haryana-122001
+               MVL I - Park,
+Sector-15, Part 2, Chandan Nagar,
+Gurgaon, Haryana - 122001
               </span>
             </div>
           </div>

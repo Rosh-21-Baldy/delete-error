@@ -1,101 +1,217 @@
 import Link from "next/link";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
+import styles from './OurPartnersSection.module.css';
+const banks = [
+  {
+    name: "SBI",
+    link: "/loan/sbi-home-loan",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/State_Bank_of_India_logo.svg/159px-State_Bank_of_India_logo.svg.png?20180321064323",
+  },
+  {
+    name: "Axis",
+    link: "/loan/axis-bank-home-loan",
+    logo: "https://www.logo.wine/a/logo/Axis_Bank/Axis_Bank-Logo.wine.svg",
+  },
+  {
+    name: "ICICI Loans",
+    link: "/loan/icici-bank-home-loans",
+    logo: "https://d28wu8o6itv89t.cloudfront.net/images/ICICIBankhomeloanspng-1594804385746.png",
+  },
+  {
+    name: "Aditya Birla Capital",
+    link: "/loan/aditya-birla-home-loan",
+    logo: "https://www.adityabirlacapital.com/-/media/ABCCorp/data/media/img/logo.webp?extension=webp",
+  },
+  {
+    name: "Bajaj Finserv",
+    link: "/loan/bajaj-home-loan",
+    logo: "https://cdn.iconscout.com/icon/free/png-256/free-bajaj-finserv-logo-icon-download-in-svg-png-gif-file-formats--indian-company-companies-pack-logos-icons-2249165.png?f=webp",
+  },
+  {
+    name: "Motilal Oswal Home Loans",
+    link: "/loan/motilal-oswal-home-loan",
+    logo: "https://www.motilaloswal.com/media_15c0fcdc4deef99d8a791fee00d99b2066c8eb40a.svg?width=750&format=svg&optimize=medium",
+  },
+  {
+    name: "L&T Finance",
+    link: "/loan/l&t-finance-home-loan",
+    logo: "https://www.ltfs.com/images/default-source/logo/ltf-logo-b-w.png?sfvrsn=58168c51_2",
+  },
+  {
+    name: "IIFL",
+    link: "/loan/iifl-home-loan",
+    logo: "https://storage.googleapis.com/iifl-storage/files/images/logos/iifl-finance.svg",
+  },
+  {
+    name: "BOI (Bank of India)",
+    link: "/loan/boi-home-loan",
+    logo: "https://bankofindia.co.in/o/boi-global-theme/images/boi/logos/boi_en_US_logo.png",
+  },
+  {
+    name: "HSBC",
+    link: "/loan/hsbc-home-loan",
+    logo: "https://www.hsbc.co.in/content/dam/hsbc/in/images/01_HSBC_MASTERBRAND_LOGO_RGB.svg",
+  },
+  {
+    name: "Kotak Mahindra",
+    link: "/loan/kotak-mahindra-home-loan",
+    logo: "https://www.logoshape.com/wp-content/uploads/2024/08/kotak-mahindra-bank-logo-vector_logoshape.png",
+  },
+  {
+    name: "HDFC",
+    link: "/loan/hdfc-home-loan",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HDFC_Bank_Logo.svg/434px-HDFC_Bank_Logo.svg.png?20110306040211",
+  },
+  {
+    name: "Bank of Baroda",
+    link: "/loan/bank-of-baroda-home-loan",
+    logo: "https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/icons/bob-logo.svg",
+  },
+  {
+    name: "Hero Fincorp",
+    link: "/loan/hero-fincorp-home-loan",
+    logo: "https://hfcl-website-cms.s3.ap-south-1.amazonaws.com/logo_dc3ab7afd1.webp",
+  },
+];
 
 const ProcessSection = () => {
   return (
-    <div className="bg-white py-16">
-      <div className="ambak-container">
-       
-      <div className="text-center mb-5">
-  <h2 className="fw-bold" style={{ color: "#28a745" }}>
-   We Simplify your Loan
-  </h2>
-  {/* <p className="text-muted">We provide customized financial services to meet all your needs</p> */}
+    <div className="bg-white py-25">
+     <div className="ambak-container">
+  <div className="text-center mb-5 my-4">
+    <h2 className="fw-semibold">
+      <span
+        style={{
+          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          color: "transparent",
+          display: "inline-block",
+          padding: "0.2rem 0.5rem",
+          fontWeight: "600",
+        }}
+      >
+        Our Partners
+      </span>
+    </h2>
+
+    {/* <p className="text-muted">We provide customized financial services to meet all your needs</p> */}
+  </div>
+  <div className="mb-10">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="relative" style={{ maxWidth: '300px', margin: '0 auto' }}> {/* Adjust maxWidth as needed */}
+        <div className="bg-white rounded-lg shadow-sm h-full p-3">
+          <div className="text-2xl font-bold text-primary bg-white rounded-full w-7 flex items-center justify-center mb-2 -mt-8 border border-muted shadow-xs"></div>
+          <div className="mb-1">
+            <div className="mt-5">
+          <Image 
+  src="https://img.freepik.com/premium-photo/3d-city-isolated-mirror-floor-3d-rendered-illustration-futuristic-city_346750-2.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
+  alt="Growth funding"
+  width={100}   // Adjusted width
+  height={75}  // Adjusted height
+  className="w-auto h-auto max-w-full max-h-full object-contain" // More flexible classes
+/>
 </div>
-        <div className="mb-14">
-     
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-md h-full p-6">
-                <div className="text-4xl font-bold text-primary bg-white rounded-full w-10 h-10 flex items-center justify-center mb-4 -mt-12 border border-muted shadow-sm">
-                  
-                </div>
-                <div className="mb-4">
-                  
-                  <Image
-                    src="https://img.freepik.com/free-vector/people-taking-out-money-from-bank-concept-illustration_114360-13931.jpg?t=st=1743016192~exp=1743019792~hmac=c74e9f032b4dbd792487a0bcd5b406fee935333a92c48126b20588e6bee38154&w=826"
-                    alt="Complete the application in minutes"
-                    width={240}
-                    height={180}
-                    className="w-full h-auto"
-                  />
-                </div>
-                <h3 className=" font-semibold text-lg mb-3"style={{color:"#0d53b7	"}}>
-                  Complete application in Seconds
-                </h3>
-                <p className="text-muted-foreground text-sm  d-flex justify-content-center">
-                  Need help? Discuss your Requirement with Finance Partner 
-                </p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-md h-full p-6">
-                <div className="text-4xl font-bold text-primary bg-white rounded-full w-10 h-10 flex items-center justify-center mb-4 -mt-12 border border-muted shadow-sm">
-                  
-                </div>
-                <div className="mb-4">
-                  <Image
-                    src="https://cdn-icons-png.flaticon.com/256/4593/4593624.png"
-                    alt="Complete the application in minutes"
-                    // alt="Track your application live"
-                    width={240}
-                    height={180}
-                    className="w-full h-auto"
-                  />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 d-flex justify-content-center"style={{color:"#0d53b7	"}}>
-                 
-                  Stay With Us
-                  
-                </h3>
-                <p className="text-muted-foreground text-sm  d-flex justify-content-center">
-                
-                 Choose your own finance Partner
-                 
-                </p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-md h-full p-6">
-                <div className="text-4xl font-bold text-primary bg-white rounded-full w-10 h-10 flex items-center justify-center mb-4 -mt-12 border border-muted shadow-sm">
-                  
-                </div>
-                <div className="mb-4">
-                  <Image
-                    src="https://img.freepik.com/free-vector/e-wallet-concept-illustration_114360-7561.jpg?t=st=1743016315~exp=1743019915~hmac=1e78a3f5b39bb2e99d3a83cd239d6a573b433db0fed964ea29456a01b65fce17&w=826"
-                    alt="Disbursement Day"
-                    width={240}
-                    height={180}
-                    className="w-full h-auto"
-                  />
-                </div>
-                <h3 className=" font-semibold text-lg mb-2 d-flex justify-content-center"style={{color:"#0d53b7	"}}>
-                sanction's
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Our fintech platform ensures full compliance with global regulatory frameworks
-                  
-                </p>
-              </div>
-            </div>
           </div>
-        
+          <h3
+            className="font-bold text-sm mb-1 mt-4"
+            style={{ color: "#0d53b7" }}
+          >
+            Fintech & Institutions
+          </h3>
+          <p className="text-muted-foreground text-2xs">
+            Smart sourcing through tech-enabled trusted agent ecosystem.
+          </p>
         </div>
-
-       
       </div>
+
+      <div className="relative" style={{ maxWidth: '300px', margin: '0 auto' }}> {/* Adjust maxWidth as needed */}
+        <div className="bg-white rounded-lg shadow-sm h-full p-3">
+          <div className="text-2xl font-bold text-primary bg-white rounded-full w-7  flex items-center justify-center mb-2 -mt-8 border border-muted shadow-xs"></div>
+          <div className="mb-2">
+            <div className="mt-5">
+          <Image
+  src="https://img.freepik.com/free-vector/construction-illustration-with-foreman-giving-instructions-team-builders-dressed-uniform-helmets_1284-29082.jpg?t=st=1744957895~exp=1744961495~hmac=1f7c79fecbf45cc12be434a718a3ffdf655cd115cd0bf8314f311066be905e3a&w=1380"
+  alt="Builder support"
+  width={150}
+  height={0} // Set height to 0 or omit it
+  style={{ height: 'auto', width: '100%', maxWidth: '550px' }}
+/>
+</div>
+          </div>
+          <h3
+            className="font-bold text-sm mb-0 mt-5 "
+            style={{ color: "#0d53b7" }}
+          >
+            Real Estate Ecosystem
+          </h3>
+          <p className="text-muted-foreground text-2xs ">
+            Financing made easy for Real estate Buyers,Investors and Developers.
+          </p>
+        </div>
+      </div>
+
+      <div className="relative" style={{ maxWidth: '300px', margin: '0 auto' }}> {/* Adjust maxWidth as needed */}
+        <div className="bg-white rounded-lg shadow-sm h-full p-3">
+          <div className="text-2xl font-bold text-primary bg-white rounded-full w-7  flex items-center justify-center mb-2 -mt-8 border border-muted shadow-xs"></div>
+          <div className="mb-2">
+            <Image
+              src="https://img.freepik.com/premium-vector/growing-business-business-man-with-upward-arrow-flat-design-illustration_207579-1416.jpg?"
+              alt="IBO growth"
+              width={80}
+              height={40}
+              className="w-full h-auto"
+            />
+          </div>
+          <h3
+            className="font-bold text-sm mb-1 "
+            style={{ color: "#0d53b7" }}
+          >
+            Independent Business Owners
+          </h3>
+          <p className="text-muted-foreground text-2xs">
+            Fueling Growth through people-powered Loan sourcing on ground.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <h2 className="fw-semibold text-center mt-5">
+        <span
+          style={{
+            background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            color: "transparent",
+            display: "inline-block",
+            padding: "0.2rem 0.5rem",
+            fontWeight: "600",
+          }}
+        >
+          Our Service Providers
+        </span>
+      </h2>
+      <Marquee speed={50} gradient={false}>
+        {banks.map((bank, index) => (
+          <a
+            key={index}
+            href={bank.link}
+            className="d-inline-block mx-3 opacity-75 hover-opacity-100 transition-opacity"
+          >
+            <Image
+              src={bank.logo}
+              alt={bank.name}
+              width={100}
+              height={40}
+              className="img-fluid"
+            />
+          </a>
+        ))}
+      </Marquee>
     </div>
   );
 };

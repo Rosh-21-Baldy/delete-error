@@ -48,7 +48,7 @@ function LoanInfoSection() {
 
       {/* Right Image Section */}
       <Col md={6} className="text-center">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/financial-progress-analysis-illustration-download-in-svg-png-gif-file-formats--fintech-budgeting-tool-investment-assessment-pack-business-illustrations-9516793.png?f=webp" alt="Hero Section" className="img-fluid" style={{ maxHeight: "450px" }} />
+        <img src="https://img.freepik.com/free-vector/builders-team-posing-photo-front-house_74855-13969.jpg?ga=GA1.1.1559874935.1744648139&semt=ais_hybrid&w=740" alt="Hero Section" className="img-fluid" style={{ maxHeight: "450px" }} />
       </Col>
     </Row>
   </Container>

@@ -118,9 +118,9 @@ export default function Footer() {
           {/* Company Info */}
           <Col xs={12} md={4} className="d-flex flex-column text-start align-items-start mb-4">
             <img src="https://www.prefinn.com/_next/static/media/logo.96e5ff96.png" alt="Prefinn Logo" className="mb-3" style={{ width: "215px" }} />
-            {/* <p className="text-start text-sm">
-              Prefinn is a Finance & Fintech Solution firm ventured by experienced Banking professionals having significant expertise in the areas of Banking, Digital Lending, Financial Inclusion & Fintech Product & Services.
-            </p> */}
+            <p className="text-start text-sm">
+            Transforming finance through technology, trust, innovation, and smarter digital solutions.
+            </p>
             {/* Social Media Icons */}
             <div className="d-flex gap-3 mt-3 fs-4">
   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -144,7 +144,7 @@ export default function Footer() {
 
           {/* Company Links */}
           <Col xs={12} md={4} className="d-flex flex-column align-items-start mb-4 mt-2">
-            <h5 className="fw-bold text-start"style={{color:"#041184"}}>Our Company</h5>
+            <h5  className="fw-bold text-start"style={{color:"#041184"}}>Our Company</h5>
             <ul className="list-unstyled text-dark d-flex flex-column gap-3 mt-3">
               <li><a href="about-us" className="text-dark text-decoration-none">About Prefinn</a></li>
               <li><a href="/become-partner" className="text-dark text-decoration-none">Become a Partner</a></li>
@@ -155,19 +155,35 @@ export default function Footer() {
 
           {/* Contact Information */}
           <Col xs={12} md={4} className="mb-4 mt-2">
-            <h4 className="fw-bold"style={{color:"#041184"}}>Contact Information</h4>
+            <h5 className="fw-bold"style={{color:"#041184"}}>Contact Information</h5>
             <p className="small d-flex align-items-center mt-3">
               <MdCall className="text-success fs-4 me-2" />
+              {/* <strong className="text-dark">+91-9650812333</strong><br /> */}
               <span className="text-dark">+91-9650812333</span>
             </p>
             <p className="small d-flex align-items-center">
               <MdEmail className="text-success fs-4 me-2" />
-              <span className="text-dark">support@prefinn.com</span>
+              <span className="text-dark">info@prefinn.com</span>
+             
             </p>
-            <p className="small d-flex align-items-center">
-              <MdLocationOn className="text-success fs-4 me-2" />
-              <span className="text-dark">Plot No.77, Sector-37, Gurugram, Haryana-122001</span>
-            </p>
+            <p className="small d-flex align-items-start gap-2">
+  <MdLocationOn className="text-success fs-4 flex-shrink-0 mt-1" />
+  <span className="text-dark fw-sm">
+  Prefinn FinServ Private Limited<br />
+  Cabin No. 204, 2nd Floor, MVL I-Park,<br />
+  Sector-15, Part 2, Chandan Nagar,<br />
+  Gurgaon, Haryana - 122001<br />
+  <a 
+    href="https://maps.google.com?q=MVL+I-Park+Sector-15+Part+2+Chandan+Nagar+Gurgaon+Haryana+122001"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary hover:underline"
+  >
+    View on Map
+  </a>
+</span>
+
+</p>
           </Col>
         </Row>
       </Container>

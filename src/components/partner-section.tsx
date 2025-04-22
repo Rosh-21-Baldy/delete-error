@@ -835,6 +835,7 @@
 
 import { GiPiggyBank } from "react-icons/gi";
 import { CiBank } from "react-icons/ci";
+import { RiBankCardFill } from "react-icons/ri";
 import { TbBuildingBank } from "react-icons/tb";
 import { FaHouseLaptop } from "react-icons/fa6";
 import { GiDecapitation } from "react-icons/gi";
@@ -857,16 +858,17 @@ const PartnerSection = () => {
     },
     {
       title: "Personal Loans",
-      link: "personalloans",
+      link: "workingCapitalloans",
       description:
-        "Prefinn offers Personal Loans, including unsecured loans and overdraft facilities.",
-      icon: <CreditCard />,
+        "Prefinn helps clients assess their personal loan requirements by partnering with licensed financial advisors. ",
+      icon:<RiBankCardFill />,
+      
     },
     {
       title: "Business Loans",
       link: "businessloans",
       description:
-        "Prefinn offers Business Loan services to help businesses assess their short-term financing needs.",
+        "Prefinn offers Business Loan services to help businesses assess their short-term financing needs .",
       icon: <TbBuildingBank />,
     },
     {
@@ -885,86 +887,29 @@ const PartnerSection = () => {
     },
   ];
 
-  const banks = [
-    {
-      name: "SBI",
-      link: "/loan/sbi-home-loan",
-      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/State_Bank_of_India_logo.svg/159px-State_Bank_of_India_logo.svg.png?20180321064323",
-    },
-    {
-      name: "Axis",
-      link: "/loan/axis-bank-home-loan",
-      logo: "https://www.logo.wine/a/logo/Axis_Bank/Axis_Bank-Logo.wine.svg",
-    },
-    {
-      name: "ICICI Loans",
-      link: "/loan/icici-bank-home-loans",
-      logo: "https://d28wu8o6itv89t.cloudfront.net/images/ICICIBankhomeloanspng-1594804385746.png",
-    },
-    {
-      name: "Aditya Birla Capital",
-      link: "/loan/aditya-birla-home-loan",
-      logo: "https://www.adityabirlacapital.com/-/media/ABCCorp/data/media/img/logo.webp?extension=webp",
-    },
-    {
-      name: "Bajaj Finserv",
-      link: "/loan/bajaj-home-loan",
-      logo: "https://cdn.iconscout.com/icon/free/png-256/free-bajaj-finserv-logo-icon-download-in-svg-png-gif-file-formats--indian-company-companies-pack-logos-icons-2249165.png?f=webp",
-    },
-    {
-      name: "Motilal Oswal Home Loans",
-      link: "/loan/motilal-oswal-home-loan",
-      logo: "https://www.motilaloswal.com/media_15c0fcdc4deef99d8a791fee00d99b2066c8eb40a.svg?width=750&format=svg&optimize=medium",
-    },
-    {
-      name: "L&T Finance",
-      link: "/loan/l&t-finance-home-loan",
-      logo: "https://www.ltfs.com/images/default-source/logo/ltf-logo-b-w.png?sfvrsn=58168c51_2",
-    },
-    {
-      name: "IIFL",
-      link: "/loan/iifl-home-loan",
-      logo: "https://storage.googleapis.com/iifl-storage/files/images/logos/iifl-finance.svg",
-    },
-    {
-      name: "BOI (Bank of India)",
-      link: "/loan/boi-home-loan",
-      logo: "https://bankofindia.co.in/o/boi-global-theme/images/boi/logos/boi_en_US_logo.png",
-    },
-    {
-      name: "HSBC",
-      link: "/loan/hsbc-home-loan",
-      logo: "https://www.hsbc.co.in/content/dam/hsbc/in/images/01_HSBC_MASTERBRAND_LOGO_RGB.svg",
-    },
-    {
-      name: "Kotak Mahindra",
-      link: "/loan/kotak-mahindra-home-loan",
-      logo: "https://www.logoshape.com/wp-content/uploads/2024/08/kotak-mahindra-bank-logo-vector_logoshape.png",
-    },
-    {
-      name: "HDFC",
-      link: "/loan/hdfc-home-loan",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HDFC_Bank_Logo.svg/434px-HDFC_Bank_Logo.svg.png?20110306040211",
-    },
-    {
-      name: "Bank of Baroda",
-      link: "/loan/bank-of-baroda-home-loan",
-      logo: "https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/icons/bob-logo.svg",
-    },
-    {
-      name: "Hero Fincorp",
-      link: "/loan/hero-fincorp-home-loan",
-      logo: "https://hfcl-website-cms.s3.ap-south-1.amazonaws.com/logo_dc3ab7afd1.webp",
-    },
-  ];
+  
 
   return (
     <div className="bg-white py-0">
       <Container>
         <div className="text-center mt-0 pt-3">
-          <h2 className="fw-semibold">
+          {/* <h2 className="fw-semibold">
             <span style={{ color: "#28a745" }}> Our Loan Products</span>
-          </h2>
+          </h2> */}
+          <h2 className="fw-semibold">
+  <span style={{ 
+    background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    padding: "0.2rem 0.5rem",
+    fontWeight: "600"
+  }}>
+    Our Loan Products
+  </span>
+</h2>
         </div>
 
         <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
@@ -978,7 +923,7 @@ const PartnerSection = () => {
                 className="text-center p-4 shadow-sm loan-card"
                 style={{
                   width: "210px",
-                  height: "280px",
+                  height: "250px",
                   background: "#fff",
                   color: "#041184",
                   transition: "all 0.3s ease-in-out",
@@ -996,57 +941,111 @@ const PartnerSection = () => {
             </a>
           ))}
         </div>
+       
 
         <Separator className="my-10" />
 
-        <div className="text-center mb-6">
-          <h2 className="fw-semibold text-success">
-            <span style={{ color: "#28a745" }}> Our Success Stories</span>
-          </h2>
-        </div>
+<div className="text-center mb-6" data-aos="fade-up">
+<h2 className="fw-semibold">
+  <span style={{ 
+    background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    padding: "0.2rem 0.5rem",
+    fontWeight: "600"
+  }}>
+    Our Success Stories
+  </span>
+</h2>
 
-        <Row className="mb-9">
-          {[
-            { icon: "⭐", value: "32+", text: "Happy Customers" },
-            { icon: "💰", value: "23cr", text: "Loan Disbursed" },
-            { icon: "🏦", value: "130+", text: "Finance Partners" },
-            { icon: "🔗", value: "70+", text: "Distribution Partners" },
-          ].map((item, index) => (
-            <Col key={index} xs={6} md={3} className="mb-3">
-              <Card className="text-center shadow-sm p-3">
-                <div className="fs-3">{item.icon}</div>
-                <h4 className="fw-bold" style={{ color: "#0d53b7" }}>
-                  {item.value}
-                </h4>
-                <p className="text-muted">{item.text}</p>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+</div>
 
-        <h3
-          className="fw-bold mb-4 text-center mt-5"
-          style={{ color: "#28a745" }}
-        >
-          Our Service Providers
-        </h3>
-        <Marquee speed={50} gradient={false}>
-          {banks.map((bank, index) => (
-            <a
-              key={index}
-              href={bank.link}
-              className="d-inline-block mx-3 opacity-75 hover-opacity-100 transition-opacity"
-            >
-              <Image
-                src={bank.logo}
-                alt={bank.name}
-                width={100}
-                height={40}
-                className="img-fluid"
-              />
-            </a>
-          ))}
-        </Marquee>
+<Row className="mb-9 g-4" data-aos="fade-up" data-aos-delay="200">
+  {[
+    { 
+      icon: "😊", 
+      value: "32K+", 
+      text: "Happy Customers",
+      gradient: "linear-gradient(45deg, #28a745 0%, #0d53b7 100%)"
+    },
+    { 
+      icon: "₹", 
+      value: "₹23cr+", 
+      text: "Loan Disbursed",
+      gradient: "linear-gradient(45deg, #28a745 0%, #0d53b7 100%)"
+    },
+    { 
+      icon: "🏦", 
+      value: "130+", 
+      text: "Finance Partners",
+      gradient: "linear-gradient(45deg, #28a745 0%, #0d53b7 100%)"
+    },
+    { 
+      icon: "🤝", 
+      value: "70+", 
+      text: "Channel Partners",
+      gradient: "linear-gradient(45deg, #28a745 0%, #0d53b7 100%)"
+    },
+  ].map((item, index) => (
+    <Col key={index} xs={12} md={3} className="mb-4">
+      <div className="success-card-wrapper">
+        <Card className="text-center shadow-lg p-4 h-100 border-0 hover-transform">
+          <div className="icon-container mx-auto mb-4" style={{
+            background: item.gradient,
+            width: '80px',
+            height: '80px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+          }}>
+            <div className="fs-1 text-white">{item.icon}</div>
+          </div>
+          <h3 className="fw-bold display-6 mb-3" style={{ color: '#0d53b7' }}>
+            {item.value}
+          </h3>
+          <p className="text-uppercase text-muted fw-medium mb-0" style={{ letterSpacing: '1.5px' }}>
+            {item.text}
+          </p>
+        </Card>
+      </div>
+    </Col>
+  ))}
+</Row>
+
+<style jsx>{`
+  .hover-transform {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .success-card-wrapper:hover .icon-container {
+    animation: float 1.5s ease-in-out infinite;
+  }
+`}</style>
+        
+        
       </Container>
     </div>
   );

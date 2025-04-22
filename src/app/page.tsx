@@ -5,7 +5,7 @@ import PartnerSection from "@/components/partner-section";
 import ProcessSection from "@/components/process-section";
 import EMICalculator from "@/components/emi-calculator";
 import LoanOfferings from "@/components/loan-offerings";
-import RateBanner from "@/components/rate-banner";
+// import RateBanner from "@/components/rate-banner";
 import ContactForm from "@/components/contact-form";
 // import BlogSection from "@/components/blog-section";
 import Footer from "@/components/footer";
@@ -18,14 +18,14 @@ export default function Home() {
       <HeroSection />
       <PartnerSection />
       <ProcessSection />
-      <div className="bg-ambak-bg py-16">
+      <div className="bg-white  ">
         <div className="ambak-container">
           <EMICalculator />
         </div>
       </div>
-      <LoanOfferings />
-      <RateBanner />
-      <div className="bg-white py-16">
+      {/* <LoanOfferings />
+      <RateBanner /> */}
+      <div className="bg-white py-25">
         <div className="ambak-container">
           <ContactForm />
         </div>

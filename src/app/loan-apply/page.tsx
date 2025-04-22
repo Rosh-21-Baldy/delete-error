@@ -325,7 +325,7 @@ const LoanEnquiry = () => {
   <Row className="justify-content-center">
     <Col md={12} lg={10}>
       <h2 className="mb-4 text-center">
-        Loan <span className="fw-bold text-success">Enquiry Form</span>
+        <span className="fw-bold text-blue-900"> Loan Enquiry Form</span>
       </h2>
 
       {showError && (
@@ -401,15 +401,23 @@ const LoanEnquiry = () => {
           </Col>
 
           <Col md={6}>
-            <Form.Control
-              type="text"
-              placeholder="Amount"
-              name="amount"
-              value={formData.amount}
-              onChange={handleChange}
-              required
-            />
-          </Col>
+  <Form.Select
+    name="amount"
+    value={formData.amount}
+    onChange={handleChange}
+    required
+  >
+    <option value="">Loan Amount</option>
+    <option value="1L-5L">1L - 5L</option>
+    <option value="5L-10L">5L - 10L</option>
+    <option value="10L-20L">10L - 20L</option>
+    <option value="20L-50L">20L - 50L</option>
+    <option value="50L-1Cr">50L - 1Cr</option>
+    <option value="1Cr-5Cr">1Cr - 5Cr</option>
+    <option value=">5Cr">Above 5Cr</option>
+  </Form.Select>
+</Col>
+
 
           <Col md={6}>
             <Form.Control
@@ -445,7 +453,7 @@ const LoanEnquiry = () => {
           </Col>
 
           <Col xs={12}>
-            <Button variant="success" className="w-100 mt-2" type="submit">
+            <Button variant="primary" className="w-100 mt-2" type="submit">
               SUBMIT
             </Button>
           </Col>
@@ -468,7 +476,7 @@ const LoanEnquiry = () => {
       <Col xs={12} sm={6} md={4} key={index}>
         <Card className="text-center p-3 h-100" style={{ minHeight: "170px" }}>
           <Card.Body>
-            <div className="fs-4 fw-bold text-success mb-2">{index + 1}</div>
+            <div className="fs-4 fw-bold text-primary mb-2">{index + 1}</div>
             <Card.Text style={{ fontSize: "0.9rem" }}>{text}</Card.Text>
           </Card.Body>
         </Card>

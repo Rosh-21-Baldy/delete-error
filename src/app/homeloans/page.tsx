@@ -1,9 +1,3 @@
-
-
-
-
-
-
 "use client";
 import React, { useState } from "react";
 import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
@@ -13,7 +7,7 @@ import Footer from "@/components/footer";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Link from "next/link";
 const HomeLoanSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({
@@ -165,311 +159,131 @@ const HomeLoanSection = () => {
           hideProgressBar
         />
       </>
-      <div
-        className="container-fluid p-0"
-        style={{ fontFamily: "Arial, sans-serif", position: "relative" }}
+
+
+      
+
+<Container fluid className="py-6 mt-15 bg-white">
+  <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
+    {/* Left Side - Text */}
+    <Col md={6} className="text-center text-md-start px-4">
+      <h1
+        className="fw-bold mb-4"
+        style={{
+          color: '#3c4f84',
+          fontSize: '3.2rem',
+          fontWeight: '800',
+          lineHeight: '1.2',
+        }}
       >
-        {/* Banner Section */}
-        <div className="position-relative">
-          {/* Background Image */}
-          <img
-            src="https://png.pngtree.com/thumb_back/fh260/background/20240602/pngtree-banks-provide-home-loans-and-low-interest-loans-image_15737144.jpg"
-            className="img-fluid w-100"
-            style={{ height: "100vh", objectFit: "cover" }}
-            alt="Home Loan"
-          />
+        Own Tomorrow’s Home,<br /> Funded Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
+      </h1>
 
-          {/* Form Container */}
-          <div
-            className="position-absolute "
-            style={{
-              top: "20px", // ⬅ Adjust top spacing here
-              right: "20px",
-              width: "100%",
-              maxWidth: "550px",
-              maxHeight: "calc(100vh - 100px)", // ⬅ Ensures it fits in screen with space
-              overflowY: "hidden",
-              background: "#FDFEFE",
-              borderRadius: "20px",
-              boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2)",
-              padding: "20px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div className="border-0" style={{ background: "transparent" }}>
-              <h5 className="text-center text-danger mb-1">
-                Apply for Home Loan
-              </h5>
+      <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
+        Efficient, Scalable, Certified.
+      </h3>
 
-              <form onSubmit={handleSubmit}>
-                {/* Name */}
-                <div className="mb-2">
-                  <label className="form-label small ">
-                    Name <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className={`form-control form-control-sm ${
-                      errors.name && "is-invalid"
-                    }`}
-                    placeholder="Enter your full name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    required
-                  />
-                  {errors.name && (
-                    <div className="invalid-feedback">{errors.name}</div>
-                  )}
-                </div>
+      <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
+        Get the best loan deals, personalized for you — fast, secure, and fully digital.
+      </p>
+    </Col>
 
-                {/* Email */}
-                <div className="mb-2">
-                  <label className="form-label small">
-                    Email <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    className={`form-control form-control-sm ${
-                      errors.email && "is-invalid"
-                    }`}
-                    placeholder="Enter your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    required
-                  />
-                  {errors.email && (
-                    <div className="invalid-feedback">{errors.email}</div>
-                  )}
-                </div>
+    {/* Right Side - Image */}
+    <Col md={6} className="d-flex align-items-center justify-content-center">
+      <img
+        src="https://img.freepik.com/premium-photo/3d-illustration-house-rupee-symbol-white-background_519469-1496.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
+        alt="House Illustration"
+        style={{
+          maxHeight: '400px',
+          width: 'auto',
+          objectFit: 'contain',
+        }}
+      />
+    </Col>
+  </Row>
+</Container>
 
-                {/* Mobile */}
-                <div className="mb-2">
-                  <label className="form-label small">
-                    Mobile Number <span className="text-danger">*</span>
-                  </label>
-                  <div className="input-group">
-                    <span className="input-group-text">+91</span>
-                    <input
-                      type="tel"
-                      name="mobile"
-                      className={`form-control form-control-sm ${
-                        errors.mobile && "is-invalid"
-                      }`}
-                      placeholder="Enter your mobile number"
-                      value={formData.mobile}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      maxLength={10}
-                      required
-                    />
-                  </div>
-                  {errors.mobile && (
-                    <div className="invalid-feedback d-block">
-                      {errors.mobile}
-                    </div>
-                  )}
-                </div>
-
-                {/* OTP */}
-                <div className="mb-2">
-                  <label className="form-label small">
-                    OTP <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="otp"
-                    className={`form-control form-control-sm ${
-                      errors.otp && "is-invalid"
-                    }`}
-                    placeholder="Enter OTP"
-                    value={formData.otp}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    maxLength={6}
-                    required
-                  />
-                  {errors.otp && (
-                    <div className="invalid-feedback d-block">{errors.otp}</div>
-                  )}
-                </div>
-
-                {/* PAN Card */}
-                <div className="mb-2">
-                  <label className="form-label small">
-                    PAN Card Number <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="pan"
-                    className={`form-control form-control-sm ${
-                      errors.pan && "is-invalid"
-                    }`}
-                    placeholder="Enter PAN card number"
-                    value={formData.pan}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    maxLength={10}
-                    required
-                  />
-                  {errors.pan && (
-                    <div className="invalid-feedback">{errors.pan}</div>
-                  )}
-                </div>
-
-                {/* Pincode */}
-                <div className="mb-2">
-                  <label className="form-label small">
-                    Enter Pincode <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="pincode"
-                    className={`form-control form-control-sm ${
-                      errors.pincode && "is-invalid"
-                    }`}
-                    placeholder="Enter pincode"
-                    value={formData.pincode}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    maxLength={6}
-                    required
-                  />
-                  {errors.pincode && (
-                    <div className="invalid-feedback">{errors.pincode}</div>
-                  )}
-                </div>
-
-                {/* Agree Checkbox */}
-                <div className="mb-2 form-check">
-                  <input
-                    type="checkbox"
-                    name="agree"
-                    className={`form-check-input ${
-                      errors.agree && "is-invalid"
-                    }`}
-                    checked={formData.agree}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label className="form-check-label">
-                    I agree to the{" "}
-                    <a
-                      href="/term-cond"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-danger"
-                    >
-                      Terms & Conditions
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      href="/privacy-pol"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-danger"
-                    >
-                      Privacy Policy
-                    </a>
-                  </label>
-                  {errors.agree && (
-                    <div className="invalid-feedback d-block">
-                      {errors.agree}
-                    </div>
-                  )}
-                </div>
-
-                {/* Submit Button */}
-                <div className="text-center mt-auto">
-                  <button
-                    type="submit"
-                    className="bg-danger text-white px-2 py-1 rounded border-0"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+<Container fluid className="py-0 mt-0 px-0" style={{ marginTop: '-10px' }}>
+  <Card className="p-3 p-md-5 shadow-sm" 
+        style={{
+          backgroundColor: "#f2f5ff",
+          borderRadius: "26px",
+          width: "100%",
+          margin: "0",
+        }}>
+    {/* Main Heading */}
+    <Row className="text-center mb-4">
+      <Col>
+        <div className="d-flex flex-column align-items-center">
+          <h1 style={{
+            fontWeight: "700",
+            color: "#042E4C",
+            fontSize: "2rem",
+            lineHeight: "1.2",
+            marginBottom: "1rem"
+          }}>
+            Prefinn Smart financing 
+          </h1>
+          <span style={{
+            fontSize: "1.1rem",
+            color: "#27543a",
+            fontWeight: "500",
+            letterSpacing: "0.5px"
+          }}>
+            Secure, and fully digital
+          </span>
         </div>
-      </div>
+      </Col>
+    </Row>
 
-      <Container fluid className="py-0 mt-5">
-        {" "}
-        {/* Use fluid to make it full-width */}
-        <Card
-          className="p-4 shadow-sm"
-          style={{
-            backgroundColor: "#f2f5ff",
-            borderRadius: "16px",
-            width: "100%",
-            margin: "0",
-          }}
-        >
-          <Row className="align-items-center">
-            {/* Left Text */}
-            <Col md={5}>
-              <h1 style={{ fontWeight: "bold", color: "dark" }}>
-                Prefinn Guarantees You
-              </h1>
-              <h4 style={{ fontWeight: "bold", color: "#588e8a" }}>
-                we offer you the best Home loans
-              </h4>
-            </Col>
+    {/* Statistics Grid */}
+    <Row className="g-4 justify-content-center mb-4">
+      {[
+        { label: "As high as", value: "90%", subtext: "of Property Value" },
+        { label: "As low as", value: "8.35%", subtext: "Interest Rates" }, 
+        { label: "India's top", value: "130+", subtext: "Financiers" }
+      ].map((stat, index) => (
+        <Col xs={12} md={4} key={index} className="text-center">
+          <div className="d-flex flex-column gap-1">
+            <p className="mb-0 text-secondary" style={{ fontSize: "0.9rem", fontWeight: "500" }}>
+              {stat.label}
+            </p>
+            <h2 className="mb-0" style={{ color: "#042E4C", fontWeight: "700", fontSize: "2.25rem" }}>
+              {stat.value}
+            </h2>
+            <p className="mb-0 text-secondary" style={{ fontSize: "0.9rem", lineHeight: "1.2" }}>
+              {stat.subtext}
+            </p>
+          </div>
+        </Col>
+      ))}
+    </Row>
 
-            {/* Right Content */}
-            <Col md={7}>
-              <Row>
-                <Col xs={12} md={4} className="text-center">
-                  <p style={{ fontSize: "14px", color: "#6c757d" }}>
-                    As high as
-                  </p>
-                  <h2 style={{ color: "#042E4C", fontWeight: "bold" }}>90%</h2>
-                  <p style={{ fontSize: "14px", color: "#6c757d" }}>
-                    of Property Value
-                  </p>
-                </Col>
-                <Col xs={12} md={4} className="text-center">
-                  <p style={{ fontSize: "14px", color: "#6c757d" }}>
-                    As low as
-                  </p>
-                  <h2 style={{ color: "#042E4C", fontWeight: "bold" }}>
-                    8.35%
-                  </h2>
-                  <p style={{ fontSize: "14px", color: "#6c757d" }}>
-                    Interest Rates
-                  </p>
-                </Col>
-                <Col xs={12} md={4} className="text-center">
-                  <p style={{ fontSize: "14px", color: "#6c757d" }}>
-                    India’s top
-                  </p>
-                  <h2 style={{ color: "#042E4C", fontWeight: "bold" }}>130+</h2>
-                  <p style={{ fontSize: "14px", color: "#6c757d" }}>
-                    Financiers
-                  </p>
-                </Col>
-              </Row>
-              <p
-                style={{ fontSize: "16px", color: "#27543a" }}
-                className="mt-3"
-              >
-                Prefinn ensures you find the right home loan by analyzing offers
-                from multiple lenders based on your financial profile and needs.
-              </p>
-              <p style={{ fontSize: "16px", color: "#27543a" }}>
-                Loan amount sanctioned by banks and HFCs varies between 65% to
-                80% of the property price, depending on the applicant’s
-                financial stability and credit score.
-              </p>
-            </Col>
-          </Row>
-        </Card>
-      </Container>
+    {/* Explanatory Text */}
+    <Row>
+      <Col md={10} className="mx-auto text-center">
+        <p className="text-green" style={{ 
+          fontSize: "1rem",
+          lineHeight: "1.5",
+          fontWeight: "400",
+          marginBottom: "1rem"
+        }}>
+          Prefinn ensures you find the right home loan by analyzing offers from multiple lenders
+          based on your financial profile and needs.
+        </p>
+        <p className="text-green" style={{ 
+          fontSize: "1rem",
+          lineHeight: "1.5",
+          fontWeight: "400",
+          marginBottom: "0"
+        }}>
+          Loan amount sanctioned by banks and HFCs varies between 65% to 80% of the property price,
+          depending on the applicant's financial stability and credit score.
+        </p>
+      </Col>
+    </Row>
+  </Card>
+</Container>
 
       <Container fluid className="py-5 text-center mt-0">
         {" "}
@@ -593,12 +407,12 @@ const HomeLoanSection = () => {
                   (e.currentTarget.style.backgroundColor = "#f0f8ff")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#588e8a")
+                  (e.currentTarget.style.backgroundColor = "#3262ad")
                 }
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#008080"}}>{item.text}</p>
+                  <p style={{color:"#b5d70b"}}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>  
@@ -609,6 +423,26 @@ const HomeLoanSection = () => {
         </Row>
       </Container>
 
+<Container fluid className="py-5 mt-0" style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+> 
+<div className="text-center mb-14">
+          <h2 className="text-blue-900 text-2xl md:text-3xl font-bold mb-4">
+            At Prefinn your success is our success.
+          </h2>
+       
+          <h3 className="text-blue-900 text-xl font-medium mt-1">
+            Happiness Delivered, Always
+          </h3>
+          <div className="mt-6">
+            <Link
+              href="/AboutHomeLoans"
+              className="inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium no-underline hover:!bg-[#16a34a] transition-colors">
+            
+              Apply Now
+            </Link>
+          </div>
+        </div>
+</Container>
       <Container fluid className="py-5 mt-0">
         {" "}
         {/* Full-width container */}
@@ -654,6 +488,442 @@ const HomeLoanSection = () => {
 };
 
 export default HomeLoanSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* here starts */}
+      {/* <div
+        className="container-fluid p-0"
+        style={{ fontFamily: "Arial, sans-serif", position: "relative" }}
+      >
+      
+        <div className="position-relative">
+          <img
+            src="https://png.pngtree.com/thumb_back/fh260/background/20240602/pngtree-banks-provide-home-loans-and-low-interest-loans-image_15737144.jpg"
+            className="img-fluid w-100"
+            style={{ height: "100vh", objectFit: "cover" }}
+            alt="Home Loan"
+          />
+
+          <div
+            className="position-absolute "
+            style={{
+              top: "20px", 
+              right: "20px",
+              width: "100%",
+              maxWidth: "550px",
+              maxHeight: "calc(100vh - 100px)", 
+              overflowY: "hidden",
+              background: "#FDFEFE",
+              borderRadius: "20px",
+              boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2)",
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <div className="border-0" style={{ background: "transparent" }}>
+              <h5 className="text-center text-danger mb-1">
+                Apply for Home Loan
+              </h5>
+
+              <form onSubmit={handleSubmit}>
+       
+                <div className="mb-2">
+                  <label className="form-label small ">
+                    Name <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    className={`form-control form-control-sm ${
+                      errors.name && "is-invalid"
+                    }`}
+                    placeholder="Enter your full name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    required
+                  />
+                  {errors.name && (
+                    <div className="invalid-feedback">{errors.name}</div>
+                  )}
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label small">
+                    Email <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    className={`form-control form-control-sm ${
+                      errors.email && "is-invalid"
+                    }`}
+                    placeholder="Enter your email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    required
+                  />
+                  {errors.email && (
+                    <div className="invalid-feedback">{errors.email}</div>
+                  )}
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label small">
+                    Mobile Number <span className="text-danger">*</span>
+                  </label>
+                  <div className="input-group">
+                    <span className="input-group-text">+91</span>
+                    <input
+                      type="tel"
+                      name="mobile"
+                      className={`form-control form-control-sm ${
+                        errors.mobile && "is-invalid"
+                      }`}
+                      placeholder="Enter your mobile number"
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      maxLength={10}
+                      required
+                    />
+                  </div>
+                  {errors.mobile && (
+                    <div className="invalid-feedback d-block">
+                      {errors.mobile}
+                    </div>
+                  )}
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label small">
+                    OTP <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="otp"
+                    className={`form-control form-control-sm ${
+                      errors.otp && "is-invalid"
+                    }`}
+                    placeholder="Enter OTP"
+                    value={formData.otp}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    maxLength={6}
+                    required
+                  />
+                  {errors.otp && (
+                    <div className="invalid-feedback d-block">{errors.otp}</div>
+                  )}
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label small">
+                    PAN Card Number <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="pan"
+                    className={`form-control form-control-sm ${
+                      errors.pan && "is-invalid"
+                    }`}
+                    placeholder="Enter PAN card number"
+                    value={formData.pan}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    maxLength={10}
+                    required
+                  />
+                  {errors.pan && (
+                    <div className="invalid-feedback">{errors.pan}</div>
+                  )}
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label small">
+                    Enter Pincode <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="pincode"
+                    className={`form-control form-control-sm ${
+                      errors.pincode && "is-invalid"
+                    }`}
+                    placeholder="Enter pincode"
+                    value={formData.pincode}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    maxLength={6}
+                    required
+                  />
+                  {errors.pincode && (
+                    <div className="invalid-feedback">{errors.pincode}</div>
+                  )}
+                </div>
+
+                <div className="mb-2 form-check">
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    className={`form-check-input ${
+                      errors.agree && "is-invalid"
+                    }`}
+                    checked={formData.agree}
+                    onChange={handleChange}
+                    required
+                  />
+                  <label className="form-check-label">
+                    I agree to the{" "}
+                    <a
+                      href="/term-cond"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-danger"
+                    >
+                      Terms & Conditions
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="/privacy-pol"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-danger"
+                    >
+                      Privacy Policy
+                    </a>
+                  </label>
+                  {errors.agree && (
+                    <div className="invalid-feedback d-block">
+                      {errors.agree}
+                    </div>
+                  )}
+                </div>
+
+                <div className="text-center mt-auto">
+                  <button
+                    type="submit"
+                    className="bg-danger text-white px-2 py-1 rounded border-0"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> */}
+{/* here ends */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
