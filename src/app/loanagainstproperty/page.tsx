@@ -130,43 +130,30 @@ export default function PersonalLoans() {
 
   const faqs = [
     {
-      question: " What can I use a personal loan for?",
+      question: " Can I pledge a jointly-owned property for a loan against property?",
       answer:
-        "A personal loan can be used for almost any type of expense ranging from big ticket appliance purchases and home renovations to luxury vacations and debt consolidation. Some other cases where personal loans may be useful include payment to unexpected medical bills, investment in business, fixing your car, down payment of new house and much more.",
+        "  Yes, but all co-owners must consent and become co-borrowers or guarantors for the loan.",
     },
     {
-      question: "Is there a minimum personal loan amount that I need to borrow?",
+      question: " Is agricultural land accepted as collateral for a loan against property?",
       answer:
-        "Yes. Though the exact amount of the minimum personal loan amount varies from one lending institution to another, most lenders have set their minimum personal loan principal amount at Rs. 30,000",
+        " Rarely, most lenders prefer residential/commercial properties; agricultural land eligibility depends on state laws and lender policies",
     },
     {
-      question: "What is the tenure of a personal loan?",
+      question: " How does a loan against property affect my existing home loan?",
       answer:
-        "Personal loans feature tenure of 1 year to 5 years or 12 to 60 months. In rare cases, shorter or longer personal loan tenures may be allowed by the borrower on a case by case basis.",
+        " Your property’s equity (market value minus existing loan) determines eligibility; existing loans reduce the LAP amount you can avail.",
     },
     {
-      question: "How to repay the personal loan?",
+      question: " Can I get tax benefits on a loan against property?",
       answer:
-        "The loan can be repaid in the form of Equated Monthly Installment (EMI) via post-dated cheques   drawn in favour of the bank or by releasing a mandate allowing payment through the Electronic Clearing Services (ECS) system.",
+        " No, unless the loan is used for business purposes (interest may qualify as a business expense under IT Act).",
 
     },
     {
-      question: "What are the key documents required when applying for a personal loan?",
-      answer:
-        <ul>
-          <li>
-            Income proof (Salary Slip for salaried/recent acknowledged ITR for self-employed)
-          </li>
-          <li>
-          Address Proof Documents
-          </li>
-          <li>
-          Identity Proof Documents and others
-          </li>
-          <li>
-          Certified copies of degree/license (in case of self-employed professional) and others as per the lender’s criteria.
-          </li>
-        </ul>
+      question: "What happens if I use a loan against property to fund expenses abroad?",
+      answer:" Permitted, but lenders may restrict forex transactions; currency conversion risks and RBI guidelines apply."
+        
 
     }
   ];

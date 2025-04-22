@@ -196,18 +196,508 @@
 
 
 
+// 'use client';
+// import Link from 'next/link';
+// import { useState } from 'react';
+// import { Container, Row, Col, Card, Button, ListGroup, Badge } from 'react-bootstrap';
+// import Navbar from '@/components/navbar';
+// import Footer from '@/components/footer';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+// export default function BalanceTransferCalculator() {
+//   const [currentBalance, setCurrentBalance] = useState(500000);
+//   const [currentInterest, setCurrentInterest] = useState(18.99);
+//   const [newInterest, setNewInterest] = useState(11.25);
+//   const [transferFee, setTransferFee] = useState(2.0);
+//   const [term, setTerm] = useState(24);
+
+//   // Savings calculation
+//   const calculateSavings = () => {
+//     const calculateTotalCost = (principal: number, rate: number, months: number) => {
+//       const monthlyRate = rate / (12 * 100);
+//       const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / 
+//                  (Math.pow(1 + monthlyRate, months) - 1);
+//       return emi * months;
+//     };
+
+//     const feeAmount = currentBalance * (transferFee / 100);
+//     const currentTotal = calculateTotalCost(currentBalance, currentInterest, term);
+//     const newTotal = calculateTotalCost(currentBalance + feeAmount, newInterest, term);
+    
+//     return {
+//       savings: currentTotal - newTotal,
+//       currentTotal,
+//       newTotal,
+//       feeAmount
+//     };
+//   };
+
+//   const { savings, currentTotal, newTotal, feeAmount } = calculateSavings();
+
+//   const transferServices = [
+//     { id: 1, title: 'Credit Card Transfer', icon: '💳', color: '#4a90e2' },
+//     { id: 2, title: 'Loan Consolidation', icon: '📊', color: '#7ed321' },
+//     { id: 3, title: 'Debt Refinancing', icon: '⚖️', color: '#bd10e0' },
+//     { id: 4, title: 'Balance Protection', icon: '🛡️', color: '#f8e71c' }
+//   ];
+
+//   const processSteps = [
+//     { title: 'Balance Analysis', description: 'Review current debt structure' },
+//     { title: 'Offer Matching', description: 'Find best transfer options' },
+//     { title: 'Risk Assessment', description: 'Creditworthiness evaluation' },
+//     { title: 'Transfer Execution', description: 'Secure debt migration' }
+//   ];
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* Hero Section */}
+//       <section className="bt-hero bg-gradient-primary text-white py-6">
+//         <Container className="py-6 text-center">
+//           <h1 className="display-4 fw-bold mb-4 animate-slide-up">
+//             Smarter Debt Management <span className="text-warning">Made Simple</span>
+//           </h1>
+//           <div className="row justify-content-center">
+//             <div className="col-lg-8">
+//               <p className="lead mb-4 text-light-1">
+//                 Reduce interest costs and consolidate debts with our balance transfer solutions
+//               </p>
+//               <Link href="/loan-apply" passHref>
+//                 <Button 
+//                   variant="warning" 
+//                   size="lg" 
+//                   className="rounded-pill px-5 fw-bold shadow-lg hover-scale block text-dark font-medium ripple"
+//                 >
+//                   Apply Now
+//                 </Button>
+//               </Link>
+//             </div>
+//           </div>
+//         </Container>
+//       </section>
+
+//       {/* Calculator Section */}
+// <section className="py-4 bg-light-2">
+//   <Container>
+//     <Row className="g-3">
+//       <Col lg={6}>
+//         <Card className="h-100 p-3 shadow-sm border-0">
+//           <h2 className="mb-3 text-gradient-primary fs-4">Transfer Calculator</h2>
+          
+//           {/* Current Balance */}
+//           <div className="mb-4">
+//             <label className="d-flex justify-content-between align-items-center mb-2 fw-medium text-dark-1 small">
+//               <span>Current Balance</span>
+//               <span className="text-primary">₹{currentBalance.toLocaleString('en-IN')}</span>
+//             </label>
+//             <input
+//               type="range"
+//               className="form-range custom-slider"
+//               min="10000"
+//               max="1000000"
+//               value={currentBalance}
+//               onChange={(e) => setCurrentBalance(Number(e.target.value))}
+//             />
+//             <div className="d-flex justify-content-between text-muted small mt-1">
+//               <span>₹10K</span>
+//               <span>₹10L</span>
+//             </div>
+//           </div>
+
+//           {/* Current Interest */}
+//           <div className="mb-4">
+//             <label className="d-flex justify-content-between align-items-center mb-2 fw-medium text-dark-1 small">
+//               <span>Current APR</span>
+//               <span className="text-primary">{currentInterest.toFixed(2)}%</span>
+//             </label>
+//             <input
+//               type="range"
+//               className="form-range custom-slider"
+//               min="5"
+//               max="40"
+//               step="0.25"
+//               value={currentInterest}
+//               onChange={(e) => setCurrentInterest(Number(e.target.value))}
+//             />
+//             <div className="d-flex justify-content-between text-muted small mt-1">
+//               <span>5%</span>
+//               <span>40%</span>
+//             </div>
+//           </div>
+
+//           {/* New Interest */}
+//           <div className="mb-4">
+//             <label className="d-flex justify-content-between align-items-center mb-2 fw-medium text-dark-1 small">
+//               <span>New APR</span>
+//               <span className="text-success">{newInterest.toFixed(2)}%</span>
+//             </label>
+//             <input
+//               type="range"
+//               className="form-range custom-slider"
+//               min="5"
+//               max="30"
+//               step="0.25"
+//               value={newInterest}
+//               onChange={(e) => setNewInterest(Number(e.target.value))}
+//             />
+//             <div className="d-flex justify-content-between text-muted small mt-1">
+//               <span>5%</span>
+//               <span>30%</span>
+//             </div>
+//           </div>
+
+//           {/* Transfer Fee */}
+//           <div className="mb-3">
+//             <label className="d-flex justify-content-between align-items-center mb-2 fw-medium text-dark-1 small">
+//               <span>Transfer Fee</span>
+//               <span className="text-primary">{transferFee.toFixed(2)}%</span>
+//             </label>
+//             <input
+//               type="range"
+//               className="form-range custom-slider"
+//               min="0"
+//               max="5"
+//               step="0.1"
+//               value={transferFee}
+//               onChange={(e) => setTransferFee(Number(e.target.value))}
+//             />
+//             <div className="d-flex justify-content-between text-muted small mt-1">
+//               <span>0%</span>
+//               <span>5%</span>
+//             </div>
+//           </div>
+//         </Card>
+//       </Col>
+
+//       {/* Results Card */}
+//       <Col lg={6}>
+//         <Card className="h-100 p-3 bg-dark-1 text-white shadow-sm border-0">
+//           <h3 className="mb-3 text-gradient-warning fs-5">Savings Summary</h3>
+//           <ListGroup variant="flush" className="mb-3">
+//             <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between align-items-center py-2 small">
+//               <span>Current Total Payable</span>
+//               <span>₹{Math.round(currentTotal).toLocaleString('en-IN')}</span>
+//             </ListGroup.Item>
+//             <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between align-items-center py-2 small">
+//               <span>New Total Payable</span>
+//               <span>₹{Math.round(newTotal).toLocaleString('en-IN')}</span>
+//             </ListGroup.Item>
+//             <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between align-items-center py-2 small">
+//               <span>Transfer Fees</span>
+//               <span>₹{Math.round(feeAmount).toLocaleString('en-IN')}</span>
+//             </ListGroup.Item>
+//             <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between align-items-center py-2 small border-bottom-0">
+//               <span className="fw-medium">Net Savings</span>
+//               <span className={`fw-medium ${savings > 0 ? 'text-success' : 'text-danger'}`}>
+//                 ₹{Math.abs(savings).toLocaleString('en-IN')}
+//               </span>
+//             </ListGroup.Item>
+//           </ListGroup>
+//           <div className="text-center mt-3 pt-2 border-top border-light-1">
+//             <h2 className="h4 fw-bold my-2 text-warning">
+//               {savings > 0 ? 'Save' : 'Cost'} ₹{Math.abs(savings).toLocaleString('en-IN', { maximumFractionDigits: 0 })}
+//             </h2>
+//             <small className="d-block text-light-1 small">Over {term} months</small>
+//           </div>
+//         </Card>
+//       </Col>
+//     </Row>
+//   </Container>
+// </section>
+
+//       {/* Services Section */}
+//       <section className="py-6 bg-white">
+//         <Container>
+//           <Row className="mb-4 text-center">
+//             <Col>
+//               <h2 className="display-5 fw-bold mb-3 text-dark-1">Transfer Solutions</h2>
+//               <p className="text-muted lead">Optimize your debt management strategies</p>
+//             </Col>
+//           </Row>
+//           <Row className="g-4">
+//             {transferServices.map((service) => (
+//               <Col key={service.id} md={6} lg={3}>
+//                 <Card 
+//                   className="h-100 border-0 shadow-sm text-center p-4 service-card"
+//                   style={{ borderBottom: `4px solid ${service.color}`}}
+//                 >
+//                   <div className="display-3 mb-3 emoji-scale">{service.icon}</div>
+//                   <Card.Body>
+//                     <Card.Title className="fw-bold mb-3 text-dark-1">{service.title}</Card.Title> 
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+//             ))}
+//           </Row>
+//         </Container>
+//       </section>
+
+//       {/* Process Section */}
+//       <section className="py-6 bg-light-2">
+//         <Container>
+//           <Row className="mb-4 text-center">
+//             <Col>
+//               <h2 className="display-5 fw-bold mb-3 text-dark-1">Transfer Process</h2>
+//               <p className="text-muted lead">Streamlined 4-step transfer workflow</p>
+//             </Col>
+//           </Row>
+//           <Row className="g-4 process-steps">
+//             {processSteps.map((step, index) => (
+//               <Col key={index} md={6} lg={3}>
+//                 <div className="position-relative">
+//                   {index !== 0 && (
+//                     <div className="process-connector d-none d-lg-block"></div>
+//                   )}
+//                   <Card className="h-100 border-0 shadow-sm text-center p-4 hover-scale">
+//                     <Badge pill bg="warning" className="fs-5 mb-3 mx-auto number-badge">
+//                       {index + 1}
+//                     </Badge>
+//                     <Card.Body>
+//                       <Card.Title className="fw-bold mb-3 text-dark-1">{step.title}</Card.Title>
+//                       <Card.Text className="text-muted small">{step.description}</Card.Text>
+//                     </Card.Body>
+//                   </Card>
+//                 </div>
+//               </Col>
+//             ))}
+//           </Row>
+//         </Container>
+//       </section>
+
+//       <Footer />
+
+//       <style jsx global>{`
+//         :root {
+//           --primary-gradient: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+//           --warning-gradient: linear-gradient(45deg, #f9d423 0%, #ff4e50 100%);
+//         }
+
+//         .bt-hero {
+//           background: var(--primary-gradient);
+//           position: relative;
+//           overflow: hidden;
+//         }
+
+//         .text-gradient-primary {
+//           background: var(--primary-gradient);
+//           -webkit-background-clip: text;
+//           -webkit-text-fill-color: transparent;
+//         }
+
+//         .text-gradient-warning {
+//           background: var(--warning-gradient);
+//           -webkit-background-clip: text;
+//           -webkit-text-fill-color: transparent;
+//         }
+
+//         .custom-slider::-webkit-slider-thumb {
+//           width: 24px;
+//           height: 24px;
+//           background: #4e4376;
+//           border: 3px solid white;
+//           box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+//           transition: all 0.3s ease;
+//         }
+
+//         .service-card:hover {
+//           transform: translateY(-8px);
+//           box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+//         }
+
+//         .process-connector {
+//           position: absolute;
+//           top: 40%;
+//           left: -50%;
+//           width: 100%;
+//           height: 4px;
+//           background: #4e4376;
+//           z-index: 0;
+//         }
+
+//         .animate-slide-up {
+//           animation: slideUp 0.8s ease forwards;
+//           opacity: 0;
+//           transform: translateY(20px);
+//         }
+
+//         @keyframes slideUp {
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+//       `}</style>
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Container, Row, Col, Card, Button, ListGroup, Badge, Accordion } from 'react-bootstrap';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function LoanApp() {
+export default function BalanceTransferCalculator() {
   const [loanAmount, setLoanAmount] = useState(500000);
   const [tenure, setTenure] = useState(24);
   const [interestRate, setInterestRate] = useState(11.25);
@@ -223,100 +713,100 @@ export default function LoanApp() {
   const totalInterest = totalPayment - loanAmount;
 
   const loanServices = [
-    { id: 1, title: 'Car Loan', icon: '🚗' },
-    { id: 2, title: 'Personal Loan', icon: '👤' },
-    { id: 3, title: 'Home Loan', icon: '🏠' },
-    { id: 4, title: 'Education Loan', icon: '🎓' }
+    { id: 1, title: 'Car Loan', icon: '🚗', color: '#4a90e2' },
+    { id: 2, title: 'Personal Loan', icon: '👤', color: '#7ed321' },
+    { id: 3, title: 'Home Loan', icon: '🏠', color: '#bd10e0' },
+    { id: 4, title: 'Personal Loan', icon: '💳', color: '#f8e71c' }
   ];
 
-  const processSteps = [
-    { title: 'Application Submit', description: 'Quick online application process' },
-    { title: 'Review & Verification', description: 'Document validation and checks' },
-    { title: 'Loan Approval', description: 'Instant approval decision' },
-    { title: 'Loan Disbursement', description: 'Fast fund transfer to account' }
-  ];
-
-  const teamMembers = [
-    { name: 'Mike Hardson', position: 'Managing Director', bio: 'Seasoned financial expert with 15+ years experience' },
-    { name: 'Sarah Johnson', position: 'Loan Director', bio: 'Specialist in international education financing' },
-    { name: 'David Chen', position: 'Risk Manager', bio: 'Risk analysis and mitigation strategist' }
-  ];
+   const processSteps = [
+   { title: 'Balance Analysis', description: 'Review current debt structure' },
+    { title: 'Offer Matching', description: 'Find best transfer options' },
+    { title: 'Risk Assessment', description: 'Creditworthiness evaluation' },
+     { title: 'Transfer Execution', description: 'Secure debt migration' }
+   ];
 
   return (
     <>
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-dark text-white py-5">
-        <Container className="py-5 text-center">
-          <h1 className="display-4 fw-bold mb-4">
-            Smart Loans For <span className="text-primary">Bright Futures</span>
+      <section className="loan-hero bg-gradient-primary text-white py-6">
+        <Container className="py-6 text-center">
+          <h1 className="display-4 fw-bold mb-4 animate-slide-up">
+            Smarter Debt Management <span className="text-warning">Made Simple</span>
           </h1>
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <p className="lead mb-4">
-                Achieve your dreams with our flexible financial solutions and competitive rates
+              <p className="lead mb-4 text-light-1">
+                reduce Interest Cost And Consolidate debt With Our Balance Transfer solutions
               </p>
-              {/* <Button variant="primary" size="lg" className="rounded-pill px-5">
-                Apply Now
-              </Button> */}
-            </div>
+              <Link href="/loan-apply" passHref>
+  <Button
+    variant="warning"
+    size="lg"
+    className="rounded-pill px-5 fw-bold shadow-lg hover-scale block text-dark font-medium ripple"
+  >
+    Apply Now
+  </Button>
+</Link>
+            </div>  
           </div>
         </Container>
       </section>
 
       {/* Loan Calculator Section */}
-      <section className="py-5 bg-light">
+      <section className="py-6 bg-light-2">
         <Container>
           <Row className="g-4">
             <Col lg={6}>
-              <Card className="h-100 p-4 shadow">
-                <h2 className="mb-4">How Much Do You Need?</h2>
+              <Card className="h-100 p-4 shadow-lg border-0">
+                <h2 className="mb-4 text-gradient-primary">Loan Calculator</h2>
                 
                 {/* Loan Amount Slider */}
-                <div className="mb-4">
-                  <label className="d-flex justify-content-between mb-3 fw-bold">
+                <div className="mb-5">
+                  <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
                     <span>Loan Amount</span>
                     <span className="text-primary">₹{loanAmount.toLocaleString('en-IN')}</span>
                   </label>
                   <input
                     type="range"
-                    className="form-range"
+                    className="form-range custom-slider"
                     min="30000"
                     max="500000"
                     value={loanAmount}
                     onChange={(e) => setLoanAmount(Number(e.target.value))}
                   />
-                  <div className="d-flex justify-content-between text-muted">
-                    <small>₹30K</small>
-                    <small>₹5L</small>
+                  <div className="d-flex justify-content-between text-muted small">
+                    <span>₹30K</span>
+                    <span>₹5L</span>
                   </div>
                 </div>
 
                 {/* Interest Rate Slider */}
-                <div className="mb-4">
-                  <label className="d-flex justify-content-between mb-3 fw-bold">
+                <div className="mb-5">
+                  <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
                     <span>Interest Rate</span>
                     <span className="text-primary">{interestRate.toFixed(2)}%</span>
                   </label>
                   <input
                     type="range"
-                    className="form-range"
+                    className="form-range custom-slider"
                     min="10"
                     max="24"
                     step="0.25"
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
                   />
-                  <div className="d-flex justify-content-between text-muted">
-                    <small>10%</small>
-                    <small>24%</small>
+                  <div className="d-flex justify-content-between text-muted small">
+                    <span>10%</span>
+                    <span>24%</span>
                   </div>
                 </div>
 
                 {/* Tenure Slider */}
                 <div className="mb-4">
-                  <label className="d-flex justify-content-between mb-3 fw-bold">
+                  <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
                     <span>Repayment Tenure</span>
                     <span className="text-primary">
                       {Math.floor(tenure / 12)}Y {tenure % 12}M
@@ -324,15 +814,15 @@ export default function LoanApp() {
                   </label>
                   <input
                     type="range"
-                    className="form-range"
+                    className="form-range custom-slider"
                     min="12"
                     max="60"
                     value={tenure}
                     onChange={(e) => setTenure(Number(e.target.value))}
                   />
-                  <div className="d-flex justify-content-between text-muted">
-                    <small>1 Year</small>
-                    <small>5 Years</small>
+                  <div className="d-flex justify-content-between text-muted small">
+                    <span>1 Year</span>
+                    <span>5 Years</span>
                   </div>
                 </div>
               </Card>
@@ -340,28 +830,27 @@ export default function LoanApp() {
 
             {/* Results Card */}
             <Col lg={6}>
-              <Card className="h-100 p-4 bg-primary text-white shadow">
-                <h3 className="mb-4">Payment Summary</h3>
-                <ListGroup variant="flush">
-                  <ListGroup.Item className="bg-primary text-white d-flex justify-content-between">
+              <Card className="h-100 p-4 bg-dark-1 text-white shadow-lg border-0">
+                <h3 className="mb-4 text-gradient-warning">Payment Summary</h3>
+                <ListGroup variant="flush" className="mb-4">
+                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-3">
                     <span>Principal Amount</span>
                     <span>₹{loanAmount.toLocaleString('en-IN')}</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="bg-primary text-white d-flex justify-content-between">
+                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-3">
                     <span>Total Interest</span>
                     <span>₹{Math.round(totalInterest).toLocaleString('en-IN')}</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="bg-primary text-white d-flex justify-content-between">
+                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-3 border-bottom-0">
                     <span>Total Payable</span>
                     <span>₹{Math.round(totalPayment).toLocaleString('en-IN')}</span>
                   </ListGroup.Item>
                 </ListGroup>
-                <div className="text-center mt-4 pt-3 border-top">
-                  <h2 className="display-5 fw-bold my-3">
+                <div className="text-center mt-4 pt-3 border-top border-light-1">
+                  <h2 className="display-5 fw-bold my-3 text-warning">
                     ₹{emi.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
                   </h2>
-                  <small className="d-block">Monthly EMI</small>
-                  
+                  <small className="d-block text-light-1">Monthly EMI</small>
                 </div>
               </Card>
             </Col>
@@ -370,22 +859,25 @@ export default function LoanApp() {
       </section>
 
       {/* Loan Services */}
-      <section className="py-5">
+      <section className="py-6 bg-white">
         <Container>
-          <Row className="mb-5 text-center">
+          <Row className="mb-4 text-center">
             <Col>
-              <h2 className="display-5 fw-bold mb-3">Our Loan Services</h2>
+              <h2 className="display-5 fw-bold mb-3 text-dark-1">Our Loan Services</h2>
               <p className="text-muted lead">Financial solutions for every need</p>
             </Col>
           </Row>
           <Row className="g-4">
             {loanServices.map((service) => (
               <Col key={service.id} md={6} lg={3}>
-                <Card className="h-100 border-0 shadow-sm text-center p-4 hover-effect">
-                  <div className="display-3 mb-3">{service.icon}</div>
+                <Card 
+                  className="h-100 border-0 shadow-sm text-center p-4 service-card"
+                  style={{ borderBottom: `4px solid ${service.color}`}}
+                >
+                  <div className="display-3 mb-3 emoji-scale">{service.icon}</div>
                   <Card.Body>
-                    <Card.Title className="fw-bold mb-3">{service.title}</Card.Title>
-                    
+                    <Card.Title className="fw-bold mb-3 text-dark-1">{service.title}</Card.Title>
+                   
                   </Card.Body>
                 </Card>
               </Col>
@@ -394,72 +886,164 @@ export default function LoanApp() {
         </Container>
       </section>
 
-      {/* Process Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <Row className="mb-5 text-center">
-            <Col>
-              <h2 className="display-5 fw-bold mb-3">How It Works</h2>
-              <p className="text-muted lead">Simple 4-step approval process</p>
-            </Col>
-          </Row>
-          <Row className="g-4">
-            {processSteps.map((step, index) => (
-              <Col key={index} md={6} lg={3}>
-                <Card className="h-100 border-0 shadow-sm text-center p-4">
-                  <Badge bg="primary" className="fs-5 mb-3 mx-auto">{index + 1}</Badge>
-                  <Card.Body>
-                    <Card.Title className="fw-bold mb-3">{step.title}</Card.Title>
-                    <Card.Text className="text-muted">{step.description}</Card.Text>
-                  </Card.Body>
-                </Card>
+     
+     {/* Process Section */}
+       <section className="py-6 bg-light-2">
+         <Container>
+          <Row className="mb-4 text-center">
+             <Col>
+               <h2 className="display-5 fw-bold mb-3 text-dark-1">Transfer Process</h2>
+               <p className="text-muted lead">Streamlined 4-step transfer workflow</p>
+             </Col>
+           </Row>
+           <Row className="g-4 process-steps">
+             {processSteps.map((step, index) => (
+               <Col key={index} md={6} lg={3}>
+                 <div className="position-relative">
+                   {index !== 0 && (
+                     <div className="process-connector d-none d-lg-block"></div>
+                   )}
+                   <Card className="h-100 border-0 shadow-sm text-center p-4 hover-scale">
+                     <Badge pill bg="warning" className="fs-5 mb-3 mx-auto number-badge">
+                      {index + 1}
+                     </Badge>
+                     <Card.Body>
+                       <Card.Title className="fw-bold mb-3 text-dark-1">{step.title}</Card.Title>
+                       <Card.Text className="text-muted small">{step.description}</Card.Text>
+                     </Card.Body>
+                   </Card>
+                 </div>
               </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+             ))}
+         </Row>
+         </Container>
+     </section>
 
-      {/* FAQ Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <Row className="mb-5 text-center">
-            <Col>
-              <h2 className="display-5 fw-bold mb-3">FAQ</h2>
-              <p className="text-muted lead">Common questions answered</p>
-            </Col>
-          </Row>
-          <Accordion>
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>What types of loans are available?</Accordion.Header>
-              <Accordion.Body>
-                We offer personal loans, business loans, education loans, and home loans 
-                with flexible terms and competitive rates.
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>How long does approval take?</Accordion.Header>
-              <Accordion.Body>
-                Most applications receive instant approval decisions with funds disbursed 
-                within 24-48 hours of document verification.
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </Container>
-      </section>
+      
 
       <Footer />
 
       <style jsx global>{`
-        .hover-effect {
+        :root {
+          --primary-gradient: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+          --warning-gradient: linear-gradient(45deg, #f9d423 0%, #ff4e50 100%);
+        }
+
+        .loan-hero {
+          background: var(--primary-gradient);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .loan-hero::after {
+          content: '';
+          position: absolute;
+          bottom: -50px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: white;
+          transform: skewY(-3deg);
+        }
+
+        .text-gradient-primary {
+          background: var(--primary-gradient);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-warning {
+          background: var(--warning-gradient);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .custom-slider::-webkit-slider-thumb {
+          width: 24px;
+          height: 24px;
+          background: #4e4376;
+          border: 3px solid white;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+          transition: all 0.3s ease;
+        }
+
+        .custom-slider::-webkit-slider-thumb:hover {
+          transform: scale(1.1);
+        }
+
+        .service-card {
+          transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .hover-scale {
           transition: transform 0.3s ease;
         }
-        .hover-effect:hover {
-          transform: translateY(-5px);
+
+        .hover-scale:hover {
+          transform: scale(1.05);
         }
-        .form-range::-webkit-slider-thumb {
-          background: #0d6efd;
-          width: 20px;
-          height: 20px;
+
+        .emoji-scale {
+          transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .emoji-scale {
+          transform: scale(1.2);
+        }
+
+        .process-steps .process-connector {
+          position: absolute;
+          top: 40%;
+          left: -50%;
+          width: 100%;
+          height: 4px;
+          background: #4e4376;
+          z-index: 0;
+        }
+
+        .number-badge {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+
+        .animate-slide-up {
+          animation: slideUp 0.8s ease forwards;
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        @keyframes slideUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .bg-light-2 {
+          background-color: #f8f9fa;
+        }
+
+        .bg-dark-1 {
+          background-color: #2b2d42;
+        }
+
+        .text-light-1 {
+          color: #e9ecef;
+        }
+
+        .text-dark-1 {
+          color: #2b2d42;
         }
       `}</style>
     </>

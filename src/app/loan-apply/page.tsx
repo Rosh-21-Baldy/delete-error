@@ -325,7 +325,7 @@ const LoanEnquiry = () => {
   <Row className="justify-content-center">
     <Col md={12} lg={10}>
       <h2 className="mb-4 text-center">
-        <span className="fw-bold text-blue-900"> Loan Enquiry Form</span>
+        <span className="fw-bold"> Loan Enquiry Form</span>
       </h2>
 
       {showError && (
@@ -429,17 +429,60 @@ const LoanEnquiry = () => {
               required
             />
           </Col>
-
           <Col md={6}>
-            <Form.Control
-              type="text"
-              placeholder="State"
-              name="state"
-              value={formData.state}
-              onChange={handleChange}
-              required
-            />
-          </Col>
+  <Form.Select
+    name="state"
+    value={formData.state}
+    onChange={handleChange}
+    required
+  >
+    <option value="" disabled>
+      State
+    </option>
+    {[
+      "Andhra Pradesh",
+      "Arunachal Pradesh",
+      "Assam",
+      "Bihar",
+      "Chhattisgarh",
+      "Goa",
+      "Gujarat",
+      "Haryana",
+      "Himachal Pradesh",
+      "Jharkhand",
+      "Karnataka",
+      "Kerala",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Manipur",
+      "Meghalaya",
+      "Mizoram",
+      "Nagaland",
+      "Odisha",
+      "Punjab",
+      "Rajasthan",
+      "Sikkim",
+      "Tamil Nadu",
+      "Telangana",
+      "Tripura",
+      "Uttar Pradesh",
+      "Uttarakhand",
+      "West Bengal",
+      "Andaman and Nicobar Islands",
+      "Chandigarh",
+      "Dadra and Nagar Haveli and Daman and Diu",
+      "Delhi",
+      "Jammu and Kashmir",
+      "Ladakh",
+      "Lakshadweep",
+      "Puducherry",
+    ].map((state) => (
+      <option key={state} value={state}>
+        {state}
+      </option>
+    ))}
+  </Form.Select>
+</Col>
 
           <Col md={6}>
             <Form.Control

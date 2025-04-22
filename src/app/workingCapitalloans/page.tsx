@@ -154,43 +154,30 @@ export default function workingCapitalloans() {
 
   const faqs = [
     {
-      question: " What can I use a personal loan for?",
+      question: " Can a startup with no credit history get a working capital loan?",
       answer:
-        "A personal loan can be used for almost any type of expense ranging from big ticket appliance purchases and home renovations to luxury vacations and debt consolidation. Some other cases where personal loans may be useful include payment to unexpected medical bills, investment in business, fixing your car, down payment of new house and much more.",
+        "Yes, through fintech lenders or NBFCs offering collateral-free loans based on cash flow projections or invoice financing.",
     },
     {
-      question: "Is there a minimum personal loan amount that I need to borrow?",
+      question: " How does a working capital loan impact my balance sheet?",
       answer:
-        "Yes. Though the exact amount of the minimum personal loan amount varies from one lending institution to another, most lenders have set their minimum personal loan principal amount at Rs. 30,000",
+        " It increases short-term liabilities but improves liquidity to fund operations and stabilize assets.",
     },
     {
-      question: "What is the tenure of a personal loan?",
+      question: "  Are there alternatives to traditional working capital loans?",
       answer:
-        "Personal loans feature tenure of 1 year to 5 years or 12 to 60 months. In rare cases, shorter or longer personal loan tenures may be allowed by the borrower on a case by case basis.",
+        "Yes, options like invoice discounting, merchant cash advances, or supply chain financing can bridge cash gaps.",
     },
     {
-      question: "How to repay the personal loan?",
+      question: "Can I prepay a working capital loan without penalties?",
       answer:
-        "The loan can be repaid in the form of Equated Monthly Installment (EMI) via post-dated cheques   drawn in favour of the bank or by releasing a mandate allowing payment through the Electronic Clearing Services (ECS) system.",
+        " Depends on the lender; some fintech platforms allow prepayment, while banks may charge a fee.",
 
     },
     {
-      question: "What are the key documents required when applying for a personal loan?",
-      answer:
-        <ul>
-          <li>
-            Income proof (Salary Slip for salaried/recent acknowledged ITR for self-employed)
-          </li>
-          <li>
-          Address Proof Documents
-          </li>
-          <li>
-          Identity Proof Documents and others
-          </li>
-          <li>
-          Certified copies of degree/license (in case of self-employed professional) and others as per the lender’s criteria.
-          </li>
-        </ul>
+      question: "Is GST registration mandatory to apply for a working capital loan?",
+      answer:" Not always, but lenders may prioritize GST-registered businesses for easier income verification."
+       
 
     }
   ];

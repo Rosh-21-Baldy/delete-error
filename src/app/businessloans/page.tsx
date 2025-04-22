@@ -149,25 +149,7 @@ export default function businessloans() {
         "The loan can be repaid in the form of Equated Monthly Installment (EMI) via post-dated cheques   drawn in favour of the bank or by releasing a mandate allowing payment through the Electronic Clearing Services (ECS) system.",
 
     },
-    {
-      question: "What are the key documents required when applying for a personal loan?",
-      answer:
-        <ul>
-          <li>
-            Income proof (Salary Slip for salaried/recent acknowledged ITR for self-employed)
-          </li>
-          <li>
-          Address Proof Documents
-          </li>
-          <li>
-          Identity Proof Documents and others
-          </li>
-          <li>
-          Certified copies of degree/license (in case of self-employed professional) and others as per the lender’s criteria.
-          </li>
-        </ul>
-
-    }
+    
   ];
   const [loanAmount, setLoanAmount] = useState(30000);
   const [interestRate, setInterestRate] = useState(12);
