@@ -494,11 +494,11 @@ const ContactForm = () => {
               {/* Legal Text */}
               <p className="text-sm text-gray-500 text-center mt-6 leading-relaxed">
                 By submitting, you acknowledge our{" "}
-                <Link href="/terms" className="text-blue-900 hover:underline">
+                <Link href="/term-cond" className="text-blue-900 hover:underline">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="text-blue-900 hover:underline">
+                <Link href="privacy-pol" className="text-blue-900 hover:underline">
                   Privacy Policy
                 </Link>
               </p>

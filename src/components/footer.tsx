@@ -146,7 +146,7 @@ export default function Footer() {
           <Col xs={12} md={4} className="d-flex flex-column align-items-start mb-4 mt-2">
             <h5  className="fw-bold text-start"style={{color:"#041184"}}>Our Company</h5>
             <ul className="list-unstyled text-dark d-flex flex-column gap-3 mt-3">
-              <li><a href="about-us" className="text-dark text-decoration-none">About Prefinn</a></li>
+              <li><a href="about-us" className="text-dark text-decoration-none">About Us</a></li>
               <li><a href="/become-partner" className="text-dark text-decoration-none">Become a Partner</a></li>
               <li><a href="term-cond" className="text-dark text-decoration-none">Terms & Conditions</a></li>
               <li><a href="privacy-pol" className="text-dark text-decoration-none">Privacy Policy</a></li>
@@ -170,7 +170,7 @@ export default function Footer() {
   <MdLocationOn className="text-success fs-4 flex-shrink-0 mt-1" />
   <span className="text-dark fw-sm">
   Prefinn FinServ Private Limited<br />
-  Cabin No. 204, 2nd Floor, MVL I-Park,<br />
+   204, 2nd Floor, MVL I-Park,<br />
   Sector-15, Part 2, Chandan Nagar,<br />
   Gurgaon, Haryana - 122001<br />
   <a 
@@ -190,7 +190,7 @@ export default function Footer() {
 
       {/* Copyright Section */}
       <div className="text-white text-center py-1 " style={{ backgroundColor: "#041184" }}>
-        <small>Copyright © 2025 PreFinn Fintech Solutions - All Rights Reserved</small>
+        <small>Copyright © 2025 Prism Business Consultants - All Rights Reserved</small>
       </div>
     </footer>
   );

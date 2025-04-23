@@ -95,7 +95,7 @@ const EMICalculator = ({
 
       <p className="text-center text-muted-success mb-3">
         {/* Your EMI is going to be */}
-        Aapki EMI Kuch Ye Hogi !
+        Aapki Monthly EMI Kuch Ye Hogi !
       </p>
       <p className="text-2xl md:text-4xl font-bold text-dark text-center mb-8">
         ₹{emi.toLocaleString('en-IN')}
@@ -219,11 +219,11 @@ const EMICalculator = ({
              Your Loan is Just a Click Away
           </h6>
           <div className="mt-6">
-            <Link
-              href="/loan-apply"
-             className="text-decoration-none inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium hover:bg-green-600 transition-colors">
-              Apply Now
-            </Link>
+          <Link
+    href="/loan-apply"
+    className="text-2xl text-decoration-none inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium hover:bg-green-600 transition-colors">
+    Apply Now
+  </Link>
           </div>
         </div>
     </div>

@@ -742,13 +742,6 @@ export default function BalanceTransferCalculator() {
                 reduce Interest Cost And Consolidate debt With Our Balance Transfer solutions
               </p>
               <Link href="/loan-apply" passHref>
-  <Button
-    variant="warning"
-    size="lg"
-    className="rounded-pill px-5 fw-bold shadow-lg hover-scale block text-dark font-medium ripple"
-  >
-    Apply Now
-  </Button>
 </Link>
             </div>  
           </div>

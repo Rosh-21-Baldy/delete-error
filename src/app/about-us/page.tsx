@@ -106,7 +106,7 @@ export default function AboutUs() {
   return (
   <>
   <Navbar/>
-   <div
+  <div
   className="container-fluid py-5"
   style={{
     backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')`,
@@ -117,70 +117,52 @@ export default function AboutUs() {
 >
   <div className="container">
     <div className="row align-items-center">
-
       <div className="col-md-6">
-      <div
-  style={{
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    marginBottom: '1.5rem',
-  }}
->
-  {/* Animated Line */}
-  <div
-    style={{
-      width: '60px',
-      height: '3px',
-      backgroundColor: '#fff',
-      animation: 'slideInLine 0.6s ease-out forwards',
-      opacity: 0,
-    }}
-  ></div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            marginBottom: '1.5rem',
+          }}
+        >
+          {/* Removed animated line */}
 
-  {/* Animated Heading */}
-  <h2
-    style={{
-      marginBottom: 0,
-      marginTop: '0.5rem',
-      opacity: 0,
-      transform: 'translateY(10px)',
-      animation: 'fadeSlideIn 0.8s ease-out 0.5s forwards',
-    }}
-  >
-    
-  </h2>
+          {/* Animated Heading */}
+          <h2
+            style={{
+              marginBottom: 0,
+              marginTop: '0.5rem',
+              opacity: 0,
+              transform: 'translateY(10px)',
+              animation: 'fadeSlideIn 0.8s ease-out 0.5s forwards',
+            }}
+          >
+            {/* Optional heading */}
+          </h2>
 
-  {/* Keyframes injected into page */}
-  <style>{`
-    @keyframes slideInLine {
-      0% {
-        width: 0;
-        opacity: 0;
-      }
-      100% {
-        width: 60px;
-        opacity: 1;
-      }
-    }
+          {/* Keyframes for animation */}
+          <style>{`
+            @keyframes fadeSlideIn {
+              0% {
+                opacity: 0;
+                transform: translateY(10px);
+              }
+              100% {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          `}</style>
+        </div>
 
-    @keyframes fadeSlideIn {
-      0% {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  `}</style>
-</div>
-
-        <p className="mb-4" style={{ lineHeight: '1.7' }}>
-          We are dedicated to transforming financial access through seamless digital solutions.
-          Whether you're an individual or business, our platform helps you get fast, transparent, and secure loan services.
-        </p>
+        {/* Centered Paragraph */}
+        <div className="d-flex justify-content-center w-100">
+          <p className="text-right" style={{ lineHeight: '1.7', maxWidth: '500px' }}>
+            We are dedicated to transforming financial access through seamless digital solutions.
+            Whether you're an individual or business, our platform helps you get fast, transparent, and secure loan services.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -224,7 +206,7 @@ export default function AboutUs() {
     </div>
     <div className="col-md-6">
       <ul style={{ listStyleType: 'none', paddingLeft: 0, lineHeight: '4.9' }}>
-        <li><strong>✅ Tech-first Lending:</strong> Real-time approvals and tracking</li>
+        <li><strong>✅ Preffered Lending Solutions:</strong> Real-time approvals and tracking</li>
         <li><strong>✅ Pan-India Partnerships:</strong> With all major Banks & NBFCs</li>
         <li><strong>✅ Personalized Offers:</strong> Tailored to every customer profile</li>
         {/* <li><strong>✅ Transparent Process:</strong> No hidden fees or complexities</li> */}

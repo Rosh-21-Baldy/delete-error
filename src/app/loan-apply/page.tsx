@@ -325,7 +325,7 @@ const LoanEnquiry = () => {
   <Row className="justify-content-center">
     <Col md={12} lg={10}>
       <h2 className="mb-4 text-center">
-        <span className="fw-bold"> Loan Enquiry Form</span>
+        <span className="fw-bold"> Request a Loan Quote</span>
       </h2>
 
       {showError && (
@@ -496,30 +496,35 @@ const LoanEnquiry = () => {
           </Col>
 
           <Col xs={12}>
-            <Button variant="primary" className="w-100 mt-2" type="submit">
-              SUBMIT
-            </Button>
+          <Button
+  type="submit"
+  className="w-100 mt-2 bg-blue-900 hover:bg-green transition-colors duration-300 text-white border-0"
+  style={{ backgroundColor: '#1e3a8a' }} // fallback for blue-900
+>
+  SUBMIT
+</Button>
+
           </Col>
         </Row>
       </Form>
     </Col>
     <Col md={12} className="mx-auto">
   <h3 className="mb-4 mt-5 text-center">
-    How to avail Loan from Prefinn
+  Steps to Get a Loan
   </h3>
   <Row className="gx-3 gy-4">
     {[
       "Fill out the online Apply Loan form on website and provide your Basic details..Call Prefinn Team or wait for Call Back.",
       "While discussing your loan requirements with the Prefinn team, feel free to select the Bank or NBFC of your choice based on you.",
-      "Once Your Loan Application is filed. Have a personal discussion with Bank Loan Manager and finalise the Loan Amount and Terms and conditions.",
-      "Meet the Loan Manager in person, sign the original Loan Application file and take Disbursement of Loan Amount in your preferred Bank Account.",
+      "Once Your Loan Application is filed. Have a personal discussion with Bank Loan Manager and finalise the Loan Amount .",
+      "Meet the Loan Manager , sign the original Loan Application file and take Disbursement of Loan .",
       "Track your loan status through Prefinn's support system and follow up for any updates.",
       "Get post-loan support, EMI reminders, and account service from Prefinn's team.",
     ].map((text, index) => (
       <Col xs={12} sm={6} md={4} key={index}>
-        <Card className="text-center p-3 h-100" style={{ minHeight: "170px" }}>
+        <Card className="text-center p-3 h-90" style={{ minHeight: "120px" }}>
           <Card.Body>
-            <div className="fs-4 fw-bold text-primary mb-2">{index + 1}</div>
+            <div className="fs-4 fw-bold text-blue-900 mb-2">{index + 1}</div>
             <Card.Text style={{ fontSize: "0.9rem" }}>{text}</Card.Text>
           </Card.Body>
         </Card>

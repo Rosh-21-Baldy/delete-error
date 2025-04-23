@@ -895,7 +895,7 @@ const Navbar = () => {
               <div>
                 <p className="font-medium text-dark mb-2">Products</p>
                 <div className="space-y-1 pl-4">
-                  <Link href="/homeloans" className="block text-dark text-sm ripple">Home-Loans</Link>
+                  <Link href="/homeloans" className="block text-dark text-sm ripple">Home-Loan</Link>
                   <Link href="/personalloans" className="block text-dark text-sm ripple">Personal Loan</Link>
                   <Link href="/businessloans" className="block text-dark text-sm ripple">Business Loan</Link>
                   <Link href="/loanagainstproperty" className="block text-dark text-sm ripple">Loan Against Property</Link>

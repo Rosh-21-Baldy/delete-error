@@ -850,14 +850,14 @@ import {
 const PartnerSection = () => {
   const loanProducts = [
     {
-      title: "Home Loans",
+      title: "Home Loan",
       link: "homeloans",
       description:
         "Prefinn helps clients assess their home financing needs by partnering with experienced consultants.",
       icon: <CiBank />,
     },
     {
-      title: "Personal Loans",
+      title: "Personal Loan",
       link: "workingCapitalloans",
       description:
         "Prefinn helps clients assess their personal loan requirements by partnering with licensed financial advisors. ",
@@ -865,7 +865,7 @@ const PartnerSection = () => {
       
     },
     {
-      title: "Business Loans",
+      title: "Business Loan",
       link: "businessloans",
       description:
         "Prefinn offers Business Loan services to help businesses assess their short-term financing needs .",
@@ -879,7 +879,7 @@ const PartnerSection = () => {
       icon: <FaHouseLaptop />,
     },
     {
-      title: "Working Capital Loans",
+      title: "Working Capital Loan",
       link: "workingCapitalloans",
       description:
         "Expert financial solutions to maintain smooth business operations.",
@@ -963,7 +963,7 @@ const PartnerSection = () => {
 
 </div>
 
-<Row className="mb-9 g-4" data-aos="fade-up" data-aos-delay="200">
+<Row className="mb-5 g-3" data-aos="fade-up" data-aos-delay="200">
   {[
     { 
       icon: "😊", 
@@ -989,6 +989,13 @@ const PartnerSection = () => {
       text: "Channel Partners",
       gradient: "linear-gradient(45deg, #28a745 0%, #0d53b7 100%)"
     },
+    {
+      icon: "🤝", 
+  imageUrl: "https://cdn-icons-png.flaticon.com/512/5663/5663360.png", // Added image URL
+  value: "5+",
+  text: "Institutional Partners",
+  gradient: "linear-gradient(45deg, #28a745 0%, #0d53b7 100%)"
+},
   ].map((item, index) => (
     <Col key={index} xs={12} md={3} className="mb-4">
       <div className="success-card-wrapper">
