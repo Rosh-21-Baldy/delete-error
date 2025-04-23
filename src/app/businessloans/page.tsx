@@ -480,7 +480,7 @@ export default function businessloans() {
           </div>
         </div> */}
       </div>
-      <Container fluid className="py-0 mt-10 bg-white">
+      <Container fluid className="py-0 mt-10 mx-5 bg-white">
            <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
              {/* Left Side - Text */}
              <Col md={6} className="text-center text-md-start px-4">
@@ -801,7 +801,7 @@ export default function businessloans() {
           <div className="mt-6">
             <Link
               href="/AboutBusinessLoans"
-              className="inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium no-underline hover:!bg-[#16a34a] transition-colors">
+              className=" text-3xl inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium no-underline hover:!bg-[#16a34a] transition-colors">
             
               Apply Now
             </Link>

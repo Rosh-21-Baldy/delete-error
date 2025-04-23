@@ -271,18 +271,23 @@ const HeroSection = () => {
             </p> */}
           </div>
 
-          {/* Right Section: Image */}
-          <div className="relative flex justify-center">
-            <Image
-              // src="https://www.konnectplugins.com/loanica/images/banner.svg"
-              src="https://img.freepik.com/free-vector/fintech-isometric-composition-with-3d-text-surrounded-by-isolated-banking-cash-payments-icons-with-people-vector-illustration_1284-72232.jpg?ga=GA1.1.64248757.1745000936&semt=ais_hybrid&w=740"
-              alt="Fintech Dashboard"
-              width={600}
-              height={350}
-              className="rounded-lg  border-grey-400"
-              priority
-            />
-          </div>
+          {/* Right Section: Image  */}
+          <div className="relative flex justify-center" style={{ backgroundColor: 'white', backgroundImage: 'linear-gradient(to right, rgba(255,0,0,0.1), rgba(0,0,255,0.1))' }}> {/*mix-blend-hard-light or add after relative */}
+  <Image
+    src="https://media.istockphoto.com/id/615883622/vector/home-insurance-concept-illustration-and-infographics-design-el.jpg?s=612x612&w=0&k=20&c=uXCyI0KrYEhA40jEns1_V8enx5q3PQSZ2O43x0ILwDQ=" 
+    // src="https://media.istockphoto.com/id/615883622/vector/home-insurance-concept-illustration-and-infographics-design-el.jpg?s=612x612&w=0&k=20&c=uXCyI0KrYEhA40jEns1_V8enx5q3PQSZ2O43x0ILwDQ=" 
+    alt="Fintech Dashboard"
+    width={600}
+    height={350}
+    priority
+    style={{
+      borderRadius: '0px',
+      // boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      opacity: 2.7, // Reduce opacity for a slight fade-out effect
+      background:"white",
+    }}
+  />
+</div>
         </div>
       </div>
     </div>

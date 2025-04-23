@@ -713,10 +713,11 @@ export default function BalanceTransferCalculator() {
   const totalInterest = totalPayment - loanAmount;
 
   const loanServices = [
-    { id: 1, title: 'Car Loan', icon: '🚗', color: '#4a90e2' },
     { id: 2, title: 'Personal Loan', icon: '👤', color: '#7ed321' },
     { id: 3, title: 'Home Loan', icon: '🏠', color: '#bd10e0' },
-    { id: 4, title: 'Personal Loan', icon: '💳', color: '#f8e71c' }
+    { id: 4, title: 'Business Loan', icon: '🏢', color: '#f5a623' }, // Added icon and color
+    { id: 5, title: 'Loan Against Property', icon: '🏡🔑', color: '#4a90e2' }, // Added icon and color
+    { id: 6, title: 'Working Capital Loan', icon: '🔄', color: '#9013fe' }, // Added icon and color
   ];
 
    const processSteps = [
@@ -734,12 +735,12 @@ export default function BalanceTransferCalculator() {
       <section className="loan-hero bg-gradient-primary text-white py-6">
         <Container className="py-6 text-center">
           <h1 className="display-4 fw-bold mb-4 animate-slide-up">
-            Smarter Debt Management <span className="text-warning">Made Simple</span>
+            Smarter Management <span className="text-warning">Made Simple</span>
           </h1>
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <p className="lead mb-4 text-light-1">
-                reduce Interest Cost And Consolidate debt With Our Balance Transfer solutions
+                reduce Interest Cost And Consolidate Our Balance Transfer solutions
               </p>
               <Link href="/loan-apply" passHref>
 </Link>
@@ -753,13 +754,13 @@ export default function BalanceTransferCalculator() {
         <Container>
           <Row className="g-4">
             <Col lg={6}>
-              <Card className="h-100 p-4 shadow-lg border-0">
-                <h2 className="mb-4 text-gradient-primary">Loan Calculator</h2>
+              <Card className="h-100 p-4 shadow-lg border-0 bg-dark-1">
+                <h2 className="mb-4 text-gradient-primary ">Loan Calculator</h2>
                 
                 {/* Loan Amount Slider */}
                 <div className="mb-5">
                   <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
-                    <span>Loan Amount</span>
+                    <span className="text-primary">Loan Amount</span>
                     <span className="text-primary">₹{loanAmount.toLocaleString('en-IN')}</span>
                   </label>
                   <input
@@ -779,7 +780,7 @@ export default function BalanceTransferCalculator() {
                 {/* Interest Rate Slider */}
                 <div className="mb-5">
                   <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
-                    <span>Interest Rate</span>
+                    <span className="text-primary">Interest Rate</span>
                     <span className="text-primary">{interestRate.toFixed(2)}%</span>
                   </label>
                   <input
@@ -800,7 +801,7 @@ export default function BalanceTransferCalculator() {
                 {/* Tenure Slider */}
                 <div className="mb-4">
                   <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
-                    <span>Repayment Tenure</span>
+                    <span className="text-primary">Repayment Tenure</span>
                     <span className="text-primary">
                       {Math.floor(tenure / 12)}Y {tenure % 12}M
                     </span>
@@ -852,33 +853,31 @@ export default function BalanceTransferCalculator() {
       </section>
 
       {/* Loan Services */}
-      <section className="py-6 bg-white">
-        <Container>
-          <Row className="mb-4 text-center">
-            <Col>
-              <h2 className="display-5 fw-bold mb-3 text-dark-1">Our Loan Services</h2>
-              <p className="text-muted lead">Financial solutions for every need</p>
-            </Col>
-          </Row>
-          <Row className="g-4">
-            {loanServices.map((service) => (
-              <Col key={service.id} md={6} lg={3}>
-                <Card 
-                  className="h-100 border-0 shadow-sm text-center p-4 service-card"
-                  style={{ borderBottom: `4px solid ${service.color}`}}
-                >
-                  <div className="display-3 mb-3 emoji-scale">{service.icon}</div>
-                  <Card.Body>
-                    <Card.Title className="fw-bold mb-3 text-dark-1">{service.title}</Card.Title>
-                   
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
+      <section className="py-4 bg-white"> {/* Reduced vertical padding */}
+  <Container>
+    <Row className="mb-3 text-center"> {/* Reduced bottom margin */}
+      <Col>
+        <h2 className="display-6 fw-bold mb-2 text-dark-1">Our Loan Services</h2> {/* Reduced font size and margin */}
+        <p className="text-muted small">Financial solutions for every need</p> {/* Reduced font size */}
+      </Col>
+    </Row>
+    <Row className="flex-nowrap"> {/* Force single line */}
+      {loanServices.map((service) => (
+        <Col key={service.id} className="col"> {/* Make columns equal width within the row */}
+          <Card
+            className="h-100 border-0 shadow-sm text-center p-4 service-card gap-1" 
+            style={{ borderBottom: `2px solid ${service.color}` }} 
+          >
+            <div className="display-4 mb-2 emoji-scale">{service.icon}</div> {/* Reduced font size and margin */}
+            <Card.Body className="p-1"> {/* Reduced padding */}
+              <Card.Title className="fw-bold mb-1 text-dark-1 ">{service.title}</Card.Title> {/* Reduced font size and margin */}
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  </Container>
+</section>
      
      {/* Process Section */}
        <section className="py-6 bg-light-2">

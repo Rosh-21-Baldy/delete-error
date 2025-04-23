@@ -113,10 +113,12 @@ export default function AboutUs() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: '#fff',
+    textAlign: 'center', // Added text alignment to the parent container
   }}
 >
   <div className="container">
     <div className="row align-items-center">
+      {/* Removed the col-md-6 wrapping the paragraph */}
       <div className="col-md-6">
         <div
           style={{
@@ -155,14 +157,13 @@ export default function AboutUs() {
             }
           `}</style>
         </div>
-
-        {/* Centered Paragraph */}
-        <div className="d-flex justify-content-center w-100">
-          <p className="text-right" style={{ lineHeight: '1.7', maxWidth: '500px' }}>
-            We are dedicated to transforming financial access through seamless digital solutions.
-            Whether you're an individual or business, our platform helps you get fast, transparent, and secure loan services.
-          </p>
-        </div>
+      </div>
+      {/* Paragraph now outside the col-md-6 */}
+      <div className="col-12">
+        <p style={{ lineHeight: '1.7', maxWidth: '500px', margin: '1rem auto 0 auto' }}>
+          We are dedicated to transforming financial access through seamless digital solutions.
+          Whether you're an individual or business, our platform helps you get fast, transparent, and secure loan services.
+        </p>
       </div>
     </div>
   </div>
@@ -184,36 +185,44 @@ export default function AboutUs() {
         }}
       >
         About Us
-      </span>
+      </span> 
     </h2>
-    <p className="mt-3 text-muted" style={{ maxWidth: '700px', margin: '0 auto' }}>
+    <p className="mt-3 text-muted " style={{ maxWidth: '1200px', margin: '0 auto' , fontSize: '1.3rem'}}>
       At Prefinn, we are redefining access to finance. Our mission is to simplify lending with a seamless, secure, and smart experience. As a B2C lending fintech platform, we partner with leading banks and NBFCs to deliver tailored loan solutions, powered by data and driven by purpose.
     </p>
-    {/* <p className="mt-3 text-muted" style={{ maxWidth: '700px', margin: '0 auto' }}>
+     {/* <p className="mt-3 text-muted" style={{ maxWidth: '700px', margin: '0 auto' }}>
     Prefinn is an omni-channel B2C Lending Fintech Platform that offers personalized, tech-powered lending solutions to clients and partners. Working with top banks and NBFCs, we deliver data-driven insights and customized loan options to foster inclusive financial growth.
-    </p> */}
+    </p>  */}
   </div>
 
   {/* Image + Text Row */}
-  <div className="row align-items-center">
-    <div className="col-md-6 mb-4 mb-md-0">
-      <img 
-        src="https://img.freepik.com/premium-vector/collaborative-brainstorming-session-about-us-page-concept_1263357-35648.jpg" 
-        alt="Team Collaboration" 
-        className="img-fluid rounded shadow-sm" 
-        style={{ borderRadius: '12px' }}
-      />
-    </div>
-    <div className="col-md-6">
-      <ul style={{ listStyleType: 'none', paddingLeft: 0, lineHeight: '4.9' }}>
-        <li><strong>✅ Preffered Lending Solutions:</strong> Real-time approvals and tracking</li>
-        <li><strong>✅ Pan-India Partnerships:</strong> With all major Banks & NBFCs</li>
-        <li><strong>✅ Personalized Offers:</strong> Tailored to every customer profile</li>
-        {/* <li><strong>✅ Transparent Process:</strong> No hidden fees or complexities</li> */}
-        <li><strong>✅ Secure & Scalable:</strong> Built on robust digital infrastructure</li>
-      </ul>
-    </div>
+  <div className="row align-items-center py-5">
+  <div className="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+    <img
+      src="https://img.freepik.com/premium-vector/collaborative-brainstorming-session-about-us-page-concept_1263357-35648.jpg"
+      alt="Team Collaboration"
+      className="img-fluid shadow-sm"
+      style={{ borderRadius: '26px', maxWidth: '90%', height: 'auto' }}
+    />
   </div>
+  <div className="col-md-6">
+    <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
+      <li className="d-flex align-items-start mb-4">
+        <span style={{ fontSize: '2.0rem', marginRight: '10px' }}>✅</span>
+        <span>Integrated and Omni Channel Lending Platform for Corporate Channel Partners</span>
+      </li>
+      <li className="d-flex align-items-start mb-4">
+        <span style={{ fontSize: '2.0rem', marginRight: '10px' }}>✅</span>
+        <span>Wide Network of Lenders for Loan processing</span>
+      </li>
+      <li className="d-flex align-items-start">
+        <span style={{ fontSize: '2.0rem', marginRight: '10px' }}>✅</span>
+        <span>Expert team of Ex Bankers and Technocrats having 20 years+ experience</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
 </div>
 
       {/* Who We Are Section */}
@@ -247,9 +256,7 @@ export default function AboutUs() {
           Our Vision
         </h2>
         <p className="fs-5 text-muted mb-4" style={{ lineHeight: '1.8' }}>
-          At <strong>Prefinn</strong>, our mission is to create a seamless financial experience
-          that empowers every Indian to access credit when they need it the most — without friction or delay.
-          We connect users to the right lending partner using smart data, speed, and trust.
+          At <strong>Prefinn</strong>, our Vision is to build a seamless financial platform for all our stakeholders and empower them to have access to credit when they need the most in a hassle-free manner.
         </p>
 
         <div className="d-flex flex-wrap gap-3">
@@ -303,8 +310,11 @@ export default function AboutUs() {
         </div>
         <h3 className="text-xl font-semibold text-gray-800">Loan Distribution</h3>
       </div>
-      <p className="text-gray-600">
+      {/* <p className="text-gray-600">
         We offer multiple loan products to individuals and corporate clients through our vast network of Agents & IBOs backed by 130+ partner banks and NBFCs.
+      </p> */}
+       <p className="text-gray-600">
+      Comprehensive Loan Solutions delivered through our extensive network of Agents & IBOs, in collaboration with 130+ trusted partner Banks and NBFCs, catering to both individual and corporate needs.
       </p>
     </div>
 
@@ -349,7 +359,6 @@ export default function AboutUs() {
         Discover Our Features
       </span>
     </h2>
-    <p className="text-muted mt-2">Experience innovation, ease, and efficiency — all in one place.</p>
   </div>
 
   <div className="row g-4 justify-content-center">
