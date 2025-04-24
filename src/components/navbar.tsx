@@ -804,7 +804,7 @@ const Navbar = () => {
                   </svg>
                 </button>
                 <div className="absolute left-0 w-48 bg-white shadow-md rounded-md p-2 hidden group-hover:block">
-                  <Link href="/homeloans" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple">Home-Loans</Link>
+                  <Link href="/homeloans" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple">Home-Loan</Link>
                   <Link href="/personalloans" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple">Personal Loan</Link>
                   <Link href="/businessloans" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple">Business Loan</Link>
                   <Link href="/loanagainstproperty" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple">Loan Against Property</Link>

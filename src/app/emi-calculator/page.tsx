@@ -217,9 +217,8 @@ export default function LoanApp() {
   const totalInterest = totalPayment - loanAmount;
 
   const loanServices = [
-    
+    { id: 3, title: 'Home Loan', icon: '🏠', color: '#bd10e0' },
       { id: 2, title: 'Personal Loan', icon: '👤', color: '#7ed321' },
-      { id: 3, title: 'Home Loan', icon: '🏠', color: '#bd10e0' },
       { id: 4, title: 'Business Loan', icon: '🏢', color: '#f5a623' }, // Added icon and color
       { id: 5, title: 'Loan Against Property', icon: '🏡🔑', color: '#4a90e2' }, // Added icon and color
       { id: 6, title: 'Working Capital Loan', icon: '🔄', color: '#9013fe' }, // Added icon and color

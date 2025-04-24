@@ -291,7 +291,7 @@ export default function AboutUs() {
           color: "transparent",
         }}
       >
-        Our Key Services
+        Digital Solutions
       </span>
     </h2>
     <div className="w-16 h-1 bg-gradient-to-r  to-blue-600 mt-2 mx-auto rounded"></div>
@@ -308,7 +308,7 @@ export default function AboutUs() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-gray-800">Loan Distribution</h3>
+        <h3 className="text-xl font-semibold text-gray-800">Empowering Borrowers </h3>
       </div>
       {/* <p className="text-gray-600">
         We offer multiple loan products to individuals and corporate clients through our vast network of Agents & IBOs backed by 130+ partner banks and NBFCs.
@@ -326,7 +326,7 @@ export default function AboutUs() {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V9a4 4 0 10-8 0v2M5 11h14l-1 10H6L5 11z" />
       </svg>
     </div>
-    <h3 className="text-xl font-semibold text-gray-800">Products</h3>
+    <h3 className="text-xl font-semibold text-gray-800">SME Lending Experts</h3>
   </div>
   <p className="text-gray-600">
     We specialize in secured lending for home buyers & SME loans, offering tailor-made secured and unsecured options to meet all needs.
