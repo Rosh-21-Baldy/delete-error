@@ -616,13 +616,12 @@ export default function AboutHomeLoans() {
 
             {/* Submit Button */}
             <div className="text-center mt-4">
-              <button
-                type="submit"
-                className="btn btn-primary px-4 py-2"
-                style={{ transition: "0.3s" }}
-              >
-                Submit
-              </button>
+            <button
+  type="submit"
+  className="px-4 py-2 bg-blue-900 text-white rounded transition hover:bg-green-600"
+>
+  Submit
+</button>
             </div>
           </form>
         </div>

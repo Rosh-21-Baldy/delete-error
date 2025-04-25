@@ -1,7 +1,11 @@
+
+
+
+
 // import Link from "next/link";
 // import Image from "next/image";
 // import Marquee from "react-fast-marquee";
-// import styles from './OurPartnersSection.module.css';
+
 // const banks = [
 //   {
 //     name: "SBI",
@@ -16,7 +20,7 @@
 //   {
 //     name: "ICICI Loans",
 //     link: "/loan/icici-bank-home-loans",
-//     logo: "https://d28wu8o6itv89t.cloudfront.net/images/ICICIBankhomeloanspng-1594804385746.png",
+//     logo: "https://static.india.com/wp-content/uploads/2015/08/sf-14.jpg?impolicy=Medium_Resize&w=1200&h=800", // Using a PNG URL
 //   },
 //   {
 //     name: "Aditya Birla Capital",
@@ -77,181 +81,129 @@
 
 // const ProcessSection = () => {
 //   return (
-//     <div className="bg-white py-25">
-//      <div className="ambak-container">
-//   <div className="text-center mb-5 my-4">
-//     <h2 className="fw-bold">
-//       <span
-//         style={{
-//           background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-//           WebkitBackgroundClip: "text",
-//           WebkitTextFillColor: "transparent",
-//           backgroundClip: "text",
-//           color: "transparent",
-//           display: "inline-block",
-//           padding: "0.2rem 0.5rem",
-//           fontWeight: "600",
-//         }}
-//       >
-//         Our Stakeholders
-//       </span>
-//     </h2>
-
-//     {/* <p className="text-muted">We provide customized financial services to meet all your needs</p> */}
-//   </div>
-//   <div className="mb-10">
-//     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-//       <div className="relative" style={{ maxWidth: '300px', margin: '0 auto' }}> {/* Adjust maxWidth as needed */}
-//         <div className="bg-white rounded-lg shadow-sm h-full p-3">
-//           <div className="text-2xl font-bold text-primary bg-white rounded-full w-7 flex items-center justify-center mb-2 -mt-8 border border-muted shadow-xs"></div>
-//           <div className="mb-1">
-//             <div className="mt-5">
-//           <Image 
-//   src="https://img.freepik.com/premium-vector/two-hands-holding-object-finger-pointing-up-down-handshake-single-main-vector-illustration-white-background-bright-color-cartoon-combine_424947-14034.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&w=740"
-//   alt="Growth funding"
-//   width={100}   // Adjusted width
-//   height={75}  // Adjusted height
-//   className="w-auto h-auto max-w-full max-h-full object-contain" // More flexible classes
-// />
-// </div>
-//           </div>
-//           <h1
-//             className="font-bold text-lg mb-1 mt-4"
-//             style={{ color: "#0d53b7" }}
-//           >
-//             Corporate Channel
-//           </h1>
-//           <p className="text-muted-foreground text-sm">
-//           Our success stems from robust corporate channels integrated with a cutting-edge tech enablement platform
-//           </p>
+//     <div className="bg-white py-20">
+//       <div className="ambak-container">
+//         <div className="text-center mb-8">
+//           <h2 className="text-4xl font-bold">
+//             <span
+//               style={{
+//                 background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//                 display: "inline-block",
+//                 padding: "0.4rem 1.5rem",
+//               }}
+//             >
+//               Our Stakeholders
+//             </span>
+//           </h2>
 //         </div>
-//       </div>
 
-//       <div className="relative" style={{ maxWidth: '300px', margin: '0 auto' }}> {/* Adjust maxWidth as needed */}
-//         <div className="bg-white rounded-lg shadow-sm h-full p-3">
-//           <div className="text-2xl font-bold text-primary bg-white rounded-full w-7  flex items-center justify-center mb-2 -mt-8 border border-muted shadow-xs"></div>
-//           <div className="mb-2">
-//             <div className="mt-5">
-//           <Image
-//   src="https://img.freepik.com/free-vector/construction-illustration-with-foreman-giving-instructions-team-builders-dressed-uniform-helmets_1284-29082.jpg?t=st=1744957895~exp=1744961495~hmac=1f7c79fecbf45cc12be434a718a3ffdf655cd115cd0bf8314f311066be905e3a&w=1380"
-//   alt="Builder support"
-//   width={150}
-//   height={0} // Set height to 0 or omit it
-//   style={{ height: 'auto', width: '100%', maxWidth: '550px' }}
-// />
-// </div>
-//           </div>
-//           <h1
-//             className="font-bold text-lg mb-0 mt-5 "
-//             style={{ color: "#0d53b7" }}
-//           >
-//             Real Estate Channel
-//           </h1>
-//           <p className="text-muted-foreground text-sm ">
-//             Financing made easy for Real estate Buyers,Investors and Developers.
-//           </p>
-//         </div>
-//       </div>
+//         <div className="mb-12">
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+//             {/* Corporate Channel Card */}
+//             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+//               <div className="mb-6">
+//                 <Image
+//                   src="https://img.freepik.com/premium-vector/two-hands-holding-object-finger-pointing-up-down-handshake-single-main-vector-illustration-white-background-bright-color-cartoon-combine_424947-14034.jpg"
+//                   alt="Corporate Channel"
+//                   width={140}
+//                   height={120}
+//                   className="mx-auto"
+//                 />
+//               </div>
+//               <h3 className="text-xl font-bold text-[#0d53b7] mb-4">
+//                 Corporate Channel
+//               </h3>
+//               <p className="text-gray-600 text-base">
+//                 Our success stems from robust corporate channels integrated with a cutting-edge tech enablement platform
+//               </p>
+//             </div>
 
-//       <div className="relative" style={{ maxWidth: '300px', margin: '0 auto' }}> {/* Adjust maxWidth as needed */}
-//         <div className="bg-white rounded-lg shadow-sm h-full p-3">
-//           <div className="text-2xl font-bold text-primary bg-white rounded-full w-7  flex items-center justify-center mb-2 -mt-8 border border-muted shadow-xs"></div>
-//           <div className="mb-2">
-//             <Image
-//               src="https://img.freepik.com/premium-vector/businessman-calculates-finances-surrounded-by-stacks-cash-paperwork_1297718-27718.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
-//               alt="IBO growth"
-//               width={80}
-//               height={40}
-//               className="w-full h-auto"
-//             />
+//             {/* Real Estate Channel Card */}
+//             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+//               <div className="mb-6">
+//                 <Image
+//                   src="https://img.freepik.com/free-vector/construction-illustration-with-foreman-giving-instructions-team-builders-dressed-uniform-helmets_1284-29082.jpg"
+//                   alt="Real Estate Channel"
+//                   width={200}
+//                   height={120}
+//                   className="mx-auto"
+//                 />
+//               </div>
+//               <h3 className="text-xl font-bold text-[#0d53b7] mb-4">
+//                 Real Estate Channel
+//               </h3>
+//               <p className="text-gray-600 text-base">
+//                 Financing made easy for Real estate Buyers, Investors and Developers
+//               </p>
+//             </div>
+
+//             {/* Independent Business Owners Card */}
+//             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+//               <div className="mb-6">
+//                 <Image
+//                   src="https://img.freepik.com/premium-vector/businessman-calculates-finances-surrounded-by-stacks-cash-paperwork_1297718-27718.jpg"
+//                   alt="Independent Business Owners"
+//                   width={140}
+//                   height={100}
+//                   className="mx-auto"
+//                 />
+//               </div>
+//               <h3 className="text-xl font-bold text-[#0d53b7] mb-4">
+//                 Independent Business Owners
+//               </h3>
+//               <p className="text-gray-600 text-base">
+//                 Fueling Growth through people-powered Loan sourcing on ground
+//               </p>
+//             </div>
 //           </div>
-//           <h3
-//             className="font-bold text-lg mb-1 "
-//             style={{ color: "#0d53b7" }}
-//           >
-//             Independent Business Owners
-//           </h3>
-//           <p className="text-muted-foreground text-sm">
-//             Fueling Growth through people-powered Loan sourcing on ground.
-//           </p>
 //         </div>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-//       <h2 className="fw-semibold text-center mt-5">
-//         <span
-//           style={{
-//             background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-//             WebkitBackgroundClip: "text",
-//             WebkitTextFillColor: "transparent",
-//             backgroundClip: "text",
-//             color: "transparent",
-//             display: "inline-block",
-//             padding: "0.2rem 0.5rem",
-//             fontWeight: "600",
-//           }}
+
+//         {/* Service Providers Section */}
+//         <div className="text-center mb-8">
+//           <h2 className="text-3xl font-bold">
+//             <span
+//               style={{
+//                 background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//                 display: "inline-block",
+//                 padding: "0.4rem 1.5rem",
+//               }}
+//             >
+//               Our Service Providers
+//             </span>
+//           </h2>
+//         </div>
+
+//         <Marquee speed={70} gradient={false} className="py-4">
+//       {banks.map((bank, index) => (
+//         <Link
+//           href={bank.link}
+//           key={index}
+//           className="hover:opacity-75 transition-opacity duration-300"
 //         >
-//           Our Service Providers
-//         </span>
-//       </h2>
-//       <Marquee speed={50} gradient={false}>
-//         {banks.map((bank, index) => (
-//           <a
-//             key={index}
-//             href={bank.link}
-//             className="d-inline-block mx-3 opacity-75 hover-opacity-100 transition-opacity"
-//           >
+//           <div style={{ paddingLeft: '1rem', paddingRight: '1rem' }}> {/* Added div with padding */}
 //             <Image
 //               src={bank.logo}
 //               alt={bank.name}
-//               width={100}
+//               width={80}
 //               height={40}
-//               className="img-fluid"
+//               className="h-10 w-auto object-contain"
 //             />
-//           </a>
-//         ))}
-//       </Marquee>
+//           </div>
+//         </Link>
+//       ))}
+//     </Marquee>
+//       </div>
 //     </div>
 //   );
 // };
 
 // export default ProcessSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -369,9 +321,9 @@ const ProcessSection = () => {
         </div>
 
         <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Corporate Channel Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl hover:scale-105 transition-transform duration-300">
               <div className="mb-6">
                 <Image
                   src="https://img.freepik.com/premium-vector/two-hands-holding-object-finger-pointing-up-down-handshake-single-main-vector-illustration-white-background-bright-color-cartoon-combine_424947-14034.jpg"
@@ -390,7 +342,7 @@ const ProcessSection = () => {
             </div>
 
             {/* Real Estate Channel Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl hover:scale-105 transition-transform duration-300">
               <div className="mb-6">
                 <Image
                   src="https://img.freepik.com/free-vector/construction-illustration-with-foreman-giving-instructions-team-builders-dressed-uniform-helmets_1284-29082.jpg"
@@ -409,7 +361,7 @@ const ProcessSection = () => {
             </div>
 
             {/* Independent Business Owners Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl hover:scale-105 transition-transform duration-300">
               <div className="mb-6">
                 <Image
                   src="https://img.freepik.com/premium-vector/businessman-calculates-finances-surrounded-by-stacks-cash-paperwork_1297718-27718.jpg"
@@ -447,25 +399,25 @@ const ProcessSection = () => {
           </h2>
         </div>
 
-        <Marquee speed={70} gradient={false} className="py-4">
-      {banks.map((bank, index) => (
-        <Link
-          href={bank.link}
-          key={index}
-          className="hover:opacity-75 transition-opacity duration-300"
-        >
-          <div style={{ paddingLeft: '1rem', paddingRight: '1rem' }}> {/* Added div with padding */}
-            <Image
-              src={bank.logo}
-              alt={bank.name}
-              width={80}
-              height={40}
-              className="h-10 w-auto object-contain"
-            />
-          </div>
-        </Link>
-      ))}
-    </Marquee>
+        <Marquee speed={70} gradient={false} className="py-4 gap-3">
+          {banks.map((bank, index) => (
+            <Link
+              href={bank.link}
+              key={index}
+              className="hover:opacity-75 transition-opacity duration-300"
+            >
+              <div style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
+                <Image
+                  src={bank.logo}
+                  alt={bank.name}
+                  width={80}
+                  height={40}
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
+            </Link>
+          ))}
+        </Marquee>
       </div>
     </div>
   );

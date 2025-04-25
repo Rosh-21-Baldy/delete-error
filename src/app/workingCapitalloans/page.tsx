@@ -35,6 +35,7 @@ import Link from "next/link";
 
 
 
+
 export default function workingCapitalloans() {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -212,25 +213,25 @@ export default function workingCapitalloans() {
       title: "Instant Approval",
       description: "Get working capital within 24-48 hours to meet urgent business needs like inventory or payroll.",
       image: "https://img.freepik.com/free-vector/product-quality-concept-illustration_114360-7301.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740", // Clock/approval icon
-      bgColor: "#3262ad ",
+      bgColor: "#ffffff ",
     },
     {
       title: "Flexible Repayment",
       description: "Choose repayment terms (3-12 months) aligned with your cash flow cycles.",
       image: "https://img.freepik.com/free-vector/hand-drawn-payday-template_52683-150955.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740", // Calendar/terms icon
-      bgColor: "#3262ad ",
+      bgColor: "#fffff ",
     },
     {
       title: "No Collateral Needed",
       description: "Unsecured loans up to ₹50 lakhs based on business turnover and creditworthiness.",
       image: "https://img.freepik.com/free-vector/nfc-connection-abstract-concept-vector-illustration-bank-connection-nfc-communication-contactless-card-payment-method-banking-technology-financial-transaction-paying-app-abstract-metaphor_335657-2509.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740", // No-collateral icon
-      bgColor: "#3262ad ",
+      bgColor: "#fffff ",
     },
     {
       title: "Competitive Interest",
       description: "Attractive rates starting at 1.2% per month to keep costs manageable.",
       image: "https://img.freepik.com/free-vector/modern-indian-rupee-composition_23-2147995729.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740", // Interest rate icon
-      bgColor: "#3262ad ",
+      bgColor: "#fffff ",
     },
   ];
   const cardStyle = {
@@ -255,251 +256,28 @@ export default function workingCapitalloans() {
           hideProgressBar
         />
       </>
-      {/* <div
-        className="container-fluid p-0"
-        style={{ fontFamily: "Arial, sans-serif", position: "relative" }}
-      >
-        
-        <div className="position-relative">
-        
-          <img
-            src="https://img.freepik.com/premium-photo/india-accounting-concept-showing-accountant-working-income-tax-forms-budget-planning-with-currency-notes-calculator-house-car-3d-models_466689-12354.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
-            className="img-fluid w-100"
-            style={{ height: "100vh", objectFit: "cover" }}
-            alt="personal Loan"
-          />
+     
+      
 
-         
-          <div
-            className="position-absolute "
-            style={{
-              top: "20px", 
-              right: "20px",
-              width: "100%",
-              maxWidth: "550px",
-              maxHeight: "calc(100vh - 100px)", 
-              overflowY: "scroll",
-              background: "#FDFEFE",
-              borderRadius: "20px",
-              boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2)",
-              padding: "20px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div className="border-0" style={{ background: "transparent" }}>
-              <h5 className="text-center text-danger mb-1">
-                Apply for Working Capital Loan
-              </h5>
-
-              <form onSubmit={handleSubmit}>
-              
-                <div className="mb-2">
-                  <label className="form-label small ">
-                    Name <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className={`form-control form-control-sm ${errors.name && "is-invalid"
-                      }`}
-                    placeholder="Enter your full name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    required
-                  />
-                  {errors.name && (
-                    <div className="invalid-feedback">{errors.name}</div>
-                  )}
-                </div>
-
-               
-                <div className="mb-2">
-                  <label className="form-label small">
-                    Email <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    className={`form-control form-control-sm ${errors.email && "is-invalid"
-                      }`}
-                    placeholder="Enter your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    required
-                  />
-                  {errors.email && (
-                    <div className="invalid-feedback">{errors.email}</div>
-                  )}
-                </div>
-
-                
-                <div className="mb-2">
-                  <label className="form-label small">
-                    Mobile Number <span className="text-danger">*</span>
-                  </label>
-                  <div className="input-group">
-                    <span className="input-group-text">+91</span>
-                    <input
-                      type="tel"
-                      name="mobile"
-                      className={`form-control form-control-sm ${errors.mobile && "is-invalid"
-                        }`}
-                      placeholder="Enter your mobile number"
-                      value={formData.mobile}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      maxLength={10}
-                      required
-                    />
-                  </div>
-                  {errors.mobile && (
-                    <div className="invalid-feedback d-block">
-                      {errors.mobile}
-                    </div>
-                  )}
-                </div>
-
-                
-                <div className="mb-2">
-                  <label className="form-label small">
-                    OTP <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="otp"
-                    className={`form-control form-control-sm ${errors.otp && "is-invalid"
-                      }`}
-                    placeholder="Enter OTP"
-                    value={formData.otp}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    maxLength={6}
-                    required
-                  />
-                  {errors.otp && (
-                    <div className="invalid-feedback d-block">{errors.otp}</div>
-                  )}
-                </div>
-
-               
-                <div className="mb-2">
-                  <label className="form-label small">
-                    PAN Card Number <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="pan"
-                    className={`form-control form-control-sm ${errors.pan && "is-invalid"
-                      }`}
-                    placeholder="Enter PAN card number"
-                    value={formData.pan}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    maxLength={10}
-                    required
-                  />
-                  {errors.pan && (
-                    <div className="invalid-feedback">{errors.pan}</div>
-                  )}
-                </div>
-                
-
-               
-                <div className="mb-2">
-                  <label className="form-label small">
-                    Enter Pincode <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="pincode"
-                    className={`form-control form-control-sm ${errors.pincode && "is-invalid"
-                      }`}
-                    placeholder="Enter pincode"
-                    value={formData.pincode}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    maxLength={6}
-                    required
-                  />
-                  {errors.pincode && (
-                    <div className="invalid-feedback">{errors.pincode}</div>
-                  )}
-                </div>
-
-                
-                <div className="mb-2 form-check">
-                  <input
-                    type="checkbox"
-                    name="agree"
-                    className={`form-check-input ${errors.agree && "is-invalid"
-                      }`}
-                    checked={formData.agree}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label className="form-check-label">
-                    I agree to the{" "}
-                    <a
-                      href="/term-cond"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-danger"
-                    >
-                      Terms & Conditions
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      href="/privacy-pol"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-danger"
-                    >
-                      Privacy Policy
-                    </a>
-                  </label>
-                  {errors.agree && (
-                    <div className="invalid-feedback d-block">
-                      {errors.agree}
-                    </div>
-                  )}
-                </div>
-
-               
-                <div className="text-center mt-auto">
-                  <button
-                    type="submit"
-                    className="bg-danger text-white px-2 py-1 rounded border-0"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> */}
    <Container fluid className="py-0 mt-10 mx-5 bg-white">
              <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
                {/* Left Side - Text */}
                <Col md={6} className="text-center text-md-start px-4">
-                 <h1
-                   className="fw-bold mb-4"
-                   style={{
-                     color: '#3c4f84',
-                     fontSize: '3.2rem',
-                     fontWeight: '800',
-                     lineHeight: '1.2',
-                   }}
-                 >
-                   Fuel Your Ambitions,<br /> Financed Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
-                 </h1>
+               <h1
+                 className="fw-bold mb-4"
+                 style={{
+                   color: '#3c4f84',
+                   fontSize: '3.2rem',
+                   fontWeight: '800',
+                   lineHeight: '1.2',
+                 }}
+               >
+               Fuel Your Ambitions,<br /> Financed Today by<span style={{ color: '#38ad64' }}>Prefinn</span>
+               </h1>
            
-                 <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
+                 {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
                  Efficiently Processed, Scaled for Growth
-                 </h3>
+                 </h3> */}
            
                  <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
                    Get the best loan deals, personalized for you — fast, secure, and fully digital.
@@ -509,7 +287,7 @@ export default function workingCapitalloans() {
                {/* Right Side - Image */}
                <Col md={6} className="d-flex align-items-center justify-content-center">
                  <img
-                   src="https://img.freepik.com/premium-vector/online-bank-finance-mobile-application-concept-debit-credit-cards-payments-financial-transactions-accounting-business-ecommerce-web-service-vector-internet-platform_176516-2769.jpg?ga=GA1.1.45359775.1744700779&semt=ais_hybrid&w=740"
+                   src="https://img.freepik.com/premium-vector/rupee-bundle-with-rupee-bag-with-coins-economy-growth-vector-illustration_667085-62.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&w=740"
                    alt="House Illustration"
                    style={{
                      maxHeight: '450px',
@@ -829,7 +607,7 @@ export default function workingCapitalloans() {
                   (e.currentTarget.style.backgroundColor = "#f0f8ff")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#3262ad ")
+                  (e.currentTarget.style.backgroundColor = "#ffffff ")
                 }
               >
                 <Card.Body>
@@ -845,7 +623,7 @@ export default function workingCapitalloans() {
         </Row>
       </Container>
       <Container className="p-5" >
-  <h2 className="text-success fw-bold">Working Capital EMI Calculator</h2>
+  <h2 className="text-success fw-bold">EMI Calculator</h2>
   <Row>
     <Col md={7}>
       <Form>
@@ -920,7 +698,7 @@ export default function workingCapitalloans() {
 
         <Col xs={12} md={5} className="p-0">  {/* Full width on small screens */}
   <Card className="p-4 shadow h-80" style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-    <h5 className="fw-bold text-white">EMI Summary</h5>
+    <h5 className="fw-bold text-white">Your EMI</h5>
     <div className="mt-3">
       <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
       <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
@@ -957,7 +735,7 @@ export default function workingCapitalloans() {
         {faqs.map((faq, index) => (
           <Card
             key={index}
-            className="mb-3 border-4 shadow-sm"
+            className="mb-3 border-0 shadow-sm"
             style={{
               transition: "all 0.3s ease-in-out",
               borderRadius: "10px",

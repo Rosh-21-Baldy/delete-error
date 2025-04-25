@@ -667,28 +667,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -714,54 +692,55 @@ export default function BalanceTransferCalculator() {
 
   const loanServices = [
     { id: 3, title: 'Home Loan', icon: '🏠', color: '#bd10e0' },
+    { id: 5, title: 'Loan Against Property', icon: '🏡🔑', color: '#4a90e2' },
+    { id: 6, title: 'Working Capital Loan', icon: '🔄', color: '#9013fe' },
+    { id: 4, title: 'Business Loan', icon: '🏢', color: '#f5a623' },
     { id: 2, title: 'Personal Loan', icon: '👤', color: '#7ed321' },
-    { id: 4, title: 'Business Loan', icon: '🏢', color: '#f5a623' }, // Added icon and color
-    { id: 5, title: 'Loan Against Property', icon: '🏡🔑', color: '#4a90e2' }, // Added icon and color
-    { id: 6, title: 'Working Capital Loan', icon: '🔄', color: '#9013fe' }, // Added icon and color
   ];
 
-   const processSteps = [
-   { title: 'Balance Analysis', description: 'Review current debt structure' },
+  const processSteps = [
+    { title: 'Balance Analysis', description: 'Review current debt structure' },
     { title: 'Offer Matching', description: 'Find best transfer options' },
     { title: 'Risk Assessment', description: 'Creditworthiness evaluation' },
-     { title: 'Transfer Execution', description: 'Secure debt migration' }
-   ];
+    { title: 'Transfer Execution', description: 'Secure debt migration' }
+  ];
 
   return (
     <>
       <Navbar />
 
       {/* Hero Section */}
-      <section className="loan-hero bg-gradient-primary text-white py-6">
-        <Container className="py-6 text-center">
-          <h1 className="display-4 fw-bold mb-4 animate-slide-up">
+      <section className="loan-hero bg-gradient-primary text-white py-5 py-md-6">
+        <Container className="py-md-6 text-center">
+          <h1 className="display-4 fw-bold mb-3 mb-md-4 animate-slide-up">
             Smarter Management <span className="text-warning">Made Simple</span>
           </h1>
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <p className="lead mb-4 text-light-1">
-                reduce Interest Cost And Consolidate Our Balance Transfer solutions
+              <p className="lead mb-3 mb-md-4 text-light-1">
+                Reduce Interest Cost And Consolidate Our Balance Transfer solutions
               </p>
               <Link href="/loan-apply" passHref>
-</Link>
-            </div>  
+                {/* You might want to add a button here */}
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
       {/* Loan Calculator Section */}
-      <section className="py-6 bg-light-2">
+      <section className="py-5 py-md-6 bg-light-2">
         <Container>
-          <Row className="g-4">
-            <Col lg={6}>
-              <Card className="h-100 p-4 shadow-lg border-0 bg-dark-1">
-                <h2 className="mb-4 text-gradient-primary ">Loan Calculator</h2>
-                
+          <Row className="g-4 justify-content-center">
+            <Col md={8} lg={6}>
+              <Card className="h-100 p-3 p-md-4 shadow-lg border-0 bg-dark-1">
+                <h2 className="mb-3 mb-md-4 text-gradient-warning ">Loan Calculator</h2>
+
                 {/* Loan Amount Slider */}
-                <div className="mb-5">
-                  <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
-                    <span className="text-primary">Loan Amount</span>
-                    <span className="text-primary">₹{loanAmount.toLocaleString('en-IN')}</span>
+                <div className="mb-4 mb-md-5">
+                  <label className="d-flex justify-content-between mb-2 mb-md-3 fw-bold text-dark-1">
+                    <span className="text-white">Loan Amount</span>
+                    <span className="text-white">₹{loanAmount.toLocaleString('en-IN')}</span>
                   </label>
                   <input
                     type="range"
@@ -778,10 +757,10 @@ export default function BalanceTransferCalculator() {
                 </div>
 
                 {/* Interest Rate Slider */}
-                <div className="mb-5">
-                  <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
-                    <span className="text-primary">Interest Rate</span>
-                    <span className="text-primary">{interestRate.toFixed(2)}%</span>
+                <div className="mb-4 mb-md-5">
+                  <label className="d-flex justify-content-between mb-2 mb-md-3 fw-bold text-dark-1">
+                    <span className="text-white">Interest Rate</span>
+                    <span className="text-white">{interestRate.toFixed(2)}%</span>
                   </label>
                   <input
                     type="range"
@@ -799,10 +778,10 @@ export default function BalanceTransferCalculator() {
                 </div>
 
                 {/* Tenure Slider */}
-                <div className="mb-4">
-                  <label className="d-flex justify-content-between mb-3 fw-bold text-dark-1">
-                    <span className="text-primary">Repayment Tenure</span>
-                    <span className="text-primary">
+                <div className="mb-3 mb-md-4">
+                  <label className="d-flex justify-content-between mb-2 mb-md-3 fw-bold text-dark-1">
+                    <span className="text-white">Repayment Tenure</span>
+                    <span className="text-white">
                       {Math.floor(tenure / 12)}Y {tenure % 12}M
                     </span>
                   </label>
@@ -823,25 +802,25 @@ export default function BalanceTransferCalculator() {
             </Col>
 
             {/* Results Card */}
-            <Col lg={6}>
-              <Card className="h-100 p-4 bg-dark-1 text-white shadow-lg border-0">
-                <h3 className="mb-4 text-gradient-warning">Payment Summary</h3>
-                <ListGroup variant="flush" className="mb-4">
-                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-3">
+            <Col md={8} lg={6}>
+              <Card className="h-100 p-3 p-md-4 bg-dark-1 text-white shadow-lg border-0">
+                <h3 className="mb-3 mb-md-4 text-gradient-warning">Payment Summary</h3>
+                <ListGroup variant="flush" className="mb-3 mb-md-4">
+                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-2 py-md-3">
                     <span>Principal Amount</span>
                     <span>₹{loanAmount.toLocaleString('en-IN')}</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-3">
+                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-2 py-md-3">
                     <span>Total Interest</span>
                     <span>₹{Math.round(totalInterest).toLocaleString('en-IN')}</span>
                   </ListGroup.Item>
-                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-3 border-bottom-0">
+                  <ListGroup.Item className="bg-dark-1 text-white d-flex justify-content-between py-2 py-md-3 border-bottom-0">
                     <span>Total Payable</span>
                     <span>₹{Math.round(totalPayment).toLocaleString('en-IN')}</span>
                   </ListGroup.Item>
                 </ListGroup>
-                <div className="text-center mt-4 pt-3 border-top border-light-1">
-                  <h2 className="display-5 fw-bold my-3 text-warning">
+                <div className="text-center mt-3 mt-md-4 pt-2 pt-md-3 border-top border-light-1">
+                  <h2 className="display-5 fw-bold my-2 my-md-3 text-warning">
                     ₹{emi.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
                   </h2>
                   <small className="d-block text-light-1">Monthly EMI</small>
@@ -852,66 +831,80 @@ export default function BalanceTransferCalculator() {
         </Container>
       </section>
 
-      {/* Loan Services */}
-      <section className="py-4 bg-white"> {/* Reduced vertical padding */}
-  <Container>
-    <Row className="mb-3 text-center"> {/* Reduced bottom margin */}
-      <Col>
-        <h2 className="display-6 fw-bold mb-2 text-dark-1">Our Loan Services</h2> {/* Reduced font size and margin */}
-        <p className="text-muted small">Financial solutions for every need</p> {/* Reduced font size */}
-      </Col>
-    </Row>
-    <Row className="flex-nowrap"> {/* Force single line */}
-      {loanServices.map((service) => (
-        <Col key={service.id} className="col"> {/* Make columns equal width within the row */}
-          <Card
-            className="h-100 border-0 shadow-sm text-center p-4 service-card gap-1" 
-            style={{ borderBottom: `2px solid ${service.color}` }} 
-          >
-            <div className="display-4 mb-2 emoji-scale">{service.icon}</div> {/* Reduced font size and margin */}
-            <Card.Body className="p-1"> {/* Reduced padding */}
-              <Card.Title className="fw-bold mb-1 text-dark-1 ">{service.title}</Card.Title> {/* Reduced font size and margin */}
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-  </Container>
-</section>
-     
-     {/* Process Section */}
-       <section className="py-6 bg-light-2">
-         <Container>
+       {/* Loan Services */}
+       <section className="py-5 bg-white">
+        <Container>
           <Row className="mb-4 text-center">
-             <Col>
-               <h2 className="display-5 fw-bold mb-3 text-dark-1">Transfer Process</h2>
-               <p className="text-muted lead">Streamlined 4-step transfer workflow</p>
-             </Col>
-           </Row>
-           <Row className="g-4 process-steps">
-             {processSteps.map((step, index) => (
-               <Col key={index} md={6} lg={3}>
-                 <div className="position-relative">
-                   {index !== 0 && (
-                     <div className="process-connector d-none d-lg-block"></div>
-                   )}
-                   <Card className="h-100 border-0 shadow-sm text-center p-4 hover-scale">
-                     <Badge pill bg="warning" className="fs-5 mb-3 mx-auto number-badge">
-                      {index + 1}
-                     </Badge>
-                     <Card.Body>
-                       <Card.Title className="fw-bold mb-3 text-dark-1">{step.title}</Card.Title>
-                       <Card.Text className="text-muted small">{step.description}</Card.Text>
-                     </Card.Body>
-                   </Card>
-                 </div>
+            <Col>
+              <h2
+                className="display-6 fw-bold mb-3 text-dark-1"
+                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+              >
+                Our Loan Services
+              </h2>
+              <p
+                className="text-muted lead"
+                style={{ fontSize: "clamp(1.1rem, 2.2vw, 1.3rem)" }}
+              >
+                Financial solutions for every need
+              </p>
+            </Col>
+          </Row>
+          <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+            {loanServices.map((service) => (
+              <Col key={service.id}>
+                <Card
+                  className="h-100 border-0 shadow-sm text-center p-3 service-card"
+                  style={{ borderBottom: `4px solid ${service.color}` }}
+                >
+                  <div className="display-4 mb-2 emoji-scale">{service.icon}</div>
+                  <Card.Body className="p-2">
+                    <Card.Title
+                      className="fw-bold mb-1 text-dark-1 "
+                      style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)" }}
+                    >
+                      {service.title}
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
               </Col>
-             ))}
-         </Row>
-         </Container>
-     </section>
+            ))}
+          </Row>
+        </Container>
+      </section>
 
-      
+
+      {/* Process Section */}
+      <section className="py-5 py-md-6 bg-light-2">
+        <Container>
+          <Row className="mb-4 text-center">
+            <Col>
+              <h2 className="display-5 fw-bold mb-3 text-dark-1">Transfer Process</h2>
+              <p className="text-muted lead">Streamlined 4-step transfer workflow</p>
+            </Col>
+          </Row>
+          <Row className="g-4 process-steps justify-content-center"> {/* Center the steps on smaller screens */}
+            {processSteps.map((step, index) => (
+              <Col key={index} xs={12} md={6} lg={3}> {/* Make columns full width on small screens */}
+                <div className="position-relative">
+                  {index !== 0 && (
+                    <div className="process-connector d-none d-lg-block"></div>
+                  )}
+                  <Card className="h-100 border-0 shadow-sm text-center p-3 p-md-4 hover-scale">
+                    <Badge pill bg="warning" className="fs-5 mb-3 mx-auto number-badge">
+                      {index + 1}
+                    </Badge>
+                    <Card.Body className="p-2">
+                      <Card.Title className="fw-bold mb-2 text-dark-1">{step.title}</Card.Title>
+                      <Card.Text className="text-muted small">{step.description}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
 
       <Footer />
 
@@ -951,16 +944,16 @@ export default function BalanceTransferCalculator() {
         }
 
         .custom-slider::-webkit-slider-thumb {
-          width: 24px;
-          height: 24px;
+          width: 20px;
+          height: 20px;
           background: #4e4376;
-          border: 3px solid white;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+          border: 2px solid white;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.2);
           transition: all 0.3s ease;
         }
 
         .custom-slider::-webkit-slider-thumb:hover {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
 
         .service-card {
@@ -968,8 +961,8 @@ export default function BalanceTransferCalculator() {
         }
 
         .service-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+          transform: translateY(-5px);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
         .hover-scale {
@@ -977,7 +970,7 @@ export default function BalanceTransferCalculator() {
         }
 
         .hover-scale:hover {
-          transform: scale(1.05);
+          transform: scale(1.02);
         }
 
         .emoji-scale {
@@ -985,25 +978,34 @@ export default function BalanceTransferCalculator() {
         }
 
         .service-card:hover .emoji-scale {
-          transform: scale(1.2);
+          transform: scale(1.1);
         }
 
         .process-steps .process-connector {
           position: absolute;
           top: 40%;
-          left: -50%;
-          width: 100%;
-          height: 4px;
+          left: 0;
+          width: 50%; /* Adjust connector width for better mobile view */
+          height: 3px;
           background: #4e4376;
           z-index: 0;
         }
 
+        /* Adjust connector position for different breakpoints */
+        @media (min-width: 992px) {
+          .process-steps .process-connector {
+            left: -50%;
+            width: 100%;
+          }
+        }
+
         .number-badge {
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
           display: flex;
           align-items: center;
           justify-content: center;
+          font-size: 0.9rem;
           z-index: 1;
           position: relative;
           transition: all 0.3s ease;
@@ -1041,3 +1043,55 @@ export default function BalanceTransferCalculator() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

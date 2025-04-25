@@ -182,27 +182,27 @@ export default function businessloans() {
       title: "Flexible Loan Tenure",
       description: "Flexible and longer repayment options",
       image: "https://cdn-icons-png.flaticon.com/128/9196/9196974.png",
-      bgColor: "#3262ad ",
+      bgColor: "#ffffff ",
     },
     {
       title: "Balance Transfer",
       description:
         "Transfer Existing Business Loan at lower EMIs with competitive rates",
       image: "https://cdn-icons-png.flaticon.com/128/3707/3707848.png",
-      bgColor: "#3262ad ", 
+      bgColor: "#ffffff ", 
     },
     {
       title: "Business Loan in Seconds",
       description:
         "Online and Instant loan disbursal for Banks existing current account holders",
       image: "https://cdn-icons-png.flaticon.com/128/9172/9172420.png",
-      bgColor: "#3262ad ",
+      bgColor: "#ffffff ",
     },
     {
       title: "No Collateral & Guarantor",
       description: "The business loan is collateral-free and requires no guarantor",
       image: "https://cdn-icons-png.flaticon.com/128/17480/17480230.png",
-      bgColor: "#3262ad ",
+      bgColor: "#ffffff",
     },
   ];
   const documents = [
@@ -496,9 +496,9 @@ export default function businessloans() {
                   Tomorrow’s Venture,<br /> Financed Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
                </h1>
          
-               <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
+               {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
                Efficient, Scalable & Certified Business Loans
-               </h3>
+               </h3> */}  
          
                <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
                  Get the best loan deals, personalized for you — fast, secure, and fully digital.
@@ -508,7 +508,7 @@ export default function businessloans() {
              {/* Right Side - Image */}
              <Col md={6} className="d-flex align-items-center justify-content-center">
                <img
-                 src="https://img.freepik.com/free-vector/business-business-concept-with-purchase-contract-symbols-flat-vector-illustration_1284-76939.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
+                 src="https://img.freepik.com/premium-vector/rupee-plant-growth-money-jar-investment-mutual-fund-concept-vector-illustration_667085-819.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
                   
                  alt="House Illustration"
                  style={{
@@ -682,15 +682,15 @@ export default function businessloans() {
                   width: "100%",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#f0f8ff")
+                  (e.currentTarget.style.backgroundColor = "#fffff")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#3262ad ")
+                  (e.currentTarget.style.backgroundColor = "#fffff ")
                 }
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#b5d70b "}}>{item.text}</p>
+                  <p style={{color:"#808080"}}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -701,7 +701,7 @@ export default function businessloans() {
         </Row>
       </Container>
       <Container className="p-5 px-2" >
-  <h2 className="text-success fw-bold">Business Loan EMI Calculator</h2>
+  <h2 className="text-success fw-bold"> EMI Calculator</h2>
   <Row>
     <Col md={7}>
       <Form>
@@ -776,7 +776,7 @@ export default function businessloans() {
 
         <Col xs={12} md={5} className="p-0 gap-5">  {/* Full width on small screens */}
   <Card className="p-4 shadow h-100 px-5 " style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-    <h5 className="fw-bold text-white">Your Business Loan EMI</h5>
+    <h5 className="fw-bold text-white">Your EMI</h5>
     <div className="mt-3">
       <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
       <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
@@ -817,7 +817,7 @@ export default function businessloans() {
         {faqs.map((faq, index) => (
           <Card
             key={index}
-            className="mb-3 border-4 shadow-sm"
+          className="mb-3 border-0 shadow-sm"
             style={{
               transition: "all 0.3s ease-in-out",
               borderRadius: "10px",

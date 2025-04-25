@@ -364,19 +364,19 @@ export default function AboutUs() {
   <div className="row g-4 justify-content-center">
     {[
       {
-        icon: <FaHandsHelping size={40} className="text-warning mb-3" />,
+        icon: <FaHandsHelping size={40} className="text-primary mb-3" />,
         title: "Product Diversification",
         description:
           "Offering multiple loan product options to Housing & SME customers at one platform.",
       },
       {
-        icon: <FaCheckCircle size={40} className="text-warning mb-3" />,
+        icon: <FaCheckCircle size={40} className="text-primary mb-3" />,
         title: "Customer-Centric Approach",
         description:
           "Prompt Relationship Manager service with optimized loan options saving time and money.",
       },
       {
-        icon: <FaLock size={40} className="text-warning mb-3" />,
+        icon: <FaLock size={40} className="text-primary mb-3" />,
         title: "Secure & Fast Processing",
         description:
           "Robust data encryption ensures smooth and secure customer experience.",

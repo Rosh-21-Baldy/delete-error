@@ -738,9 +738,6 @@ const [loanAmount, setLoanAmount] = useState(30000);
   }, [loanAmount, interestRate, tenure]);
 
 
-
-  
-
   return (
     <>
      
@@ -759,22 +756,23 @@ const [loanAmount, setLoanAmount] = useState(30000);
       <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
         {/* Left Side - Text */}
         <Col md={6} className="text-center text-md-start px-4">
-          <h1
-            className="fw-bold mb-4"
-            style={{
-              color: '#3c4f84',
-              fontSize: '3.2rem',
-              fontWeight: '800',
-              lineHeight: '1.2',
-            }}
-          >
-          
-          Your Ambitions,<br /> Priority Personal Loans by <span style={{ color: '#38ad64' }}>Prefinn</span>
-          </h1>
+        <h1
+  className="fw-bold mb-4"
+  style={{
+    color: '#3c4f84',
+    fontSize: '3.2rem',
+    fontWeight: '800',
+    lineHeight: '1.2',
+  }}
+>
+  <span style={{ fontSize: '4rem', display: 'block' }}>Your Ambitions,</span>
+  Priority Personal Loans by <span style={{ color: '#38ad64' }}>Prefinn</span>
+</h1>
+
     
-          <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
+          {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#3b79d4' }}>
           tailored to your financial goals
-          </h3>
+          </h3> */}
     
           <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
             Get the best loan deals, personalized for you — fast, secure, and fully digital.
@@ -955,12 +953,12 @@ const [loanAmount, setLoanAmount] = useState(30000);
                   (e.currentTarget.style.backgroundColor = "#f0f8ff")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#4B5EAA")
+                  (e.currentTarget.style.backgroundColor = "#ffffff")
                 }
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#b5d70b"}}>{item.text}</p>
+                  <p style={{color:"#fffff"}}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -971,7 +969,7 @@ const [loanAmount, setLoanAmount] = useState(30000);
         </Row>
       </Container>
            <Container className="p-5 px-2" >
-        <h2 className="text-success fw-bold">Loan EMI Calculator</h2>
+        <h2 className="text-success fw-bold"> EMI Calculator</h2>
         <Row>
           <Col md={7}>
             <Form>
@@ -1046,7 +1044,7 @@ const [loanAmount, setLoanAmount] = useState(30000);
       
               <Col xs={12} md={5} className="p-0 gap-5">  {/* Full width on small screens */}
         <Card className="p-4 shadow h-100 px-5 " style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-          <h5 className="fw-bold text-white">Your Loan EMI</h5>
+          <h5 className="fw-bold text-white">Your EMI</h5>
           <div className="mt-3">
             <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
             <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
@@ -1077,14 +1075,14 @@ const [loanAmount, setLoanAmount] = useState(30000);
           </div>
         </div>
 
-      <Container fluid className="py-4 mt-0">
+      <Container fluid className="py-5 mt-0">
         {" "}
         {/* Full-width container */}
         <h2 className="text-center mb-4 fw-bold ">FAQs</h2>
         {faqs.map((faq, index) => (
           <Card
             key={index}
-            className="mb-3 border-4 shadow-sm"
+             className="mb-3 border-0 shadow-sm"
             style={{
               transition: "all 0.3s ease-in-out",
               borderRadius: "10px",

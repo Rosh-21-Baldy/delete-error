@@ -12,13 +12,15 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    // <main className="min-h-screen bg-background">
+       <main className=" bg-white px-25">
+     
       {/* <OfferBanner /> */}
       <Navbar />
       <HeroSection />
       <PartnerSection />
       <ProcessSection />
-      <div className="bg-white  ">
+      <div className="bg-white">
         <div className="ambak-container">
           <EMICalculator />
         </div>
@@ -35,3 +37,16 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

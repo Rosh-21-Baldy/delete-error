@@ -166,22 +166,22 @@ const HomeLoanSection = () => {
 <Container fluid className="py-6 mt-15 mx-5 bg-white">
   <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
     {/* Left Side - Text */}
-    <Col md={6} className="text-center text-md-start px-4">
-      <h1
-        className="fw-bold mb-4"
-        style={{
-          color: '#3c4f84',
-          fontSize: '3.2rem',
-          fontWeight: '800',
-          lineHeight: '1.2',
-        }}
-      >
-        Own Tomorrow’s Home,<br /> Funded Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
-      </h1>
+    <Col md={6} className="text-center text-md-start px-4 mt-2">
+    <h1
+                 className="fw-sm mb-4"
+                 style={{
+                   color: '#3c4f84',
+                   fontSize: '3.2rem',
+                   fontWeight: '800',
+                   lineHeight: '1.2',
+                 }}
+               >
+               Own Tomorrow’s Home,<br /> Funded Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
+               </h1>
 
-      <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
+      {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
         Efficient, Scalable, Certified.
-      </h3>
+      </h3> */}
 
       <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
         Get the best loan deals, personalized for you — fast, secure, and fully digital.
@@ -230,7 +230,7 @@ const HomeLoanSection = () => {
             fontWeight: "500",
             letterSpacing: "0.5px"
           }}>
-            Secure, and fully digital
+          
           </span>
         </div>
       </Col>
@@ -277,7 +277,7 @@ const HomeLoanSection = () => {
           fontWeight: "400",
           marginBottom: "0"
         }}>
-          Loan amount sanctioned by banks and HFCs varies between 65% to 80% of the property price,
+          Loan amount sanctioned by banks and HFCs varies between 75% to 90% of the property price,
           depending on the applicant's financial stability and credit score.
         </p>
       </Col>
@@ -407,12 +407,12 @@ const HomeLoanSection = () => {
                   (e.currentTarget.style.backgroundColor = "#f0f8ff")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#3262ad")
+                  (e.currentTarget.style.backgroundColor = "#f0f8ff")
                 }
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#b5d70b"}}>{item.text}</p>
+                  <p style={{color:"#fffff"}}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>  
@@ -423,7 +423,7 @@ const HomeLoanSection = () => {
         </Row>
       </Container>
 
-<Container fluid className="py-5 mt-0" style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+<Container fluid className="py-5 mt-0" style={{ backgroundColor: "#", borderRadius: "0" }}
 > 
 <div className="text-center mb-14">
           <h2 className="text-blue-900 text-2xl md:text-3xl font-bold mb-4">

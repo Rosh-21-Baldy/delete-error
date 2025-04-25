@@ -2,7 +2,7 @@
 
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/components/navbar";
@@ -158,21 +158,30 @@ export default function PersonalLoans() {
     }
   ];
 
-// EMI Calculator State for Personal Loan
-const [loanAmount, setLoanAmount] = useState(500000);
-const [tenure, setTenure] = useState(24);
-const [interestRate, setInterestRate] = useState(11.25);
+ const [loanAmount, setLoanAmount] = useState(30000);
+  const [interestRate, setInterestRate] = useState(12);
+  const [tenure, setTenure] = useState(12);
 
-// EMI Calculation Formula for Personal Loan
-const calculateEMI = (P: number, r: number, n: number): number => {
-  const monthlyRate = r / (12 * 100); // converting annual rate to monthly decimal
-  return (P * monthlyRate * Math.pow(1 + monthlyRate, n)) /
-         (Math.pow(1 + monthlyRate, n) - 1);
-};
+  const [emi, setEmi] = useState(0);
+  const [totalPayment, setTotalPayment] = useState(0);
+  const [totalInterest, setTotalInterest] = useState(0);
 
-const emi = calculateEMI(loanAmount, interestRate, tenure);
-const totalPayment = emi * tenure;
-const totalInterest = totalPayment - loanAmount;
+  useEffect(() => {
+    const principal = loanAmount;
+    const monthlyRate = interestRate / 12 / 100;
+    const months = tenure;
+
+    const emiValue =
+      (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+      (Math.pow(1 + monthlyRate, months) - 1);
+
+    const total = emiValue * months;
+    const interest = total - principal;
+
+    setEmi(emiValue);
+    setTotalPayment(total);
+    setTotalInterest(interest);
+  }, [loanAmount, interestRate, tenure]);
 
   return (
     <>
@@ -428,9 +437,9 @@ const totalInterest = totalPayment - loanAmount;
             Leverage Your Equity,<br /> Funded Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
           </h1>
     
-          <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
+          {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
             Efficient, Scalable, Certified.
-          </h3>
+          </h3> */}
     
           <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
             Get the best loan deals, personalized for you — fast, secure, and fully digital.
@@ -456,7 +465,7 @@ const totalInterest = totalPayment - loanAmount;
   <Row className="g-4">
     {/* Left Side Panel */}
     <Col md={4}>
-      <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#3262ad "}}>
+      <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
         <h4 className="fw-bold text-warning">No Hassle, No Delay</h4>
         <h2 className="fw-bold display-6">100% SIMPLE PROCESS</h2>
         <ul className="list-unstyled mt-4 fs-5">
@@ -480,7 +489,7 @@ const totalInterest = totalPayment - loanAmount;
 
     {/* Right Side Form */}
     <Col md={4}>
-      <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#3262ad "}}>
+      <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
         <h4 className="fw-bold text-warning">Fast & Easy</h4>
         <h2 className="fw-bold display-6">Empower Yourself with Our Smart Solution</h2>
         <ul className="list-unstyled mt-4 fs-5">
@@ -620,7 +629,7 @@ const totalInterest = totalPayment - loanAmount;
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-5px)";
                   e.currentTarget.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.2)";
-                  e.currentTarget.style.backgroundColor = "#3262ad";
+                  e.currentTarget.style.backgroundColor = "#ffffff";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
@@ -641,131 +650,94 @@ const totalInterest = totalPayment - loanAmount;
         </Row>
       </Container>
 
-      <Container fluid className="py-5 px-lg-5 px-md-3 px-sm-2" style={{ background: "#f8f9fa" }}>
-  <h2 className="text-success fw-bold display-5 mb-4 text-center">EMI Calculator</h2>
-  <Row className="g-4 justify-content-center">
-    <Col lg={7} md={12} className="pe-lg-4">
-      <Form className="bg-white p-4 rounded-4 shadow" style={{ border: "1px solid rgba(0,0,0,0.1)" }}>
-        <Form.Group className="mb-4">
-          <Form.Label className="fw-bold fs-5 text-secondary mb-3 d-block">
-            Loan Amount
-            <span className="float-end text-success">
-              ₹ {loanAmount.toLocaleString('en-IN')}
-            </span>
-          </Form.Label>
-          <Form.Range 
-            min="30000" 
-            max="500000" 
-            value={loanAmount} 
-            onChange={(e) => setLoanAmount(Number(e.target.value))}
-            style={{
-              height: "8px",
-              background: `linear-gradient(90deg, #198754 ${(loanAmount/500000)*100}%, #dee2e6 0%)`,
-              borderRadius: "8px"
-            }}
-          />
-          <div className="d-flex justify-content-between text-muted mt-2">
-            <small>₹30K</small>
-            <small>₹5L</small>
-          </div>
-        </Form.Group>
-
-        <Form.Group className="mb-4">
-          <Form.Label className="fw-bold fs-5 text-secondary mb-3 d-block">
-            Interest Rate
-            <span className="float-end text-success">
-              {interestRate.toFixed(2)}%
-            </span>
-          </Form.Label>
-          <Form.Range 
-            min="12" 
-            max="21" 
-            step="0.25"
-            value={interestRate} 
-            onChange={(e) => setInterestRate(Number(e.target.value))}
-            style={{
-              height: "8px",
-              background: `linear-gradient(90deg, #198754 ${((interestRate-12)/9)*100}%, #dee2e6 0%)`,
-              borderRadius: "8px"
-            }}
-          />
-          <div className="d-flex justify-content-between text-muted mt-2">
-            <small>12%</small>
-            <small>21%</small>
-          </div>
-        </Form.Group>
-
-        <Form.Group className="mb-4">
-          <Form.Label className="fw-bold fs-5 text-secondary mb-3 d-block">
-            Tenure
-            <span className="float-end text-success">
-              {Math.floor(tenure/12)}Y {tenure%12}M
-            </span>
-          </Form.Label>
-          <Form.Range 
-            min="12" 
-            max="48" 
-            value={tenure} 
-            onChange={(e) => setTenure(Number(e.target.value))}
-            style={{
-              height: "8px",
-              background: `linear-gradient(90deg, #198754 ${((tenure-12)/36)*100}%, #dee2e6 0%)`,
-              borderRadius: "8px"
-            }}
-          />
-          <div className="d-flex justify-content-between text-muted mt-2">
-            <small>1 Year</small>
-            <small>4 Years</small>
-          </div>
-        </Form.Group>
-      </Form>
-    </Col>
-
-    <Col lg={5} md={12} className="ps-lg-3">
-      <Card className="p-1 shadow-lg border-0 h-100" style={{ 
-        backgroundColor: "#005662",
-        borderRadius: "17px",
-        background: "#3262ad"
-      }}>
-        <h3 className="text-white fw-bold mb-4 text-center ">EMI SUMMARY</h3>
-        <div className="mt-3">
-          <div className="d-flex justify-content-between align-items-center mb-3">
-            <span className="text-white-80">Principal Amount</span>
-            <span className="text-white fw-bold">₹{loanAmount.toLocaleString('en-IN')}</span>
-          </div>
-          
-          <div className="d-flex justify-content-between align-items-center mb-3">
-            <span className="text-white-80">Total Interest</span>
-            <span className="text-warning fw-bold">₹{Math.round(totalInterest).toLocaleString('en-IN')}</span>
-          </div>
-
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <span className="text-white-80">Total Payable</span>
-            <span className="text-success fw-bold">₹{Math.round(totalPayment).toLocaleString('en-IN')}</span>
-          </div>
-
-          <div className="bg-white-10 p-3 rounded-3 mb-4">
-            <div className="d-flex justify-content-between align-items-center">
-              <span className="text-white-80">Duration</span>
-              <span className="text-white fw-bold">
-                {Math.floor(tenure/12)} Years {tenure%12} Months
-              </span>
-            </div>
-          </div>
-
-          <hr className="opacity-25 my-4" />
-
-          <div className="text-center bg-success-20 p-3 rounded-3">
-            <span className="text-white-80 d-block mb-1">Monthly EMI</span>
-            <h2 className="text-white fw-bold mb-0 display-6">
-              ₹{emi.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
-            </h2>
-          </div>
-        </div>
-      </Card>
-    </Col>
-  </Row>
-</Container>
+      <Container className="p-5" >
+   <h2 className="text-success fw-bold">EMI Calculator</h2>
+   <Row>
+     <Col md={7}>
+       <Form>
+         <Form.Group className="mb-4">
+           <Form.Label className="fw-bold">Select the required Loan Amount</Form.Label>
+           <Form.Range
+             min="200000"
+             max="7500000"
+             step="100000"
+             value={loanAmount}
+             onChange={(e) => setLoanAmount(Number(e.target.value))}
+             className="flex-grow-1 me-2"
+           />
+           <div className="d-flex justify-content-between text-muted px-1">
+             <span>2L</span>
+             <span>16L</span>
+             <span>31L</span>
+             <span>45L</span>
+             <span>60L</span>
+             <span>75L</span>
+           </div>
+         </Form.Group>
+ 
+         <Form.Group className="mb-4">
+   <Form.Label className="fw-bold">Interest Rate (p.a)</Form.Label>
+   <div className="d-flex justify-content-between align-items-center">
+     <Form.Range
+       min="12"
+       max="21"
+       step="1"
+       value={interestRate}
+       onChange={(e) => setInterestRate(Number(e.target.value))}
+       className="flex-grow-1 me-2"
+     />
+     <span className="fw-bold">{interestRate}%</span>
+   </div>
+   <div className="d-flex justify-content-between text-muted px-1 mt-1">
+     <span>12%</span>
+     <span>14%</span>
+     <span>16%</span>
+     <span>18%</span>
+     <span>20%</span>
+     <span>22%</span>
+   </div>
+ </Form.Group>
+ 
+ 
+             <Form.Group className="mb-4">
+   <Form.Label className="fw-bold">Tenure (in months)</Form.Label>
+   <div className="d-flex justify-content-between align-items-center">
+     <Form.Range
+       min="12"
+       max="96"
+       step="1"
+       value={tenure}
+       onChange={(e) => setTenure(Number(e.target.value))}
+       className="flex-grow-1 me-2"
+     />
+     <span className="fw-bold">{tenure}</span>
+   </div>
+   <div className="d-flex justify-content-between text-muted px-1 mt-1">
+     <span>12</span>
+     <span>29</span>
+     <span>46</span>
+     <span>62</span>
+     <span>79</span>
+     <span>96</span>
+   </div>
+ </Form.Group>
+           </Form>
+         </Col>
+ 
+         <Col xs={12} md={5} className="p-0">  {/* Full width on small screens */}
+   <Card className="p-4 shadow h-80" style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
+     <h5 className="fw-bold text-white">Your EMI</h5>
+     <div className="mt-3">
+       <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
+       <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
+       <p><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p>
+       <p><strong>Tenure (Months):</strong> <span className="fw-bold">{tenure}</span></p>
+       <h4 className="text-white fw-bold">Monthly EMI: ₹ {emi.toFixed(0)}</h4>
+     </div>
+   </Card>
+ </Col>
+       </Row>
+     </Container>
 
 <div className="text-center mb-14 py-10">
           <h2 className="text-blue-900 text-2xl md:text-3xl font-bold mb-3">
@@ -791,7 +763,7 @@ const totalInterest = totalPayment - loanAmount;
         {faqs.map((faq, index) => (
           <Card
             key={index}
-            className="mb-3 border-4 shadow-sm"
+             className="mb-3 border-0 shadow-sm"
             style={{
               transition: "all 0.3s ease-in-out",
               borderRadius: "10px",

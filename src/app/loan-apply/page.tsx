@@ -267,6 +267,7 @@ const LoanEnquiry = () => {
     amount: "",
     city: "",
     state: "",
+    preferredBank:"",
     pinCode: "",
   });
 
@@ -313,6 +314,7 @@ const LoanEnquiry = () => {
         amount: "",
         city: "",
         state: "",
+        preferredBank:"",
         pinCode: "",
       });
     }
@@ -391,12 +393,13 @@ const LoanEnquiry = () => {
               required
             >
               <option value="">Loan Type</option>
-              <option value="Personal Loan">Personal Loan</option>
+              
               <option value="Home Loan">Home Loan</option>
-              <option value="Car Loan">Car Loan</option>
               <option value="Loan Against Property">Loan Against Property</option>
-              <option value="Business Loan">Business Loan</option>
               <option value="Working Capital Loan">Working Capital Loan</option>
+              <option value="Business Loan">Business Loan</option>
+              <option value="Personal Loan">Personal Loan</option>
+             
             </Form.Select>
           </Col>
 
@@ -494,7 +497,35 @@ const LoanEnquiry = () => {
               required
             />
           </Col>
+          <Col md={6}>
+          <Form.Select
+    name="preferredBank"
+    value={formData.preferredBank}
+    onChange={handleChange}
+    required
+  >
+    <option value="">Preferred NBFC's</option>
+    <option value="HDFC Bank">HDFC Bank</option>
+    <option value="ICICI Bank">ICICI Bank</option>
+    <option value="Axis Bank">Axis Bank</option>
+    <option value="SBI">State Bank of India</option>
+    <option value="Kotak Mahindra">Kotak Mahindra Bank</option>
+    <option value="Yes Bank">Yes Bank</option>
+    <option value="IndusInd Bank">BOI</option>
+    <option value="IndusInd Bank">Motilaal Oswal </option>
+    <option value="IndusInd Bank">Hero Fincorp</option> 
+    <option value="IndusInd Bank">HSBC</option>
+    <option value="IndusInd Bank">IIFL</option>
+    <option value="IndusInd Bank">L&T Finance</option>
+    <option value="IndusInd Bank">Motilal Oswal Home</option>
+    <option value="IndusInd Bank">Aditya Birla Capital</option>
+    <option value="IndusInd Bank">Bajaj Finserv</option>
 
+
+
+    <option value="Other">Other</option>
+  </Form.Select>
+</Col>
           <Col xs={12}>
           <Button
   type="submit"
