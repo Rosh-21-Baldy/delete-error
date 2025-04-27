@@ -1,4 +1,3 @@
-
 // "use client";
 // import React, { useState,useEffect } from "react";
 // import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
@@ -12,7 +11,6 @@
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 // import Link from "next/link";
-
 
 // export default function PersonalLoans() {
 
@@ -177,7 +175,6 @@
 //   const totalPayment = emi * tenure;
 //   const totalInterest = totalPayment - loanAmount;
 
-
 //   const [formattedLoanAmount, setFormattedLoanAmount] = useState("");
 
 //   useEffect(() => {
@@ -186,7 +183,7 @@
 
 //   return (
 //     <>
-     
+
 //       <Navbar />
 //       <>
 //         {/* Your main JSX */}
@@ -196,8 +193,7 @@
 //           hideProgressBar
 //         />
 //       </>
-      
-    
+
 //     <Container fluid className="py-0 mt-10 bg-white">
 //       <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
 //         {/* Left Side - Text */}
@@ -211,19 +207,19 @@
 //               lineHeight: '1.2',
 //             }}
 //           >
-          
+
 //           Your Ambitions,<br /> Priority Personal Loans by <span style={{ color: '#38ad64' }}>Prefinn</span>
 //           </h1>
-    
+
 //           <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
 //           tailored to your financial goals
 //           </h3>
-    
+
 //           <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
 //             Get the best loan deals, personalized for you — fast, secure, and fully digital.
 //           </p>
 //         </Col>
-    
+
 //         {/* Right Side - Image */}
 //         <Col md={6} className="d-flex align-items-center justify-content-center">
 //           <img
@@ -462,7 +458,7 @@
 //         </Row>
 //       </Container>
 //       <div className="text-center mb-14">
-            
+
 //           <h2 className=" text-2xl md:text-3xl font-bold mb-4" style={{color:'#4B5EAA'}}>
 //             At Prefinn your success is our success.
 //           </h2>
@@ -472,7 +468,7 @@
 //           <div className="mt-8">
 //             <Link
 //               href="/AboutPersonalLoans"
-              
+
 //               className="inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium no-underline hover:!bg-[#16a34a] transition-colors">
 //               Apply Now
 //             </Link>
@@ -516,44 +512,14 @@
 //           </Card>
 //         ))}
 //       </Container>
-     
+
 //       <Footer />
 //     </>
 //   );
 // };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/components/navbar";
@@ -563,9 +529,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
-
 export default function PersonalLoans() {
-
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -645,11 +609,11 @@ export default function PersonalLoans() {
       ...prev,
       [name]: name === "pan" ? value.toUpperCase() : val,
     }));
- 
+
     if (Object.keys(errors).includes(name)) {
-        validateField(name, val);
-      }
-        };
+      validateField(name, val);
+    }
+  };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -690,7 +654,8 @@ export default function PersonalLoans() {
         "A personal loan can be used for almost any type of expense ranging from big ticket appliance purchases and home renovations to luxury vacations and debt consolidation. Some other cases where personal loans may be useful include payment to unexpected medical bills, investment in business, fixing your car, down payment of new house and much more.",
     },
     {
-      question: "Is there a minimum personal loan amount that I need to borrow?",
+      question:
+        "Is there a minimum personal loan amount that I need to borrow?",
       answer:
         "Yes. Though the exact amount of the minimum personal loan amount varies from one lending institution to another, most lenders have set their minimum personal loan principal amount at Rs. 30,000",
     },
@@ -703,16 +668,14 @@ export default function PersonalLoans() {
       question: "How to repay the personal loan?",
       answer:
         "The loan can be repaid in the form of Equated Monthly Installment (EMI) via post-dated cheques   drawn in favour of the bank or by releasing a mandate allowing payment through the Electronic Clearing Services (ECS) system.",
-
     },
     {
-      question: "What are the key documents required when applying for a personal loan?",
-      answer:"this is"
-   ,
-
-    }
+      question:
+        "What are the key documents required when applying for a personal loan?",
+      answer: "this is",
+    },
   ];
-const [loanAmount, setLoanAmount] = useState(30000);
+  const [loanAmount, setLoanAmount] = useState(30000);
   const [interestRate, setInterestRate] = useState(12);
   const [tenure, setTenure] = useState(12);
 
@@ -737,69 +700,74 @@ const [loanAmount, setLoanAmount] = useState(30000);
     setTotalInterest(interest);
   }, [loanAmount, interestRate, tenure]);
 
-
   return (
     <>
-     
       <Navbar />
       <>
         {/* Your main JSX */}
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar
-        />
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       </>
-      
-    
-    <Container fluid className="py-0 mt-10 mx-5 bg-white">
-      <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
-        {/* Left Side - Text */}
-        <Col md={6} className="text-center text-md-start px-4">
-        <h1
-  className="fw-bold mb-4"
-  style={{
-    color: '#3c4f84',
-    fontSize: '3.2rem',
-    fontWeight: '800',
-    lineHeight: '1.2',
-  }}
->
-  <span style={{ fontSize: '4rem', display: 'block' }}>Your Ambitions,</span>
-  Priority Personal Loans by <span style={{ color: '#38ad64' }}>Prefinn</span>
-</h1>
 
-    
-          {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#3b79d4' }}>
+      <Container fluid className="py-0 mt-10 mx-5 bg-white">
+        <Row
+          className="align-items-center justify-content-center"
+          style={{ minHeight: "20vh" }}
+        >
+          {/* Left Side - Text */}
+          <Col md={6} className="text-center text-md-start px-4">
+            <h1
+              className="fw-bold mb-4"
+              style={{
+                color: "#3c4f84",
+                fontSize: "3.2rem",
+                fontWeight: "800",
+                lineHeight: "1.2",
+              }}
+            >
+              <span style={{ fontSize: "4rem", display: "block" }}>
+                Your Ambitions,
+              </span>
+              Priority Personal Loans by{" "}
+              <span style={{ color: "#38ad64" }}>Prefinn</span>
+            </h1>
+
+            {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#3b79d4' }}>
           tailored to your financial goals
           </h3> */}
-    
-          <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
-            Get the best loan deals, personalized for you — fast, secure, and fully digital.
-          </p>
-        </Col>
-    
-        {/* Right Side - Image */}
-        <Col md={6} className="d-flex align-items-center justify-content-center">
-          <img
-            src="https://img.freepik.com/premium-vector/rupee-plant-growth-money-bag-investment-mutual-fund-concept-vector-illustration_667085-492.jpg?ga=GA1.1.56492630.1742847583&w=740"
-            alt="House Illustration"
-            style={{
-              maxHeight: '400px',
-              width: 'auto',
-              objectFit: 'contain',
-            }}
-          />
-        </Col>
-      </Row>
-    </Container>
+
+            <p className="text-muted mb-4" style={{ fontSize: "1.2rem" }}>
+              Get the best loan deals, personalized for you — fast, secure, and
+              fully digital.
+            </p>
+          </Col>
+
+          {/* Right Side - Image */}
+          <Col
+            md={6}
+            className="d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="https://img.freepik.com/premium-vector/rupee-plant-growth-money-bag-investment-mutual-fund-concept-vector-illustration_667085-492.jpg?ga=GA1.1.56492630.1742847583&w=740"
+              alt="House Illustration"
+              style={{
+                maxHeight: "400px",
+                width: "auto",
+                objectFit: "contain",
+              }}
+            />
+          </Col>
+        </Row>
+      </Container>
       <Container fluid className="p-4" style={{ backgroundColor: "#FEFEFE" }}>
         <Row>
           {/* Left Side Panel */}
 
           <Col md={4}>
-            <Card className="text-white p-4" style={{ backgroundColor: "#4B5EAA" }}>
-              <h4 className="fw-bold text-black">No Hassle, No Delay</h4>
+            <Card
+              className="p-4 shadow-lg rounded-4 border-0"
+              style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
+            >
+              <h4 className="fw-bold text-warning">No Hassle, No Delay</h4>
               <h2 className="fw-bold">100% SIMPLE PROCESS</h2>
               <ul className="list-unstyled mt-10">
                 <li>✔ PROVIDE YOUR BASIC INFORMATION </li>
@@ -810,17 +778,31 @@ const [loanAmount, setLoanAmount] = useState(30000);
           </Col>
 
           {/* Center Image Section */}
-          <Col md={4} className="text-center d-flex flex-column align-items-center justify-content-center">
-            <img src="https://img.freepik.com/free-photo/excited-ceo-corporate-man-manager-pointing-aside-promo-text-showing-left-banner-smiling-amazed-standing-white-background_176420-53107.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid" alt="Loan Offer" className="img-fluid" />
+          <Col
+            md={4}
+            className="text-center d-flex flex-column align-items-center justify-content-center"
+          >
+            <img
+              src="https://img.freepik.com/free-photo/excited-ceo-corporate-man-manager-pointing-aside-promo-text-showing-left-banner-smiling-amazed-standing-white-background_176420-53107.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid"
+              alt="Loan Offer"
+              className="img-fluid"
+            />
             {/* <img src="https://img.freepik.com/free-photo/man-presenting-something_1368-3697.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid" alt="Loan Offer" className="img-fluid" /> */}
-            <h4 className="fw-bold text-success me-0 mt-3">LOWEST INTEREST RATES</h4>
+            <h4 className="fw-bold text-blue-900 me-0 mt-3">
+              LOWEST INTEREST RATES
+            </h4>
           </Col>
 
           {/* Right Side Form */}
           <Col md={4}>
-            <Card className="text-white p-4" style={{ backgroundColor: "#4B5EAA" }}>
-              <h4 className="fw-bold text-black">Fast & Easy</h4>
-              <h2 className="fw-sm-bold">Empower Yourself with Our Smart Solution</h2>
+            <Card
+              className="p-4 shadow-lg rounded-4 border-0"
+              style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
+            >
+              <h4 className="fw-bold text-warning">Fast & Easy</h4>
+              <h2 className="fw-sm-bold">
+                Empower Yourself with Our Smart Solution
+              </h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ SUBMIT DETAILS SECURELY </li>
                 <li>✔ GET FUNDS TRANSFERRED QUICKLY</li>
@@ -834,7 +816,7 @@ const [loanAmount, setLoanAmount] = useState(30000);
       <Container fluid className="py-5 text-center mt-0">
         {" "}
         {/* Use fluid to make it full-width */}
-        <h2 style={{ fontWeight: "bold", color: "#27543a " }}>
+        <h2 style={{ fontWeight: "bold", color: "#0d3b66" }}>
           Fast Approvals, Safe Process That’s the Prefinn Promise
         </h2>
         <Row className="mt-4 no-gutters">
@@ -848,15 +830,13 @@ const [loanAmount, setLoanAmount] = useState(30000);
                 minHeight: "120px",
                 width: "100%",
                 margin: "0",
-                backgroundColor: "#f0f8ff",
+                backgroundColor: "#ffffff",
               }}
             >
-              <h5 className="text-dark fw-bold">
-                Get Instant Approval
-              </h5>
-              <p style={{ fontSize: "14px", color: "#008080" }}>
-                Quick Decisions, Faster Access to Funds
-                Receive loan approval in real time .
+              <h5 className="text-dark fw-bold">Get Instant Approval</h5>
+              <p style={{ fontSize: "14px", color: "#0d3b66" }}>
+                Quick Decisions, Faster Access to Funds Receive loan approval in
+                real time .
               </p>
             </Card>
           </Col>
@@ -868,14 +848,15 @@ const [loanAmount, setLoanAmount] = useState(30000);
                 minHeight: "120px",
                 width: "100%",
                 margin: "0",
-                backgroundColor: "#f0f8ff",
+                backgroundColor: "#ffffff",
               }}
             >
               <h5 style={{ color: "dark", fontWeight: "bold" }}>
                 Your Ideal Personal Loan Starts Here
               </h5>
-              <p style={{ fontSize: "14px", color: "#008080" }}>
-                From low interest rates to fast approvals ,Prefinn brings it all together lenders.
+              <p style={{ fontSize: "14px", color: "#0d3b66" }}>
+                From low interest rates to fast approvals ,Prefinn brings it all
+                together lenders.
               </p>
             </Card>
           </Col>
@@ -887,13 +868,13 @@ const [loanAmount, setLoanAmount] = useState(30000);
                 minHeight: "120px",
                 width: "100%",
                 margin: "0",
-                backgroundColor: "#f0f8ff",
+                backgroundColor: "#ffffff",
               }}
             >
               <h5 style={{ color: "dark", fontWeight: "bold" }}>
-                Fast Funds, No Fuss – Make It Happen
+                No Fuss Make It Happen
               </h5>
-              <p style={{ fontSize: "14px", color: "#008080" }}>
+              <p style={{ fontSize: "14px", color: "#0d3b66" }}>
                 Personal loans designed to match your life and your pace.
               </p>
             </Card>
@@ -904,13 +885,13 @@ const [loanAmount, setLoanAmount] = useState(30000);
       <Container
         fluid
         className="py-5 mt-0"
-        style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+        style={{ background: "#ffffff" }}
       >
         {" "}
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{ color: "#27543a " }}>
+            <h2 className="fw-bold" style={{ color: "#0d3b66 " }}>
               The Prefinn Promise
             </h2>
             <p className="text-muted">Smart Secure Personal Loans</p>
@@ -921,15 +902,15 @@ const [loanAmount, setLoanAmount] = useState(30000);
           {/* Use no-gutters to remove padding between columns */}
           {[
             {
-              title: "No More Waiting, Get Your Personal Loan Fast",
+              title: "Get Your Personal Loan ",
               text: "Our quick and easy process gets you the funds when you need them most.",
             },
             {
-              title: "Loan Experts Who Care",
+              title: "Loan Experts Who Care ",
               text: "Count on expert support and a dedicated advisor to simplify your personal loan journey.",
             },
             {
-              title: "Customized Loans, Professional Service",
+              title: " Professional Service",
               text: "Get matched with reputable lenders offering low-interest personal loans tailored for you.",
             },
             {
@@ -958,7 +939,7 @@ const [loanAmount, setLoanAmount] = useState(30000);
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#fffff"}}>{item.text}</p>
+                  <p style={{ color: "#0d3b66" }}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -968,13 +949,15 @@ const [loanAmount, setLoanAmount] = useState(30000);
           <Col></Col>
         </Row>
       </Container>
-           <Container className="p-5 px-2" >
+      <Container className="p-5 px-2">
         <h2 className="text-success fw-bold"> EMI Calculator</h2>
         <Row>
           <Col md={7}>
             <Form>
               <Form.Group className="mb-4">
-                <Form.Label className="fw-bold">Select the required Loan Amount</Form.Label>
+                <Form.Label className="fw-bold">
+                  Select the required Loan Amount
+                </Form.Label>
                 <Form.Range
                   min="200000"
                   max="7500000"
@@ -992,97 +975,138 @@ const [loanAmount, setLoanAmount] = useState(30000);
                   <span>75L</span>
                 </div>
               </Form.Group>
-      
-              <Form.Group className="mb-4">
-        <Form.Label className="fw-bold">Interest Rate (p.a)</Form.Label>
-        <div className="d-flex justify-content-between align-items-center">
-          <Form.Range
-            min="12"
-            max="21"
-            step="1"
-            value={interestRate}
-            onChange={(e) => setInterestRate(Number(e.target.value))}
-            className="flex-grow-1 me-2"
-          />
-          <span className="fw-bold">{interestRate}%</span>
-        </div>
-        <div className="d-flex justify-content-between text-muted px-1 mt-1">
-          <span>12%</span>
-          <span>14%</span>
-          <span>16%</span>
-          <span>18%</span>
-          <span>20%</span>
-          <span>22%</span>
-        </div>
-      </Form.Group>
-      
-      
-                  <Form.Group className="mb-4">
-        <Form.Label className="fw-bold">Tenure (in months)</Form.Label>
-        <div className="d-flex justify-content-between align-items-center">
-          <Form.Range
-            min="12"
-            max="96"
-            step="1"
-            value={tenure}
-            onChange={(e) => setTenure(Number(e.target.value))}
-            className="flex-grow-1 me-2"
-          />
-          <span className="fw-bold">{tenure}</span>
-        </div>
-        <div className="d-flex justify-content-between text-muted px-1 mt-1">
-          <span>12</span>
-          <span>29</span>
-          <span>46</span>
-          <span>62</span>
-          <span>79</span>
-          <span>96</span>
-        </div>
-      </Form.Group>
-                </Form>
-              </Col>
-      
-              <Col xs={12} md={5} className="p-0 gap-5">  {/* Full width on small screens */}
-        <Card className="p-4 shadow h-100 px-5 " style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-          <h5 className="fw-bold text-white">Your EMI</h5>
-          <div className="mt-3">
-            <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
-            <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
-            <p><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p>
-            <p><strong>Tenure (Months):</strong> <span className="fw-bold">{tenure}</span></p>
-            <h4 className="text-white fw-bold">Monthly EMI: ₹ {emi.toFixed(0)}</h4>
-          </div>
-        </Card>
-      </Col>
-            </Row>
-          </Container>
-       
-      <div className="text-center mb-14">
-            
-          <h2 className=" text-2xl md:text-3xl font-bold mb-4" style={{color:'#4B5EAA'}}>
-            At Prefinn your success is our success.
-          </h2>
-          <h3 className=" text-xl font-medium mt-1"style={{color:'#4B5EAA'}}>
-            Happiness Delivered, Always
-          </h3>
-          <div className="mt-8">
-            <Link
-              href="/AboutPersonalLoans"
-              
-              className=" text-3xl inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium no-underline hover:!bg-[#16a34a] transition-colors">
-              Apply Now
-            </Link>
-          </div>
-        </div>
 
-      <Container fluid className="py-5 mt-0">
-        {" "}
+              <Form.Group className="mb-4">
+                <Form.Label className="fw-bold">Interest Rate (p.a)</Form.Label>
+                <div className="d-flex justify-content-between align-items-center">
+                  <Form.Range
+                    min="12"
+                    max="21"
+                    step="1"
+                    value={interestRate}
+                    onChange={(e) => setInterestRate(Number(e.target.value))}
+                    className="flex-grow-1 me-2"
+                  />
+                  <span className="fw-bold">{interestRate}%</span>
+                </div>
+                <div className="d-flex justify-content-between text-muted px-1 mt-1">
+                  <span>12%</span>
+                  <span>14%</span>
+                  <span>16%</span>
+                  <span>18%</span>
+                  <span>20%</span>
+                  <span>22%</span>
+                </div>
+              </Form.Group>
+
+              <Form.Group className="mb-4">
+                <Form.Label className="fw-bold">Tenure (in months)</Form.Label>
+                <div className="d-flex justify-content-between align-items-center">
+                  <Form.Range
+                    min="12"
+                    max="96"
+                    step="1"
+                    value={tenure}
+                    onChange={(e) => setTenure(Number(e.target.value))}
+                    className="flex-grow-1 me-2"
+                  />
+                  <span className="fw-bold">{tenure}</span>
+                </div>
+                <div className="d-flex justify-content-between text-muted px-1 mt-1">
+                  <span>12</span>
+                  <span>29</span>
+                  <span>46</span>
+                  <span>62</span>
+                  <span>79</span>
+                  <span>96</span>
+                </div>
+              </Form.Group>
+            </Form>
+          </Col>
+
+          <Col xs={12} md={5} className="p-0 gap-5">
+            {" "}
+            {/* Full width on small screens */}
+            <Card
+              className="p-4 shadow h-100 px-5 "
+              style={{ backgroundColor: "#3262ad", width: "100%" }}
+            >
+              {" "}
+              {/* Ensure full width */}
+              <h5 className="fw-bold text-white">Your EMI</h5>
+              <div className="mt-3">
+                <p>
+                  <strong>Principal amount:</strong>{" "}
+                  <span className="text-dark fw-bold">
+                    ₹ {loanAmount.toLocaleString()}
+                  </span>
+                </p>
+                <p>
+                  <strong>Interest amount:</strong>{" "}
+                  <span className="text-dark fw-bold">
+                    ₹ {totalInterest.toFixed(0)}
+                  </span>
+                </p>
+                <p>
+                  <strong>Total amount payable:</strong>{" "}
+                  <span className="text-dark fw-bold">
+                    ₹ {totalPayment.toFixed(0)}
+                  </span>
+                </p>
+                <p>
+                  <strong>Tenure (Months):</strong>{" "}
+                  <span className="fw-bold">{tenure}</span>
+                </p>
+                <h4 className="text-white fw-bold">
+                  Monthly EMI: ₹ {emi.toFixed(0)}
+                </h4>
+              </div>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+
+      <div className="text-center mb-14 mt-5">
+        <h2
+          className=" text-2xl md:text-3xl font-bold mb-4"
+          style={{ color: "#4B5EAA" }}
+        >
+          At Prefinn your success is our success.
+        </h2>
+        <h3 className=" text-xl font-medium mt-1" style={{ color: "#4B5EAA" }}>
+          Happiness Delivered, Always
+        </h3>
+        <div className="mt-8">
+          <Link
+            href="/AboutPersonalLoans"
+            className=" text-3xl inline-block bg-blue-900 text-white py-2 px-6 rounded-md font-medium no-underline hover:!bg-[#16a34a] transition-colors"
+          >
+            Apply Now
+          </Link>
+        </div>
+      </div>
+
+      <Container fluid className="py-4 mt-0">
+     
         {/* Full-width container */}
-        <h2 className="text-center mb-4 fw-bold ">FAQs</h2>
+        <h1 className="text-center mb-4 mt-0 fw-bold">
+          <span
+            style={{
+              background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              color: "transparent",
+              display: "inline-block",
+            }}
+          >
+            FAQ
+          </span>
+        </h1>
         {faqs.map((faq, index) => (
           <Card
             key={index}
-             className="mb-3 border-0 shadow-sm"
+            className="mb-3 border-0 shadow-sm"
             style={{
               transition: "all 0.3s ease-in-out",
               borderRadius: "10px",
@@ -1090,8 +1114,9 @@ const [loanAmount, setLoanAmount] = useState(30000);
             }}
           >
             <Card.Header
-              className={`d-flex justify-content-between align-items-center p-3 ${openIndex === index ? "bg-light" : "bg-light"
-                }`}
+              className={`d-flex justify-content-between align-items-center p-3 ${
+                openIndex === index ? "bg-light" : "bg-light"
+              }`}
               style={{ cursor: "pointer" }}
               onClick={() => toggleCard(index)}
             >
@@ -1112,24 +1137,8 @@ const [loanAmount, setLoanAmount] = useState(30000);
           </Card>
         ))}
       </Container>
-     
+
       <Footer />
     </>
   );
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

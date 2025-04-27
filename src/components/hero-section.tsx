@@ -68,10 +68,12 @@ const HeroSection = () => {
         <div className="row align-items-center">
           {/* Left Side */}
           <div className="col-12 col-md-6 text-center text-md-start mb-5 mb-md-0">
-            <h1 className="fw-bold mb-3" style={{ color: "#0d53b7", fontSize: "1.75rem" }}>
+            <h1 className="fw-bold mb-3" style={{ color: "#0d53b7", fontSize: '3.2rem',
+                   fontWeight: '800',
+                   lineHeight: '1.2', }}>
               We are Prefinn,
             </h1>
-            <h3 className="fw-bold mb-4" style={{ fontSize: "1.25rem" }}>
+            <h3 className="fw-bold mb-4" style={{ fontSize: "1.50rem" }}>
               India’s Preferred Loan Distribution Platform
             </h3>
             <p className="text-dark fs-5 mb-4">

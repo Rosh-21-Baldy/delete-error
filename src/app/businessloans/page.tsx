@@ -523,7 +523,7 @@ export default function businessloans() {
           
             <Container fluid className="py-0 mt-5"></Container>
           {/* Center Image Section */}
-           <h2 className="fw-bold text-dark me-0 mt-3 d-flex justify-content-center">Growing Businesses Nationwide
+           <h2 className="fw-bold me-0 mt-3 d-flex justify-content-center" style={{color:'#0d3b66'}}>Growing Businesses Nationwide
            </h2>
   
 {/* Left Side Form */}
@@ -531,8 +531,8 @@ export default function businessloans() {
 <Container fluid className="p-4" style={{ backgroundColor: "#FEFEFE" }}>
         <Row>
         <Col md={4}>
-            <Card className="text-white p-4" style={{ backgroundColor: "#3262ad  " }}>
-              <h4 className="fw-bold text-black">Simplicity</h4>
+           <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
+              <h4 className="fw-bold text-warning">Simplicity</h4>
               <h2 className="fw-sm-bold">Get Funded in Just a Few Clicks</h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ Apply in Minutes, Get Approval Fast </li>
@@ -543,8 +543,8 @@ export default function businessloans() {
           </Col>
            {/* Bottom Side Form */}
            <Col md={4}>
-            <Card className="text-white p-4" style={{ backgroundColor: "#3262ad" }}>
-              <h4 className="fw-bold text-black">Trust</h4>
+           <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
+              <h4 className="fw-bold text-warning">Trust</h4>
               <h2 className="fw-sm-bold"> Instant Eligibility Check & Paperless Process</h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ Hassle-Free Experience </li>
@@ -556,8 +556,8 @@ export default function businessloans() {
           {/*#459fa6*/}
           {/* Right Side Form */}
           <Col md={4}>
-            <Card className="text-white p-4" style={{ backgroundColor: "#3262ad" }}>
-              <h4 className="fw-bold text-black">Prefinn</h4>
+            <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
+              <h4 className="fw-bold text-warning">Prefinn</h4>
               <h2 className="fw-sm-bold">Business Funding, Simplified</h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ Expert Support from Start to Settlement </li>
@@ -598,16 +598,16 @@ export default function businessloans() {
       <p>Fastest loan processing and get money in your account</p>
     </div>
   </div>
-</div>
+  </div>
           </div>
         </div>
       </div>
       <Container
         fluid
         className="py-5 mt-0"
-        style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+        style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
       >
-      <h2 className="fw-bold  mb-6 mt-6 py-0 text-center">Features & Benefits of Business Loan</h2>
+      <h2 className="fw-bold  mb-6 mt-6 py-0 text-center"style={{color:'#0d3b66'}}>Features & Benefits of Business Loan</h2>
       <div className="row g-3">
         {features.map((feature, index) => (
           <div className="col-12 col-md-6 col-lg-3  mb-6 mt-6 py-2 d-flex align-items-stretch" key={index}>
@@ -627,7 +627,7 @@ export default function businessloans() {
                 style={{ borderRadius: "50%", maxWidth: "80px", height: "auto" }}
               />
               <h5 className="fw-bold">{feature.title}</h5>
-              <p className="text-muted">{feature.description}</p>
+              <p className="text-blue-900">{feature.description}</p>
             </div>
           </div>
         ))}
@@ -635,14 +635,14 @@ export default function businessloans() {
       </Container>
       <Container
         fluid
-        className="py-17 mt-0"
-        style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+        className="py-17 mt-4"
+        style={{ backgroundColor: "#ffffff", borderRadius: "0" }}
       >
         {" "}
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{ color: "#000000 " }}>
+            <h2 className="fw-bold" style={{color:'#0d3b66'}}>
               The Prefinn Promise
             </h2>
             <p className="text-muted">Smart Secure Bussiness Loans</p>
@@ -685,12 +685,12 @@ export default function businessloans() {
                   (e.currentTarget.style.backgroundColor = "#fffff")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#fffff ")
+                  (e.currentTarget.style.backgroundColor = "#f0f8ff ")
                 }
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#808080"}}>{item.text}</p>
+                  <p style={{color:"#0d3b66"}}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -810,10 +810,15 @@ export default function businessloans() {
     
     
     </Container>
-      <Container fluid className="py-5 mt-0">
+      <Container fluid className="py-5 mt-2">
         {" "}
         {/* Full-width container */}
-        <h2 className="text-center mb-4 fw-bold ">FAQs</h2>
+        {/* <h2 className="text-center mb-4 fw-bold ">FAQs</h2> */}
+        <h1 className="text-center mb-4 mt-0 fw-bold"> 
+          <span style={{ background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", color: "transparent", display: "inline-block", }} > 
+          FAQ 
+          </span> 
+        </h1>
         {faqs.map((faq, index) => (
           <Card
             key={index}

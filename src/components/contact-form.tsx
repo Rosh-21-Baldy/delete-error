@@ -362,7 +362,7 @@ const ContactForm = () => {
           <div className="w-full md:w-1/2 space-y-8"> {/* Added vertical spacing */}
             {/* Header */}
             <div className="space-y-2"> {/* Tight header spacing */}
-              <h3 className="text-3xl font-semibold text-gray-900 tracking-tight">
+              <h3 className="text-3xl font-bold text-blue-900 tracking-tight">
                Drop Us a Message
               </h3>
               <p className="text-lg text-gray-600">

@@ -484,7 +484,7 @@ export default function PersonalLoans() {
            style={{ maxHeight: "350px", objectFit: "cover" }} 
       />
       {/* <img src="https://img.freepik.com/free-photo/man-presenting-something_1368-3697.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid" alt="Loan Offer" className="img-fluid" /> */}
-      <h4 className="fw-bold text-primary mt-4">LOWEST INTEREST RATES</h4>
+      <h4 className="fw-bold text-blue-900 mt-4">LOWEST INTEREST RATES</h4>
     </Col>
 
     {/* Right Side Form */}
@@ -505,7 +505,7 @@ export default function PersonalLoans() {
 
 <Container fluid className="py-5 text-center mt-0" style={{ background: "#ffffff" }}>
   {/* Use fluid to make it full-width */}
-  <h2 style={{ fontWeight: "bold", color: "#114232", letterSpacing: "0.5px" }}>
+  <h2 style={{ fontWeight: "bold", color: "#0d3b66", letterSpacing: "0.5px" }}>
     Unlock the True Value of Your Property — The Prefinn Promise
   </h2>
   <Row className="mt-4 no-gutters justify-content-center">
@@ -519,14 +519,14 @@ export default function PersonalLoans() {
           minHeight: "140px",
           width: "100%",
           margin: "0",
-          backgroundColor: "#E3F2FD",
+          backgroundColor: "#ffffff",
           transition: "transform 0.3s ease, box-shadow 0.3s ease"
         }}
       >
-        <h5 style={{ color: "#0D3B66", fontWeight: "bold" }}>
+        <h5 style={{ color: "#", fontWeight: "bold" }}>
           Quick Property Evaluation
         </h5>
-        <p style={{ fontSize: "15px", color: "#1565c0" }}>
+        <p style={{ fontSize: "15px", color: "#0d3b66" }}>
           Get your property assessed fast and unlock higher loan eligibility with ease.
         </p>
       </Card>
@@ -540,14 +540,14 @@ export default function PersonalLoans() {
           minHeight: "140px",
           width: "100%",
           margin: "0",
-          backgroundColor: "#E3F2FD",
+          backgroundColor: "#ffffff",
           transition: "transform 0.3s ease, box-shadow 0.3s ease"
         }}
       >
-        <h5 style={{ color: "#0D3B66", fontWeight: "bold" }}>
+        <h5 style={{ color: "#", fontWeight: "bold" }}>
           Competitive Interest Rates
         </h5>
-        <p style={{ fontSize: "15px", color: "#1565c0" }}>
+        <p style={{ fontSize: "15px", color: "#0d3b66" }}>
           Avail attractive rates and flexible repayment options — maximize your property’s worth.
         </p>
       </Card>
@@ -561,14 +561,14 @@ export default function PersonalLoans() {
           minHeight: "140px",
           width: "100%",
           margin: "0",
-          backgroundColor: "#E3F2FD",
+          backgroundColor: "#ffffff",
           transition: "transform 0.3s ease, box-shadow 0.3s ease"
         }}
       >
-        <h5 style={{ color: "#0D3B66", fontWeight: "bold" }}>
+        <h5 style={{ color: "#", fontWeight: "bold" }}>
           Seamless Disbursal Process
         </h5>
-        <p style={{ fontSize: "15px", color: "#1565c0" }}>
+        <p style={{ fontSize: "15px", color: "#0d3b66" }}>
           Minimal paperwork and quick approvals — funds directly to your account.
         </p>
       </Card>
@@ -579,7 +579,7 @@ export default function PersonalLoans() {
 <Container
         fluid
         className="py-5 mt-0"
-        style={{ backgroundColor: "#eaf4f4", borderRadius: "0" }}
+        style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
       >
         {" "}
         {/* Use fluid to make it full-width */}
@@ -650,7 +650,7 @@ export default function PersonalLoans() {
         </Row>
       </Container>
 
-      <Container className="p-5" >
+      <Container className="p-5 mt-5" >
    <h2 className="text-success fw-bold">EMI Calculator</h2>
    <Row>
      <Col md={7}>
@@ -756,10 +756,23 @@ export default function PersonalLoans() {
           </div>
         </div>
 
-      <Container fluid className="py-5 mt-0">
+      <Container fluid className="py-0 mt-0">
         {" "}
         {/* Full-width container */}
-        <h1 className="text-center mb-4 fw-bold ">FAQs</h1>
+        <h1 className="text-center mb-4 mt-0 fw-bold">
+      <span
+        style={{
+          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          color: "transparent",
+          display: "inline-block",
+        }}
+      >
+      FAQ
+      </span>
+    </h1>
         {faqs.map((faq, index) => (
           <Card
             key={index}

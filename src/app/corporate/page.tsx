@@ -1,41 +1,41 @@
-'use client';
-import { useState } from 'react';
-import { Container, Row, Col, Card, Button, ListGroup, Badge } from 'react-bootstrap';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// 'use client';
+// import { useState } from 'react';
+// import { Container, Row, Col, Card, Button, ListGroup, Badge } from 'react-bootstrap';
+// import Navbar from '@/components/navbar';
+// import Footer from '@/components/footer';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function LoanApp() {
-  const [loanAmount, setLoanAmount] = useState(500000);
-  const [tenure, setTenure] = useState(24);
-  const [interestRate, setInterestRate] = useState(11.25);
+// export default function LoanApp() {
+//   const [loanAmount, setLoanAmount] = useState(500000);
+//   const [tenure, setTenure] = useState(24);
+//   const [interestRate, setInterestRate] = useState(11.25);
 
-  const calculateEMI = (P: number, r: number, n: number): number => {
-    const monthlyRate = r / (12 * 100);
-    return (P * monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
-  };
+//   const calculateEMI = (P: number, r: number, n: number): number => {
+//     const monthlyRate = r / (12 * 100);
+//     return (P * monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+//   };
 
-  const emi = calculateEMI(loanAmount, interestRate, tenure);
-  const totalPayment = emi * tenure;
-  const totalInterest = totalPayment - loanAmount;
+//   const emi = calculateEMI(loanAmount, interestRate, tenure);
+//   const totalPayment = emi * tenure;
+//   const totalInterest = totalPayment - loanAmount;
 
-  const loanTypes = [
-    { id: 1, title: 'Personal Loan', description: 'Fulfill your personal dreams and needs' },
-    { id: 2, title: 'Business Loan', description: 'Grow your business with flexible funding' },
-    { id: 3, title: 'Education Loan', description: 'Invest in your future education' },
-    { id: 4, title: 'Home Loan', description: 'Secure your dream home today' }
-  ];
+//   const loanTypes = [
+//     { id: 1, title: 'Personal Loan', description: 'Fulfill your personal dreams and needs' },
+//     { id: 2, title: 'Business Loan', description: 'Grow your business with flexible funding' },
+//     { id: 3, title: 'Education Loan', description: 'Invest in your future education' },
+//     { id: 4, title: 'Home Loan', description: 'Secure your dream home today' }
+//   ];
 
-  const processSteps = [
-    { title: 'Application', description: 'Submit your basic details online' },
-    { title: 'Verification', description: 'Document review and validation' },
-    { title: 'Approval', description: 'Quick decision and terms confirmation' },
-    { title: 'Disbursement', description: 'Funds transferred to your account' }
-  ];
+//   const processSteps = [
+//     { title: 'Application', description: 'Submit your basic details online' },
+//     { title: 'Verification', description: 'Document review and validation' },
+//     { title: 'Approval', description: 'Quick decision and terms confirmation' },
+//     { title: 'Disbursement', description: 'Funds transferred to your account' }
+//   ];
 
-  return (
-    <>
-      <Navbar />
+//   return (
+//     <>
+//       <Navbar />
 
       {/* Hero Section */}
       {/* <section className="bg-primary text-white py-5">
@@ -204,9 +204,9 @@ export default function LoanApp() {
           </Row>
         </Container>
       </section> */}
-      <h1>Abhi page ka content add krna hai isme according to sir and changes bhi </h1>
+      {/* <h1>Abhi page ka content add krna hai isme according to sir and changes bhi </h1>
 
       <Footer />
     </>
   );
-}
+} */}

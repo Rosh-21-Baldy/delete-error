@@ -300,13 +300,14 @@ export default function workingCapitalloans() {
            </Container>
         {/* Empowering Heading with Animation */}
 <motion.h2 
-  className="fw-bold text-dark text-center mt-4"
+  className="fw-bold  text-center mt-4"style={{color:'#0d3b66'}}
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
 >
   Powering Business Growth with Reliable Working Capital Loans
 </motion.h2>
+
 <Container fluid className="p-4" style={{ backgroundColor: "#f8fafc" }}>
   <Row className="g-4">
     
@@ -321,8 +322,8 @@ export default function workingCapitalloans() {
           className="h-100 shadow-sm border-0 rounded-4 card-hover" 
           style={{ backgroundColor: "#3262ad ", transition: "transform 0.3s, box-shadow 0.3s" }}
         >
-          <Card.Body className="text-white p-4">
-            <h4 className="fw-bold mb-3">Working Capital Support</h4>
+          <Card.Body className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
+            <h4 className="fw-bold  text-warning mb-3">Working Capital Support</h4>
             <h2 className="fw-semibold mb-4">Fuel Your Business Expansion Smoothly</h2>
             <ul className="list-unstyled">
               <li>✔ Quick Funding to Bridge Cash Flow Gaps</li>
@@ -345,8 +346,8 @@ export default function workingCapitalloans() {
           className="h-100 shadow-sm border-0 rounded-4 card-hover" 
           style={{ backgroundColor: "#3262ad ", transition: "transform 0.3s, box-shadow 0.3s" }}
         >
-          <Card.Body className="text-white p-4">
-            <h4 className="fw-bold mb-3">Working Capital Made Easy</h4>
+        <Card.Body className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
+            <h4 className="fw-bold text-warning mb-3">Working Capital Made Easy</h4>
             <h2 className="fw-semibold mb-4">Fast Loans for Uninterrupted Operations</h2>
             <ul className="list-unstyled">
               <li>✔ Instant Online Application & Same-Day Approval</li>
@@ -369,8 +370,8 @@ export default function workingCapitalloans() {
           className="h-100 shadow-sm border-0 rounded-4 card-hover" 
           style={{ backgroundColor: "#3262ad ", transition: "transform 0.3s, box-shadow 0.3s" }}
         >
-          <Card.Body className="text-white p-4">
-            <h4 className="fw-bold mb-3">Prefinn Capital Solutions</h4>
+          <Card.Body className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
+            <h4 className="fw-bold text-warning mb-3">Prefinn Capital Solutions</h4>
             <h2 className="fw-semibold mb-4">Instant Working Capital, Simplified</h2>
             <ul className="list-unstyled">
               <li>✔ Flexible Financing for Business Continuity</li>
@@ -419,7 +420,7 @@ export default function workingCapitalloans() {
 
   {/* Features Section */}
   <div className="container mt-5">
-  <h2 className="text-center fw-bold mb-5 text-dark" data-aos="fade-down">Why Choose Prefinn?</h2>
+  <h2 className="text-center fw-bold mb-5 "style={{color:'#0d3b66'}} data-aos="fade-down">Why Choose Prefinn?</h2>
   <div className="row g-4 text-center text-lg-start">
 
     <div className="col-md-6 col-lg-3" data-aos="zoom-in-up">
@@ -437,7 +438,7 @@ export default function workingCapitalloans() {
       >
         <i className="bi bi-cash-stack fs-1 text-primary mb-3 d-block"></i>
         <p className="text-muted small mb-0">
-          💸 Prefinn offers flexible working capital loans with <strong>zero collateral</strong>, empowering self-employed individuals & businesses.
+         Prefinn offers flexible working capital loans with <strong>zero collateral</strong>, empowering self-employed individuals & businesses.
         </p>
       </div>
     </div>
@@ -457,7 +458,7 @@ export default function workingCapitalloans() {
       >
         <i className="bi bi-lightning-charge-fill fs-1 text-primary mb-3 d-block"></i>
         <p className="text-muted small mb-0">
-          ⚡ Speedy approvals with minimal paperwork. Get funding up to ₹50 Lakhs using just your bank statements.
+         Speedy approvals with minimal paperwork. Get funding up to ₹50 Lakhs using just your bank statements.
         </p>
       </div>
     </div>
@@ -477,7 +478,7 @@ export default function workingCapitalloans() {
       >
         <i className="bi bi-graph-up-arrow fs-1 text-primary mb-3 d-block"></i>
         <p className="text-muted small mb-0">
-          📈 Unlock up to ₹50 Lakhs based on your GST filing history—<strong>No Collateral Needed</strong>.
+           Unlock up to ₹50 Lakhs based on your GST filing history—<strong>No Collateral Needed</strong>.
         </p>
       </div>
     </div>
@@ -497,7 +498,7 @@ export default function workingCapitalloans() {
       >
         <i className="bi bi-check-circle-fill fs-1 text-primary mb-3 d-block"></i>
         <p className="text-muted small mb-0">
-          🚀 Fast & seamless process. Minimal documentation, maximum convenience for securing working capital loans.
+           Fast & seamless process. Minimal documentation, maximum convenience for securing working capital loans.
         </p>
       </div>
     </div>
@@ -510,9 +511,9 @@ export default function workingCapitalloans() {
 <Container
   fluid
   className="py-4 mt-0"
-  style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+  style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }} 
 >
-  <h2 className="fw-bold mb-6 mt-6 py-0 text-center">
+  <h2 className="fw-bold mb-6 mt-6 py-0 text-center"style={{color:'#0d3b66'}}>
     Features & Benefits of Working Capital Loan
   </h2>
   <div className="row g-3">
@@ -557,14 +558,14 @@ export default function workingCapitalloans() {
 
 <Container
   fluid
-  className="py-17 mt-0"
-  style={{ backgroundColor: "#f2f5ff", borderRadius: "0" }}
+  className="py-17 mt-4"
+  style={{ backgroundColor: "#ffffff", borderRadius: "0" }}
 >
         {" "}
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{ color: "#000000 " }}>
+            <h2 className="fw-bold" style={{ color: "#0d3b66 " }}>
               The Prefinn Promise
             </h2>
             <p className="text-muted">Boost Liquidity, Drive Growth Trusted Working Capital Financing</p>
@@ -612,7 +613,7 @@ export default function workingCapitalloans() {
               >
                 <Card.Body>
                   <h5>{item.title}</h5>
-                  <p style={{color:"#588e8a"}}>{item.text}</p>
+                  <p style={{color:"#0d3b66"}}>{item.text}</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -728,10 +729,23 @@ export default function workingCapitalloans() {
           </div>
         </div>
     </Container>
-      <Container fluid className="py-5 mt-0">
+      <Container fluid className="py-1 mt-0">
         {" "}
         {/* Full-width container */}
-        <h2 className="text-center mb-4 fw-bold ">FAQs</h2>
+        <h1 className="text-center mb-4 mt-0 fw-bold">
+      <span
+        style={{
+          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          color: "transparent",
+          display: "inline-block",
+        }}
+      >
+      FAQ
+      </span>
+    </h1>
         {faqs.map((faq, index) => (
           <Card
             key={index}
