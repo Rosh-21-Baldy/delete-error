@@ -219,7 +219,7 @@ const Navbar = () => {
                 <div className="absolute left-0 w-60 bg-white shadow-md rounded-md p-2 hidden group-hover:block" style={{ marginLeft: "20px" }}>
                   <Link href="/emi-calculator" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple" onClick={closeMobileMenu}>EMI Calculator</Link>
                   <Link href="/balance-transfer-calculator" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple" onClick={closeMobileMenu}>Balance Transfer Calculator</Link>
-                  <Link href="/cibilScore" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple" onClick={closeMobileMenu}>Know Your CreditScore</Link>
+                  <Link href="/cibilscore" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple" onClick={closeMobileMenu}>Know Your CreditScore</Link>
                   <Link href="/eligibilitycheck" className="block px-4 py-2 text-sm text-dark hover:bg-gray-100 text-decoration-none rounded-md ripple" onClick={closeMobileMenu}>Check Your Eligibility</Link>
                 </div>
               </div>
@@ -288,7 +288,7 @@ const Navbar = () => {
               <div className="space-y-1 pl-4">
                 <Link href="/emi-calculator" className="block text-dark text-sm ripple" onClick={closeMobileMenu}>EMI Calculator</Link>
                 <Link href="/balance-transfer-calculator" className="block text-dark text-sm ripple" onClick={closeMobileMenu}>Balance Transfer Calculator</Link>
-                <Link href="/cibilScore" className="block text-dark text-sm ripple" onClick={closeMobileMenu}>Know Your CreditScore</Link>
+                <Link href="/cibilscore" className="block text-dark text-sm ripple" onClick={closeMobileMenu}>Know Your CreditScore</Link>
                 <Link href="/eligibilitycheck" className="block text-dark text-sm ripple" onClick={closeMobileMenu}>Check Your Eligibility</Link>
                
               </div>
