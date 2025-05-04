@@ -202,13 +202,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white px-4 py-8 sm:px-6 lg:px-8">
+    <div className="bg-white px-4 py-2 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <ToastContainer />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Form Section */}
-          <div className="space-y-8">
+          <div className="space-y-4">
             <div className="space-y-2">
               <h3 className="text-3xl font-bold text-blue-900">
                 For Loan and Partner Query
@@ -299,17 +299,17 @@ const ContactForm = () => {
           </div>
 
           {/* Image Section */}
-          <div className="flex items-center justify-center">
-            <div className="relative w-full h-80 sm:h-96 md:h-[500px] rounded-xl overflow-hidden shadow-md">
-              <Image
-                src="https://img.freepik.com/free-vector/placeholder-concept-illustration_114360-4983.jpg"
-                alt="Financial consultation"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-          </div>
+          <div className="flex items-center justify-center w-full">
+  <div className="relative rounded-xl overflow-hidden shadow-md w-full max-w-screen-md h-80 sm:h-96 md:h-[500px]">
+    <Image
+      src="https://img.freepik.com/free-vector/placeholder-concept-illustration_114360-4983.jpg"
+      alt="Financial consultation"
+      fill
+      className="object-cover"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 60vw"
+    />
+  </div>
+</div>
         </div>
       </div>
     </div>

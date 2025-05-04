@@ -1,7 +1,7 @@
 
 
-// dont delete this ,this one is more responsive :
-
+// // dont delete this ,this one is more responsive :
+// const logo = '/company.logo.jpg';
 // import React from "react";
 // import Link from "next/link";
 // import { Container, Row, Col } from "react-bootstrap";
@@ -15,8 +15,15 @@
 //       <Container>
 //         <Row className="d-flex justify-content-evenly">
 //           {/* Company Info */}
-//           <Col xs={12} md={4} className="d-flex flex-column text-start align-items-start mb-4">
-//             <img src="https://www.prefinn.com/_next/static/media/logo.96e5ff96.png" alt="Prefinn Logo" className="mb-3" style={{ width: "215px" }} />
+//           <Col xs={12} md={4} className="d-flex flex-column text-start align-items-start mb-4"> <Link
+//                href="/"
+//               className="d-inline-flex align-items-center mb-3"
+//                onClick={() => {
+//                  /* closeMobileMenu logic if defined elsewhere */
+//               }}
+//              >
+//                <img src={logo}   height={10} width={60} />
+//              </Link> <img src="https://www.prefinn.com/_next/static/media/logo.96e5ff96.png" alt="Prefinn Logo" className="mb-3" style={{ width: "215px" }} />
 //             <p className="text-start text-sm">
 //             Transforming finance through technology, trust, innovation, and smarter digital solutions.
 //             </p>
@@ -88,7 +95,7 @@
 //       </Container>
 
 //       {/* Copyright Section */}
-//       <div className="text-white text-center py-1 " style={{ backgroundColor: "#041184" }}>
+//       <div className="text-white text-center py-2 " style={{ backgroundColor: "#041184" }}>
 //         <small>Copyright © 2025 Prism Business Consultants - All Rights Reserved</small>
 //       </div>
 //     </footer>
@@ -195,7 +202,7 @@
 //       </Container>
 
 //       {/* Copyright Section */}
-//       <div className="text-white text-center py-1" style={{ backgroundColor: "#041184" }}>
+//       <div className="text-white text-center py-2" style={{ backgroundColor: "#041184" }}>
 //         <small>Copyright © 2025 Prefinn Finserv Pvt.Ltd - All Rights Reserved</small>
 //       </div>
 //     </footer>
@@ -249,18 +256,18 @@ const copyrightYear = new Date().getFullYear();
 
 const footerStyles = {
   backgroundColor: "#0A2D4D",
-  color: "#f8f9fa", // Consistent light text color
+  
   headingColor: { color: "#ffffff" },
   iconSuccess: { color: "#28a745" },
   iconPrimary: { color: "#007bff" },
-  copyrightBg: { backgroundColor: "#041184" },
-  linkStyle: { textDecoration: "none", color: "#f8f9fa" }, // Ensure link text is also light
+  copyrightBg: { backgroundColor: "#fffffff" },
+  // linkStyle: { textDecoration: "none", color: "#f8f9fa" }, 
   mapLinkStyle: { textDecoration: "none", color: "#007bff" },
 };
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: footerStyles.backgroundColor, color: footerStyles.color }} className="py-4">
+    <footer style={{ backgroundColor: "rgb(250, 252, 253)" }} className="py-4 text-black">
       <Container>
         <Row className="justify-content-evenly">
           {/* Company Info */}
@@ -272,13 +279,13 @@ export default function Footer() {
                 /* closeMobileMenu logic if defined elsewhere */
               }}
             >
-              <img src={logo} alt={`${companyName} Logo`} height={20} width={120} />
+              <img src={logo} alt={`${companyName} Logo`} height={10} width={60} />
             </Link>
-            <p className="text-sm" style={{ color: footerStyles.color }}>
+            <p className="text-sm" >
               {companyDescription}
             </p>
             {/* Social Media Icons */}
-            <div className="d-flex gap-3 mt-3 fs-4">
+            <div className="d-flex gap-4 mt-5 fs-4">
               <a href={facebookLink} target="_blank" rel="noopener noreferrer">
                 <FaFacebookF style={footerStyles.iconPrimary} />
               </a>
@@ -293,43 +300,43 @@ export default function Footer() {
 
           {/* Company Links */}
           <Col xs={12} sm={6} md={4} className="mb-4 mt-2 text-start">
-            <h5 style={footerStyles.headingColor} className="fw-bold">Our Company</h5>
-            <ul className="list-unstyled mt-3">
-              <li>
-                <Link href="/about-us" style={footerStyles.linkStyle}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/become-partner" style={footerStyles.linkStyle}>
-                  Become a Partner
-                </Link>
-              </li>
-              <li>
-                <Link href="/term-cond" style={footerStyles.linkStyle}>
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy-pol" style={footerStyles.linkStyle}>
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-          </Col>
+  <h5  className="fw-bold">Our Company</h5>
+  <ul className="no-underline list-unstyled mt-3"> {/* Adjusted marginTop */}
+    <li className="py-2"> {/* Added padding for vertical spacing */}
+      <Link className="no-underline" href="/about-us" >
+        About Us
+      </Link>
+    </li>
+    <li className="py-2">
+      <Link className="no-underline" href="/become-partner" >
+        Become a Partner
+      </Link>
+    </li>
+    <li className="py-2">
+      <Link className="no-underline" href="/term-cond" >
+        Terms & Conditions
+      </Link>
+    </li>
+    <li className="py-2">
+      <Link className="no-underline"  href="/privacy-pol" >
+        Privacy Policy
+      </Link>
+    </li>
+  </ul>
+</Col>
 
           {/* Contact Information */}
           <Col xs={12} md={4} className="mb-4 mt-2">
-            <h5 style={footerStyles.headingColor} className="fw-bold text-start">Contact Information</h5>
-            <p className="small d-flex align-items-center mt-3" style={{ color: footerStyles.color }}>
+            <h5  className="fw-bold text-start">Contact Information</h5>
+            <p className="small d-flex align-items-center mt-3">
               <MdCall style={footerStyles.iconSuccess} className="fs-4 me-2" />
               <span>{contactPhone}</span>
             </p>
-            <p className="small d-flex align-items-center" style={{ color: footerStyles.color }}>
+            <p className="small d-flex align-items-center" >
               <MdEmail style={footerStyles.iconSuccess} className="fs-4 me-2" />
               <span>{contactEmail}</span>
             </p>
-            <p className="small d-flex align-items-start gap-2" style={{ color: footerStyles.color }}>
+            <p className="small d-flex align-items-start gap-2">
               <MdLocationOn style={footerStyles.iconSuccess} className="fs-4 flex-shrink-0 mt-1" />
               <span>
                 {companyName}<br />
@@ -353,8 +360,8 @@ export default function Footer() {
       </Container>
 
       {/* Copyright Section */}
-      <div style={footerStyles.copyrightBg} className="text-center py-1">
-        <small style={{ color: footerStyles.color }}>
+      <div style={footerStyles.copyrightBg} className="text-center py-2">
+        <small >
           Copyright © {copyrightYear} {companyName} - All Rights Reserved
         </small>
       </div>
