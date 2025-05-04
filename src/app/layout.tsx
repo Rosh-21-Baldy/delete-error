@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/App.css';
 import { Poppins, Inter } from "next/font/google";
+import Navbar from "@/components/navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${poppins.variable} ${inter.variable} font-sans`}>
+      <Navbar/>
         {children}
       </body>
     </html>
