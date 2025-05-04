@@ -833,24 +833,28 @@ export default function BecomePartnerPage() {
     className="img-fluid rounded mb-4" // Increased margin-bottom for more space
     style={{ maxHeight: "550px", width: "100%", objectFit: "contain" }}
   />
-  <ul className="list-unstyled">
-    <li className="mb-4 my-4 d-flex align-items-center">
-      <span style={{ color: 'green', marginRight: '0.5rem' }}>&#10003;</span>
-       Briefly explain the first key benefit or feature.
-    </li>
-    <li className="mb-4 my-4 d-flex align-items-center">
-      <span style={{ color: 'green', marginRight: '0.5rem' }}>&#10003;</span>
-      Highlight another important aspect or advantage.
-    </li>
-    <li className="mb-4 my-4d-flex align-items-center">
-      <span style={{ color: 'green', marginRight: '0.5rem' }}>&#10003;</span>
-      Mention a third compelling reason or detail.
-    </li>
-    <li className="mb-4 my-4 d-flex align-items-center">
-      <span style={{ color: 'green', marginRight: '0.5rem' }}>&#10003;</span>
-      Add a final noteworthy point.
-    </li>
-  </ul>
+  <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Strategic Financial Partner for Institutions and Business Owners</span>
+      </li>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Multi-channel platform enabling a frictionless loan journey from onboarding to disbursal.</span>
+      </li>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Integrated portal offering a wide range of Home and SME Loan options from trusted Banks and NBFCs</span>
+      </li>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Single-window access to a full suite of Lending products and services for B2C Consumers.</span>
+      </li>
+      <li className="d-flex align-items-start"> {/* Removed extra </li> tag */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Expert panel combining financial acumen and technical prowess.</span>
+      </li>
+    </ul>
 </Col>
 
                 </Row>

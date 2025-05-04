@@ -260,7 +260,7 @@ const footerStyles = {
   headingColor: { color: "#ffffff" },
   iconSuccess: { color: "#28a745" },
   iconPrimary: { color: "#007bff" },
-  copyrightBg: { backgroundColor: "#fffffff" },
+  copyrightBg: { backgroundColor: "#0d53b7" },
   // linkStyle: { textDecoration: "none", color: "#f8f9fa" }, 
   mapLinkStyle: { textDecoration: "none", color: "#007bff" },
 };
@@ -279,7 +279,7 @@ export default function Footer() {
                 /* closeMobileMenu logic if defined elsewhere */
               }}
             >
-              <img src={logo} alt={`${companyName} Logo`} height={10} width={60} />
+              <img className="h-20" src={logo} alt={`${companyName} Logo`}  />
             </Link>
             <p className="text-sm" >
               {companyDescription}
