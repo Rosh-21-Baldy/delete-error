@@ -91,8 +91,6 @@
 
 // accurate code ye hai jo bhi change kre 
 "use client";
-import { FaHandsHelping, FaCheckCircle, FaLock, FaHourglassHalf, FaUniversity, FaChartLine } from 'react-icons/fa';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/footer'
 import { Container, Row, Col } from "react-bootstrap";
@@ -107,88 +105,106 @@ export default function AboutUs() {
   <>
   <Navbar/>
   <div
-  className="container-fluid py-5"
+  className="container-fluid d-flex align-items-center justify-content-center"
   style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')`,
+    minHeight: '50vh',
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://img.freepik.com/free-photo/handshake-businessmen_1098-742.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: '#fff',
-    textAlign: 'center', // Added text alignment to the parent container
+    textAlign: 'center',
+    padding: '2rem',
   }}
 >
   <div className="container">
-    <div className="row align-items-center">
-      {/* Removed the col-md-6 wrapping the paragraph */}
-      <div className="col-md-6">
+    <div className="row justify-content-center">
+      <div className="col-12 col-md-10 col-lg-8">
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            marginBottom: '1.5rem',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            padding: '2rem',
+            borderRadius: '8px',
           }}
         >
-          {/* Removed animated line */}
-
-          {/* Animated Heading */}
           <h2
             style={{
-              marginBottom: 0,
-              marginTop: '0.5rem',
+              marginBottom: '1rem',
               opacity: 0,
               transform: 'translateY(10px)',
               animation: 'fadeSlideIn 0.8s ease-out 0.5s forwards',
+              fontSize: '1.8rem',
             }}
+            className="fw-bold"
           >
-            {/* Optional heading */}
+            Simplifying Finance. Empowering Individuals and Businesses.
           </h2>
-
-          {/* Keyframes for animation */}
-          <style>{`
-            @keyframes fadeSlideIn {
-              0% {
-                opacity: 0;
-                transform: translateY(10px);
-              }
-              100% {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-          `}</style>
+          <p className="fs-6" style={{ lineHeight: '1.7' }}>
+            We are dedicated to transforming financial access through seamless digital solutions.
+            Whether you're an individual or business, our platform helps you get fast, transparent, and secure loan services.
+          </p>
         </div>
-      </div>
-      {/* Paragraph now outside the col-md-6 */}
-      <div className="col-12">
-        <p style={{ lineHeight: '1.7', maxWidth: '500px', margin: '1rem auto 0 auto' }}>
-          We are dedicated to transforming financial access through seamless digital solutions.
-          Whether you're an individual or business, our platform helps you get fast, transparent, and secure loan services.
-        </p>
       </div>
     </div>
   </div>
-</div>
 
+  {/* Animation keyframes and responsive text scaling */}
+  <style>{`
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 576px) {
+      h2 {
+        font-size: 1.4rem !important;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+      h2 {
+        font-size: 1.6rem !important;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  `}</style>
+</div>
 
     <div className="container">
     <div className="container py-5">
   {/* Section Heading */}
   <div className="text-center mb-5">
-  <h2 className="fw-bold text-3xl md:text-4xl">
-      <span
-        style={{
-          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          color: "transparent",
-        }}
-      >
-        About Us
-      </span> 
+  <h2 className="fw-bold text-2xl md:text-4xl">
+  <span
+  style={{
+    background: " #0d53b7 ",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    padding: "0.2rem 0.5rem",
+    fontWeight: "800",
+  }}
+ >
+About us
+ </span>
     </h2>
-    <p className="mt-3 text-muted " style={{ maxWidth: '1200px', margin: '0 auto' , fontSize: '1.3rem'}}>
-      At Prefinn, we are redefining access to finance. Our mission is to simplify lending with a seamless, secure, and smart experience. As a B2C lending fintech platform, we partner with leading banks and NBFCs to deliver tailored loan solutions, powered by data and driven by purpose.
+    <p className="mt-3 text-muted " style={{ maxWidth: '1200px', margin: '0 auto' , fontSize: '1.1rem'}}>
+    At Prefinn, we are committed to transforming access to credit across India. Our objective is to streamline lending products and extend their reach to Bharat consumers via a secure, unified digital platform powered by a robust network of Banks and NBFCs.
+As a modern fintech solution provider, we equip institutional and channel partners with an integrated lending suite, enabling the delivery of personalized financial services across all customer segments nationwide
     </p>
      {/* <p className="mt-3 text-muted" style={{ maxWidth: '700px', margin: '0 auto' }}>
     Prefinn is an omni-channel B2C Lending Fintech Platform that offers personalized, tech-powered lending solutions to clients and partners. Working with top banks and NBFCs, we deliver data-driven insights and customized loan options to foster inclusive financial growth.
@@ -196,7 +212,7 @@ export default function AboutUs() {
   </div>
 
   {/* Image + Text Row */}
-  <div className="row align-items-center py-5">
+  <div className="row align-items-center py-4">
   <div className="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
     <img
       src="https://img.freepik.com/premium-vector/collaborative-brainstorming-session-about-us-page-concept_1263357-35648.jpg"
@@ -207,22 +223,29 @@ export default function AboutUs() {
   </div>
   <div className="col-md-6">
     <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
-      <li className="d-flex align-items-start mb-4">
-        <span style={{ fontSize: '2.0rem', marginRight: '10px' }}>✅</span>
-        <span>Integrated and Omni Channel Lending Platform for Corporate Channel Partners</span>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Strategic Financial Partner for Institutions and Business Owners</span>
       </li>
-      <li className="d-flex align-items-start mb-4">
-        <span style={{ fontSize: '2.0rem', marginRight: '10px' }}>✅</span>
-        <span>Wide Network of Lenders for Loan processing</span>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Multi-channel platform enabling a frictionless loan journey from onboarding to disbursal.</span>
       </li>
-      <li className="d-flex align-items-start">
-        <span style={{ fontSize: '2.0rem', marginRight: '10px' }}>✅</span>
-        <span>Expert team of Ex Bankers and Technocrats having 20 years+ experience</span>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Integrated portal offering a wide range of Home and SME Loan options from trusted Banks and NBFCs</span>
+      </li>
+      <li className="d-flex align-items-start mb-3"> {/* Reduced margin-bottom */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Single-window access to a full suite of Lending products and services for B2C Consumers.</span>
+      </li>
+      <li className="d-flex align-items-start"> {/* Removed extra </li> tag */}
+        <span style={{ fontSize: '1.5rem', marginRight: '15px', color: '#28a745' }}>✅</span> {/* Adjusted size and color */}
+        <span>Expert panel combining financial acumen and technical prowess.</span>
       </li>
     </ul>
   </div>
 </div>
-
 </div>
 
       {/* Who We Are Section */}
@@ -256,7 +279,7 @@ export default function AboutUs() {
           Our Vision
         </h2>
         <p className="fs-5 text-muted mb-4" style={{ lineHeight: '1.8' }}>
-          At <strong>Prefinn</strong>, our Vision is to build a seamless financial platform for all our stakeholders and empower them to have access to credit when they need the most in a hassle-free manner.
+          At <strong>Prefinn</strong>, our Vision is to Our vision is to build a frictionless financial ecosystem, enabling stakeholders and end consumers to access any kind of credit from their preferred lending partners with ease.
         </p>
 
         <div className="d-flex flex-wrap gap-3">
@@ -276,154 +299,9 @@ export default function AboutUs() {
 </section>
 
 
-
-{/* Key Services Section */}
-<div className="w-full flex flex-col items-center mt-16 gap-10 px-4">
-  {/* Gradient Heading with Line */}
-  <div className="text-center relative mb-2">
-    <h2 className="fw-bold text-3xl md:text-4xl">
-      <span
-        style={{
-          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          color: "transparent",
-        }}
-      >
-        Digital Solutions
-      </span>
-    </h2>
-    <div className="w-16 h-1 bg-gradient-to-r  to-blue-600 mt-2 mx-auto rounded"></div>
-  </div>
-
-  {/* Cards Wrapper */}
-  <div className="flex flex-col md:flex-row gap-8 max-w-6xl w-full justify-center">
-    
-    {/* Card 1 */}
-    <div className="flex-1 bg-white p-6 rounded-xl shadow-md border hover:shadow-xl transition-all duration-300 ">
-      <div className="flex items-center gap-4 mb-4">
-        <div className="bg-green-100 p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="green" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
-        <h3 className="text-xl font-semibold text-gray-800">Empowering Borrowers </h3>
-      </div>
-      {/* <p className="text-gray-600">
-        We offer multiple loan products to individuals and corporate clients through our vast network of Agents & IBOs backed by 130+ partner banks and NBFCs.
-      </p> */}
-       <p className="text-gray-600">
-      Comprehensive Loan Solutions delivered through our extensive network of Agents & IBOs, in collaboration with 130+ trusted partner Banks and NBFCs, catering to both individual and corporate needs.
-      </p>
-    </div>
-
-    {/* Card 2 */}
-    <div className="flex-1 bg-white p-6 rounded-xl shadow-md border hover:shadow-xl transition-all duration-300">
-  <div className="flex items-center gap-4 mb-4">
-    <div className="bg-blue-100 p-3 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="blue" className="w-6 h-6">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V9a4 4 0 10-8 0v2M5 11h14l-1 10H6L5 11z" />
-      </svg>
-    </div>
-    <h3 className="text-xl font-semibold text-gray-800">SME Lending Experts</h3>
-  </div>
-  <p className="text-gray-600">
-    We specialize in secured lending for home buyers & SME loans, offering tailor-made secured and unsecured options to meet all needs.
-  </p>
-</div>
-
-  </div>
-</div>
-
-
-
-
-
-      {/* What We Do Section */}
+{/* From Application to Disbursement, Prefinn Ensures Success at Every Step. */}
+ 
       
-
-      <section className="bg-gradient-to-b from-white via-blue-50 to-green-50 p-5 rounded-3xl shadow-lg mb-5 text-center relative z-10 mt-16">
-  <div className="mb-10">
-    <h2 className="fw-bold text-3xl md:text-4xl">
-      <span
-        style={{
-          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          color: "transparent",
-          display: "inline-block",
-        }}
-      >
-        Discover Our Features
-      </span>
-    </h2>
-  </div>
-
-  <div className="row g-4 justify-content-center">
-    {[
-      {
-        icon: <FaHandsHelping size={40} className="text-primary mb-3" />,
-        title: "Product Diversification",
-        description:
-          "Offering multiple loan product options to Housing & SME customers at one platform.",
-      },
-      {
-        icon: <FaCheckCircle size={40} className="text-primary mb-3" />,
-        title: "Customer-Centric Approach",
-        description:
-          "Prompt Relationship Manager service with optimized loan options saving time and money.",
-      },
-      {
-        icon: <FaLock size={40} className="text-primary mb-3" />,
-        title: "Secure & Fast Processing",
-        description:
-          "Robust data encryption ensures smooth and secure customer experience.",
-      },
-      {
-        icon: <FaHourglassHalf size={40} className="text-primary mb-3" />,
-        title: "Transparent Updates",
-        description:
-          "Track your loan application in real-time with total transparency.",
-      },
-      {
-        icon: <FaUniversity size={40} className="text-primary mb-3" />,
-        title: "130+ Lender Network",
-        description:
-          "Access top-tier banks and NBFCs offering competitive interest rates.",
-      },
-      {
-        icon: <FaChartLine size={40} className="text-primary mb-3" />,
-        title: "Enhanced Agent Dashboard",
-        description:
-          "Manage leads, payouts, and commissions — all with real-time insights.",
-      },
-    ].map((feature, index) => (
-      <div key={index} className="col-sm-6 col-lg-4">
-        <div
-          className="card border-0 h-100 shadow-sm p-4 transition-all rounded-4 bg-white hover:shadow-lg"
-          style={{
-            borderTop: "4px solid #28a745",
-            transition: "transform 0.3s ease",
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = "translateY(-5px)";
-            e.currentTarget.style.boxShadow = "0 12px 25px rgba(0,0,0,0.1)";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = "translateY(0)";
-            e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.05)";
-          }}
-        >
-          <div className="text-center">{feature.icon}</div>
-          <h5 className="fw-bold mb-2 text-success">{feature.title}</h5>
-          <p className="text-muted">{feature.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
 
 
 

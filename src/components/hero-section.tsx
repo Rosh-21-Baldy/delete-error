@@ -63,6 +63,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const HeroSection = () => {
   return (
+    
     <section className="bg-white py-5 py-md-20">
       <div className="container px-4">
         <div className="row align-items-center">
@@ -73,16 +74,16 @@ const HeroSection = () => {
                    lineHeight: '1.2', }}>
               We are Prefinn,
             </h1>
-            <h3 className="fw-bold mb-4" style={{ fontSize: "1.50rem" }}>
+            <h1 className="fw-bold mb-4" style={{ fontSize: "1.70rem" }}>
               India’s Preferred Loan Distribution Platform
-            </h3>
+            </h1>
             <p className="text-dark fs-5 mb-4">
               Prefinn streamlines the loan process by blending traditional finance with agile fintech, ensuring faster and more efficient disbursements.
             </p>
             <ul className="list-unstyled">
-              <li className="mb-2" style={{ color: "#041184" }}>➡ Tailored Loans for Housing & MSMEs</li>
-              <li className="mb-2" style={{ color: "#041184" }}>➡ Partnered Bank & NBFC Offerings</li>
-              <li className="mb-2" style={{ color: "#041184" }}>➡ Driving Financial Inclusion Nationwide</li>
+            <li className="mb-2 fw-bold" style={{ color: "#0d53b7" ,fontSize:'1.50',}}> Partnered Bank & NBFC Offerings</li>
+              <li className="mb-2 fw-bold" style={{ color: "#0d53b7",fontSize:'1.50' }}> Tailored Loans for Housing & MSMEs</li>
+              <li className="mb-2 fw-bold" style={{ color: "#0d53b7",fontSize:'1.50' }}> Driving Financial Inclusion Nationwide</li>
             </ul>
           </div>
 

@@ -124,6 +124,47 @@
 .social-icon:hover {
   color: #ffc107;
 }
+/* loan apply steps  */
+.card-animation {
+  transition: transform 0.3s ease-in-out;
+}
 
+.card-animation:hover {
+  transform: scale(1.05);
+}
+
+/* our success stories animation  */
+ 
+.hover-transform {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.hover-transform:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.success-card-wrapper:hover .icon-container {
+  animation: float 1.5s ease-in-out infinite;
+}
 
 

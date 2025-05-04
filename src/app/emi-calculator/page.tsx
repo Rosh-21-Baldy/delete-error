@@ -673,142 +673,142 @@ export default function LoanApp() {
 
       {/* Loan Calculator Section */}
       <section className="py-5 bg-light-2">
-        <Container>
-          <Row className="g-4 justify-content-center justify-content-lg-start">
-            <Col xs={12} lg={6}>
-              <Card className="h-100 p-3 shadow-lg border-0 bg-dark-1 text-white">
-                <h2
-                  className="mb-3 text-gradient-warning"
-                  style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
-                >
-                  Loan Calculator
-                </h2>
+  <Container>
+    <Row className="g-4 justify-content-center justify-content-lg-start">
+      <Col xs={12} lg={6}>
+        <Card className="h-100 p-3 shadow-lg border-0 bg-white">
+          <h2
+            className="mb-3 text-gradient-warning"
+            style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: '#0d53b7' }}
+          >
+            Loan Calculator
+          </h2>
 
-                {/* Loan Amount Slider */}
-                <div className="mb-4">
-                  <label
-                    className="d-flex justify-content-between mb-2 fw-bold text-light-1"
-                    style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
-                  >
-                    <span>Loan Amount</span>
-                    <span>₹{loanAmount.toLocaleString("en-IN")}</span>
-                  </label>
-                  <input
-                    type="range"
-                    className="form-range custom-slider"
-                    min="30000"
-                    max="500000"
-                    value={loanAmount}
-                    onChange={(e) => setLoanAmount(Number(e.target.value))}
-                  />
-                  <div className="d-flex justify-content-between text-muted small">
-                    <span>₹30K</span>
-                    <span>₹5L</span>
-                  </div>
-                </div>
+          {/* Loan Amount Slider */}
+          <div className="mb-4">
+            <label
+              className="d-flex justify-content-between mb-2 fw-bold text-dark" // Changed text color
+              style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
+            >
+              <span>Loan Amount</span>
+              <span>₹{loanAmount.toLocaleString("en-IN")}</span>
+            </label>
+            <input
+              type="range"
+              className="form-range custom-slider"
+              min="30000"
+              max="500000"
+              value={loanAmount}
+              onChange={(e) => setLoanAmount(Number(e.target.value))}
+            />
+            <div className="d-flex justify-content-between text-muted small">
+              <span>₹30K</span>
+              <span>₹5L</span>
+            </div>
+          </div>
 
-                {/* Interest Rate Slider */}
-                <div className="mb-4">
-                  <label
-                    className="d-flex justify-content-between mb-2 fw-bold text-light-1"
-                    style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
-                  >
-                    <span>Interest Rate</span>
-                    <span>{interestRate.toFixed(2)}%</span>
-                  </label>
-                  <input
-                    type="range"
-                    className="form-range custom-slider"
-                    min="10"
-                    max="24"
-                    step="0.25"
-                    value={interestRate}
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
-                  />
-                  <div className="d-flex justify-content-between text-muted small">
-                    <span>10%</span>
-                    <span>24%</span>
-                  </div>
-                </div>
+          {/* Interest Rate Slider */}
+          <div className="mb-4">
+            <label
+              className="d-flex justify-content-between mb-2 fw-bold text-dark" // Changed text color
+              style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
+            >
+              <span>Interest Rate</span>
+              <span>{interestRate.toFixed(2)}%</span>
+            </label>
+            <input
+              type="range"
+              className="form-range custom-slider"
+              min="10"
+              max="24"
+              step="0.25"
+              value={interestRate}
+              onChange={(e) => setInterestRate(Number(e.target.value))}
+            />
+            <div className="d-flex justify-content-between text-muted small">
+              <span>10%</span>
+              <span>24%</span>
+            </div>
+          </div>
 
-                {/* Tenure Slider */}
-                <div className="mb-3">
-                  <label
-                    className="d-flex justify-content-between mb-2 fw-bold text-light-1"
-                    style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
-                  >
-                    <span>Repayment Tenure</span>
-                    <span>
-                      {Math.floor(tenure / 12)}Y {tenure % 12}M
-                    </span>
-                  </label>
-                  <input
-                    type="range"
-                    className="form-range custom-slider"
-                    min="12"
-                    max="60"
-                    value={tenure}
-                    onChange={(e) => setTenure(Number(e.target.value))}
-                  />
-                  <div className="d-flex justify-content-between text-muted small">
-                    <span>1 Year</span>
-                    <span>5 Years</span>
-                  </div>
-                </div>
-              </Card>
-            </Col>
+          {/* Tenure Slider */}
+          <div className="mb-3">
+            <label
+              className="d-flex justify-content-between mb-2 fw-bold text-dark" // Changed text color
+              style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
+            >
+              <span>Repayment Tenure</span>
+              <span>
+                {Math.floor(tenure / 12)}Y {tenure % 12}M
+              </span>
+            </label>
+            <input
+              type="range"
+              className="form-range custom-slider"
+              min="12"
+              max="60"
+              value={tenure}
+              onChange={(e) => setTenure(Number(e.target.value))}
+            />
+            <div className="d-flex justify-content-between text-muted small">
+              <span>1 Year</span>
+              <span>5 Years</span>
+            </div>
+          </div>
+        </Card>
+      </Col>
 
-            {/* Results Card */}
-            <Col xs={12} lg={6}>
-              <Card className="h-100 p-3 bg-dark-1 text-white shadow-lg border-0">
-                <h3
-                  className="mb-3 text-gradient-warning"
-                  style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)" }}
-                >
-                  Payment Summary
-                </h3>
-                <ListGroup variant="flush" className="mb-3">
-                  <ListGroup.Item
-                    className="bg-dark-1 text-white d-flex justify-content-between py-2"
-                    style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
-                  >
-                    <span>Principal Amount</span>
-                    <span>₹{loanAmount.toLocaleString("en-IN")}</span>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="bg-dark-1 text-white d-flex justify-content-between py-2"
-                    style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
-                  >
-                    <span>Total Interest</span>
-                    <span>₹{Math.round(totalInterest).toLocaleString("en-IN")}</span>
-                  </ListGroup.Item>
-                  <ListGroup.Item
-                    className="bg-dark-1 text-white d-flex justify-content-between py-2 border-bottom-0"
-                    style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
-                  >
-                    <span>Total Payable</span>
-                    <span>₹{Math.round(totalPayment).toLocaleString("en-IN")}</span>
-                  </ListGroup.Item>
-                </ListGroup>
-                <div className="text-center mt-3 pt-2 border-top border-light-1">
-                  <h2
-                    className="display-5 fw-bold my-2 text-warning"
-                    style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
-                  >
-                    ₹{emi.toLocaleString("en-IN", { maximumFractionDigits: 0 })}
-                  </h2>
-                  <small
-                    className="d-block text-light-1"
-                    style={{ fontSize: "clamp(0.8rem, 1.5vw, 1rem)" }}
-                  >
-                    Monthly EMI
-                  </small>
-                </div>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      {/* Results Card */}
+      <Col xs={12} lg={6}>
+        <Card className="h-100 p-3 bg-white shadow-lg border-0">
+          <h3
+            className="mb-3 text-gradient-white"
+            style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)" }}
+          >
+            Payment Summary
+          </h3>
+          <ListGroup variant="flush" className="mb-3">
+            <ListGroup.Item
+              className="bg-light text-dark d-flex justify-content-between py-2" // Changed background and text color
+              style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
+            >
+              <span>Principal Amount</span>
+              <span>₹{loanAmount.toLocaleString("en-IN")}</span>
+            </ListGroup.Item>
+            <ListGroup.Item
+              className="bg-light text-dark d-flex justify-content-between py-2" // Changed background and text color
+              style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
+            >
+              <span>Total Interest</span>
+              <span>₹{Math.round(totalInterest).toLocaleString("en-IN")}</span>
+            </ListGroup.Item>
+            <ListGroup.Item
+              className="bg-light text-dark d-flex justify-content-between py-2 border-bottom-0" // Changed background and text color
+              style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
+            >
+              <span>Total Payable</span>
+              <span>₹{Math.round(totalPayment).toLocaleString("en-IN")}</span>
+            </ListGroup.Item>
+          </ListGroup>
+          <div className="text-center mt-3 pt-2 border-top border-light-1">
+            <h2
+              className="display-5 fw-bold my-2 text-warning"
+              style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+            >
+              ₹{emi.toLocaleString("en-IN", { maximumFractionDigits: 0 })}
+            </h2>
+            <small
+              className="d-block text-dark" // Changed text color
+              style={{ fontSize: "clamp(0.8rem, 1.5vw, 1rem)" }}
+            >
+              Monthly EMI
+            </small>
+          </div>
+        </Card>
+      </Col>
+    </Row>
+  </Container>
+</section>
 
       {/* Loan Services */}
       <section className="py-5 bg-white">

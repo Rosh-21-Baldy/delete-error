@@ -196,7 +196,7 @@ export default function Footer() {
 
       {/* Copyright Section */}
       <div className="text-white text-center py-1" style={{ backgroundColor: "#041184" }}>
-        <small>Copyright © 2025 Prism Business Consultants - All Rights Reserved</small>
+        <small>Copyright © 2025 Prefinn Finserv Pvt.Ltd - All Rights Reserved</small>
       </div>
     </footer>
   );

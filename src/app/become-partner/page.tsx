@@ -1221,7 +1221,7 @@ export default function BecomePartnerPage() {
             <Container fluid className="mb-1 px-4 mx-4">
                 <Row className="justify-content-center align-items-start py-5 px-3">
                     <Col md={7}>
-                        <h2 className="fw-bold mb-3 text-primary ">We are India's Leading Loan Distributors</h2>
+                        <h2 className="fw-bold mb-3  "style={{color:'#0d53b7'}}>We are India's Leading Loan Distributors</h2>
                         <p className="text-muted mb-4 ">
                             Partner with us & expand your financial Services reach with Prefinn's Lending Products.
                         </p>
@@ -1312,13 +1312,13 @@ export default function BecomePartnerPage() {
                                 </Col>
                                 <Col md={6}>
                                     <Form.Group>
-                                        <Form.Label>Pan Card Upload *</Form.Label>
+                                        <Form.Label> Upload Pan Card *</Form.Label>
                                         <Form.Control type="file" name="panCardFile" onChange={handleFileChange} accept="image/*,.pdf" required />
                                     </Form.Group>
                                 </Col>
                                 <Col md={6}>
                                     <Form.Group>
-                                        <Form.Label>Aadhaar Card Upload *</Form.Label>
+                                        <Form.Label> Upload Aadhaar Card  *</Form.Label>
                                         <Form.Control type="file" name="aadhaarCardFile" onChange={handleFileChange} accept="image/*,.pdf" required />
                                     </Form.Group>
                                 </Col>
@@ -1334,7 +1334,7 @@ export default function BecomePartnerPage() {
           src={capturedImage} 
           alt="Captured" 
           className="img-fluid rounded mb-3" 
-          style={{ maxWidth: '420px' }}
+          style={{ maxWidth: '220px' }}
         />
         <div className="d-grid gap-2">
           <Button variant="warning" onClick={retake} className="mb-2">
@@ -1391,14 +1391,47 @@ export default function BecomePartnerPage() {
                         </Form>
                     </Col>
                  
-                <Col md={5} className="d-flex align-items-center justify-content-center mt-5 mt-md-0">
+                {/* <Col md={5} className="d-flex align-items-center justify-content-center mt-5 mt-md-0">
                         <img
                             src="https://img.freepik.com/premium-vector/two-people-shake-hands-as-result-agreement-successful-cooperation_277904-4694.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
                             alt="Partner Visual"
                             className="img-fluid rounded"
                             style={{ maxHeight: "550px", width: "100%", objectFit: "contain" }}
                         />
-                    </Col>
+                        
+                    </Col> */}
+                    <Col md={12} className="d-flex flex-column align-items-center mt-5">
+  <img
+    src="https://img.freepik.com/premium-vector/two-people-shake-hands-as-result-agreement-successful-cooperation_277904-4694.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740"
+    alt="Partner Visual"
+    className="img-fluid rounded mb-4" // Added mb-4 for spacing below image
+    style={{ maxHeight: '550px', width: '100%', objectFit: 'contain' }}
+  />
+  <div className="text-center"> {/* Center the list and button */}
+    <h2>Explore Partnership Opportunities</h2>
+    <p className="lead">
+      Discover the advantages of collaborating with us.
+    </p>
+    <ul className="list-unstyled mt-4">
+      <li className="mb-2">
+        <i className="bi bi-people-fill text-primary me-2"></i> **Expand Your Network:** Connect with a diverse range of professionals.
+      </li>
+      <li className="mb-2">
+        <i className="bi bi-gear-fill text-success me-2"></i> **Joint Initiatives:** Participate in collaborative projects and ventures.
+      </li>
+      <li className="mb-2">
+        <i className="bi bi-briefcase-fill text-warning me-2"></i> **Business Growth:** Unlock new avenues for expansion and revenue.
+      </li>
+      <li className="mb-2">
+        <i className="bi bi-chat-dots-fill text-info me-2"></i> **Shared Knowledge:** Benefit from the collective expertise of our partners.
+      </li>
+      <li className="mb-2">
+        <i className="bi bi-award-fill text-secondary me-2"></i> **Enhanced Credibility:** Strengthen your reputation through association.
+      </li>
+    </ul>
+    <button className="btn btn-primary rounded-pill px-4 py-2">Learn More About Partnering</button>
+  </div>
+</Col>
                 </Row>
             </Container>
               {/* Steps Section */}
@@ -1406,7 +1439,7 @@ export default function BecomePartnerPage() {
                  <h1 className="fw-bold text-center mb-3 mt-4 text-xl md:text-2xl">
                                  <span
                                      style={{
-                                         background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+                                         background: "#0d53b7",
                                          WebkitBackgroundClip: "text",
                                          WebkitTextFillColor: "transparent",
                                          backgroundClip: "text",
@@ -1441,7 +1474,7 @@ export default function BecomePartnerPage() {
                             <h2 className="fw-bold text-center mb-3 mt-4 text-xl md:text-2xl">
                                 <span
                                     style={{
-                                        background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+                                        background: "#0d53b7",
                                         WebkitBackgroundClip: "text",
                                         WebkitTextFillColor: "transparent",
                                         backgroundClip: "text",

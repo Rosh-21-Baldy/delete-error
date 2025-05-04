@@ -487,22 +487,18 @@ export default function businessloans() {
                <h1
                  className="fw-bold mb-4"
                  style={{
-                   color: '#3c4f84',
+                   color: '#0d53b7',
                    fontSize: '3.2rem',
                    fontWeight: '800',
                    lineHeight: '1.2',
                  }}
                >
-                  Tomorrow’s Venture,<br /> Financed Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
+                  Tomorrow’s Venture,<br /> Financed Today by <span style={{ color: '#0d53b7' }}><br/>Prefinn</span>
                </h1>
          
                {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
                Efficient, Scalable & Certified Business Loans
                </h3> */}  
-         
-               <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
-                 Get the best loan deals, personalized for you — fast, secure, and fully digital.
-               </p>
              </Col>
          
              {/* Right Side - Image */}
@@ -512,8 +508,8 @@ export default function businessloans() {
                   
                  alt="House Illustration"
                  style={{
-                   maxHeight: '400px',
-                   width: 'auto',
+                   maxHeight: '350px',
+                   width: '300px',
                    objectFit: 'contain',
                  }}
                />
@@ -521,9 +517,9 @@ export default function businessloans() {
            </Row>
          </Container>
           
-            <Container fluid className="py-0 mt-5"></Container>
+            <Container fluid className="py-2 mt-2"></Container>
           {/* Center Image Section */}
-           <h2 className="fw-bold me-0 mt-3 d-flex justify-content-center" style={{color:'#0d3b66'}}>Growing Businesses Nationwide
+           <h2 className="fw-bold me-0 mt-3 d-flex justify-content-center" style={{color:'#0d53b7'}}>Growing Businesses Nationwide
            </h2>
   
 {/* Left Side Form */}
@@ -532,7 +528,6 @@ export default function businessloans() {
         <Row>
         <Col md={4}>
            <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-              <h4 className="fw-bold text-warning">Simplicity</h4>
               <h2 className="fw-sm-bold">Get Funded in Just a Few Clicks</h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ Apply in Minutes, Get Approval Fast </li>
@@ -544,7 +539,6 @@ export default function businessloans() {
            {/* Bottom Side Form */}
            <Col md={4}>
            <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-              <h4 className="fw-bold text-warning">Trust</h4>
               <h2 className="fw-sm-bold"> Instant Eligibility Check & Paperless Process</h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ Hassle-Free Experience </li>
@@ -557,7 +551,6 @@ export default function businessloans() {
           {/* Right Side Form */}
           <Col md={4}>
             <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-              <h4 className="fw-bold text-warning">Prefinn</h4>
               <h2 className="fw-sm-bold">Business Funding, Simplified</h2>
               <ul className="list-unstyled mt-4">
                 <li>✔ Expert Support from Start to Settlement </li>
@@ -568,46 +561,12 @@ export default function businessloans() {
           </Col>
         </Row>
       </Container>
-      
-      <div className="container-fluid bg-light mb-6 py-5 ">
-        <div className="container d-flex flex-column flex-lg-row align-items-center">
-          <div className="text-center text-lg-start me-lg-5">
-            <h1 className="fw-bold">Take your business to great heights</h1>
-            <p  style={{color:"#3262ad"}}>Presenting Business Loans By Prefinn</p>
-          </div>
-          <div className="mt-4 mt-lg-0">
-            <img
-              src="https://img.freepik.com/premium-photo/portrait-young-man-talking-phone-against-white-background_1048944-9241865.jpg?ga=GA1.1.56492630.1742847583&w=740"
-            
-              alt="Businessman on Phone"
-              className="img-fluid rounded"
-            />
-          </div>
-        </div>
-        <div className="container mt-5">
-          <div className="row text-center text-lg-start">
-          <div className="container bg-light py-4">
-  <div className="row">
-    <div className="col-md-4">
-      <p>Collateral-free funding up to ₹1 Cr for self-employed individuals and businesses</p>
-    </div>
-    <div className="col-md-4">
-      <p>Funding up to ₹50 lacs based on your current account statement</p>
-    </div>
-    <div className="col-md-4">
-      <p>Fastest loan processing and get money in your account</p>
-    </div>
-  </div>
-  </div>
-          </div>
-        </div>
-      </div>
       <Container
         fluid
         className="py-5 mt-0"
         style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
       >
-      <h2 className="fw-bold  mb-6 mt-6 py-0 text-center"style={{color:'#0d3b66'}}>Features & Benefits of Business Loan</h2>
+      <h2 className="fw-bold  mb-6 mt-6 py-0 text-center"style={{color:'#0d53b7'}}>Features & Benefits of Business Loan</h2>
       <div className="row g-3">
         {features.map((feature, index) => (
           <div className="col-12 col-md-6 col-lg-3  mb-6 mt-6 py-2 d-flex align-items-stretch" key={index}>
@@ -642,7 +601,7 @@ export default function businessloans() {
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{color:'#0d3b66'}}>
+            <h2 className="fw-bold" style={{color:'#0d53b7'}}>
               The Prefinn Promise
             </h2>
             <p className="text-muted">Smart Secure Bussiness Loans</p>
@@ -701,7 +660,7 @@ export default function businessloans() {
         </Row>
       </Container>
       <Container className="p-5 px-2" >
-  <h2 className="text-success fw-bold"> EMI Calculator</h2>
+  <h2 className="text-success fw-bold">Calculate EMI</h2>
   <Row>
     <Col md={7}>
       <Form>
@@ -773,31 +732,26 @@ export default function businessloans() {
 </Form.Group>
           </Form>
         </Col>
-
-        <Col xs={12} md={5} className="p-0 gap-5">  {/* Full width on small screens */}
-  <Card className="p-4 shadow h-100 px-5 " style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-    <h5 className="fw-bold text-white">Your EMI</h5>
+        <Col xs={12} md={5} className="p-0">
+  <Card className="p-4 shadow h-100 px-5" style={{ backgroundColor: "#ffffff", width: '100%' }}>
+    <h5 className="fw-bold text-dark mb-4">EMI Summary</h5> {/* Added margin-bottom */}
     <div className="mt-3">
-      <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
-      <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
-      <p><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p>
-      <p><strong>Tenure (Months):</strong> <span className="fw-bold">{tenure}</span></p>
-      <h4 className="text-white fw-bold">Monthly EMI: ₹ {emi.toFixed(0)}</h4>
+      <p className="mb-2"><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p> {/* Added margin-bottom */}
+      <p className="mb-2"><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p> {/* Added margin-bottom */}
+      <p className="mb-2"><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p> {/* Added margin-bottom */}
+      <p className="mb-2"><strong>Tenure (Months):</strong> <span className="fw-bold">{tenure}</span></p> {/* Added margin-bottom */}
+      <h4 className="text-dark fw-bold mt-4">Monthly EMI: ₹ {emi.toFixed(0)}</h4> {/* Changed text color and added margin-top */}
     </div>
   </Card>
-</Col>
+ </Col>
       </Row>
     </Container>
     <Container className="my-1">
       
     <div className="text-center mb-14">
-          <h2 className=" text-2xl md:text-3xl font-bold mb-4" style={{color:'#3262ad'}}>
+          <h2 className=" text-2xl md:text-3xl font-bold mb-4" style={{color:'#0d53b7'}}>
             At Prefinn your success is our success.
           </h2>
-      
-          <h3 className="text-blue-900 text-xl font-medium mt-1">
-            Happiness Delivered, Always
-          </h3>
           <div className="mt-6">
             <Link
               href="/AboutBusinessLoans"
@@ -815,8 +769,8 @@ export default function businessloans() {
         {/* Full-width container */}
         {/* <h2 className="text-center mb-4 fw-bold ">FAQs</h2> */}
         <h1 className="text-center mb-4 mt-0 fw-bold"> 
-          <span style={{ background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", color: "transparent", display: "inline-block", }} > 
-          FAQ 
+          <span style={{ background: "#0d53b7", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", color: "transparent", display: "inline-block", }} > 
+           Business Loan FAQ 
           </span> 
         </h1>
         {faqs.map((faq, index) => (

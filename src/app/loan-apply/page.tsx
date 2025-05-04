@@ -327,7 +327,7 @@ const LoanEnquiry = () => {
   <Row className="justify-content-center">
     <Col md={12} lg={10}>
       <h2 className="mb-4 text-center">
-        <span className="fw-bold"> Request a Loan Quote</span>
+        <span className="fw-bold"style={{color:'#0d53b7'}}> Request a Loan Quote</span>
       </h2>
 
       {showError && (
@@ -504,7 +504,7 @@ const LoanEnquiry = () => {
     onChange={handleChange}
     required
   >
-    <option value="">Preferred NBFC's</option>
+    <option value="">Preferred Bank's</option>
     <option value="HDFC Bank">HDFC Bank</option>
     <option value="ICICI Bank">ICICI Bank</option>
     <option value="Axis Bank">Axis Bank</option>
@@ -540,21 +540,21 @@ const LoanEnquiry = () => {
       </Form>
     </Col>
     <Col md={12} className="mx-auto">
-  <h3 className="mb-4 mt-5 text-center">
-  Steps to Get a Loan
+  <h3 className="mb-4 mt-5 text-center"style={{color:'#0d53b7'}}>
+    Steps to Get a Loan
   </h3>
-  <Row className="gx-3 gy-4">
+  <Row className="gx-4 gy-4">
     {[
       "Fill out the online Apply Loan form on website and provide your Basic details..Call Prefinn Team or wait for Call Back.",
       "While discussing your loan requirements with the Prefinn team, feel free to select the Bank or NBFC of your choice based on you.",
       "Once Your Loan Application is filed. Have a personal discussion with Bank Loan Manager and finalise the Loan Amount .",
-      "Meet the Loan Manager , sign the original Loan Application file and take Disbursement of Loan .",
+      "Meet the Loan Manager , sign the original Loan Application file and take Disbursement of Loan.",
       "Track your loan status through Prefinn's support system and follow up for any updates.",
       "Get post-loan support, EMI reminders, and account service from Prefinn's team.",
     ].map((text, index) => (
       <Col xs={12} sm={6} md={4} key={index}>
-        <Card className="text-center p-3 h-90" style={{ minHeight: "120px" }}>
-          <Card.Body>
+        <Card className="text-center p-0 h-100 card-animation" style={{ minHeight: "120px" }}>
+          <Card.Body className="d-flex flex-column justify-content-center">
             <div className="fs-4 fw-bold text-blue-900 mb-2">{index + 1}</div>
             <Card.Text style={{ fontSize: "0.9rem" }}>{text}</Card.Text>
           </Card.Body>
@@ -563,8 +563,6 @@ const LoanEnquiry = () => {
     ))}
   </Row>
 </Col>
-
-
   </Row>
 </Container>
 
@@ -575,20 +573,6 @@ const LoanEnquiry = () => {
 };
 
 export default LoanEnquiry;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

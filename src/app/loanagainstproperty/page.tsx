@@ -421,35 +421,31 @@ export default function PersonalLoans() {
         </div>
       </div> */}
 
- <Container fluid className="py-0 mt-10 mx-5 bg-white">
+ <Container fluid className="py-0 mt-2 mx-5 bg-white">
       <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
         {/* Left Side - Text */}
         <Col md={6} className="text-center text-md-start px-4">
           <h1
-            className="fw-bold mb-4"
+            className="fw-bold mb-2"
             style={{
-              color: '#3c4f84',
+              color: '#0d53b7',
               fontSize: '3.2rem',
               fontWeight: '800',
               lineHeight: '1.2',
             }}
           >
-            Leverage Your Equity,<br /> Funded Today by <span style={{ color: '#38ad64' }}>Prefinn</span>
+            Leverage Your Equity,<br /> Funded Today by <span style={{ color: '#38ad64' }}> <br/>Prefinn</span>
           </h1>
     
           {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
             Efficient, Scalable, Certified.
           </h3> */}
-    
-          <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
-            Get the best loan deals, personalized for you — fast, secure, and fully digital.
-          </p>
         </Col>
     
         {/* Right Side - Image */}
         <Col md={6} className="d-flex align-items-center justify-content-center">
           <img
-            src="https://img.freepik.com/premium-vector/rupee-bag-rupee-note-coin-showing-growth_667085-762.jpg?ga=GA1.1.56492630.1742847583&w=740"
+            src="https://img.freepik.com/premium-vector/bank-with-rupee-bundle-money-bag-coin-showing-npa-bad-loan-concept-vector-illustration_667085-2.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&w=740"
             alt="House Illustration"
             style={{
               maxHeight: '400px',
@@ -466,32 +462,30 @@ export default function PersonalLoans() {
     {/* Left Side Panel */}
     <Col md={4}>
       <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-        <h4 className="fw-bold text-warning">No Hassle, No Delay</h4>
         <h2 className="fw-bold display-6">100% SIMPLE PROCESS</h2>
         <ul className="list-unstyled mt-4 fs-5">
           <li>✔ PROVIDE YOUR BASIC INFORMATION </li>
           <li>✔ PICK THE BEST OFFER FOR YOU</li>
-          <li>✔ RECEIVE YOUR LOAN WITHOUT THE WAIT </li>
+          <li>✔ RECEIVE YOUR LOAN WITHOUT WAIT </li>
         </ul>
       </Card>
     </Col>
 
     {/* Center Image Section */}
     <Col md={4} className="text-center d-flex flex-column align-items-center justify-content-center">
-      <img src="https://img.freepik.com/premium-photo/cheerful-mature-indian-man-using-phone-credit-card-home_116547-90390.jpg?ga=GA1.1.1559874935.1744648139&semt=ais_hybrid&w=740" 
+      <img src="https://img.freepik.com/premium-photo/young-indian-banker-agronomist-showing-some-detail-farmer-smartphone_54391-5356.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&semt=ais_hybrid&w=740" 
            alt="Loan Offer" 
            className="img-fluid rounded-4 shadow-sm" 
            style={{ maxHeight: "350px", objectFit: "cover" }} 
       />
       {/* <img src="https://img.freepik.com/free-photo/man-presenting-something_1368-3697.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid" alt="Loan Offer" className="img-fluid" /> */}
-      <h4 className="fw-bold text-blue-900 mt-4">LOWEST INTEREST RATES</h4>
+      {/* <h4 className="fw-bold text-blue-900 mt-4">LOWEST INTEREST RATES</h4> */}
     </Col>
 
     {/* Right Side Form */}
     <Col md={4}>
       <Card className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-        <h4 className="fw-bold text-warning">Fast & Easy</h4>
-        <h2 className="fw-bold display-6">Empower Yourself with Our Smart Solution</h2>
+        <h2 className="fw-bold display-6">Empower Our Smart Solution</h2>
         <ul className="list-unstyled mt-4 fs-5">
           <li>✔ SUBMIT DETAILS SECURELY </li>
           <li>✔ GET FUNDS TRANSFERRED QUICKLY</li>
@@ -505,8 +499,8 @@ export default function PersonalLoans() {
 
 <Container fluid className="py-5 text-center mt-0" style={{ background: "#ffffff" }}>
   {/* Use fluid to make it full-width */}
-  <h2 style={{ fontWeight: "bold", color: "#0d3b66", letterSpacing: "0.5px" }}>
-    Unlock the True Value of Your Property — The Prefinn Promise
+  <h2 style={{ fontWeight: "bold", color: "#0d53b7  ", letterSpacing: "0.5px" }}>
+    Unlock the True Value of Your Property
   </h2>
   <Row className="mt-4 no-gutters justify-content-center">
     {/* Use no-gutters to remove padding between columns */}
@@ -585,7 +579,7 @@ export default function PersonalLoans() {
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{ color: "#0d3b66" }}>
+            <h2 className="fw-bold" style={{ color: "#0d53b7" }}>
               The Prefinn Promise
             </h2>
             <p className="text-muted ">Unlock Funds with Your Property’s Potential</p>
@@ -651,7 +645,7 @@ export default function PersonalLoans() {
       </Container>
 
       <Container className="p-5 mt-5" >
-   <h2 className="text-success fw-bold">EMI Calculator</h2>
+   <h2 className="text-success fw-bold"> Calculate EMI </h2>
    <Row>
      <Col md={7}>
        <Form>
@@ -725,8 +719,8 @@ export default function PersonalLoans() {
          </Col>
  
          <Col xs={12} md={5} className="p-0">  {/* Full width on small screens */}
-   <Card className="p-4 shadow h-80" style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-     <h5 className="fw-bold text-white">Your EMI</h5>
+   <Card className="p-8  shadow h-80" style={{ backgroundColor: "#ffffff", width: '100%' }}> {/* Ensure full width */}
+     <h5 className="fw-bold text-dark">EMI Summary</h5>
      <div className="mt-3">
        <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
        <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
@@ -740,12 +734,9 @@ export default function PersonalLoans() {
      </Container>
 
 <div className="text-center mb-14 py-10">
-          <h2 className="text-blue-900 text-2xl md:text-3xl font-bold mb-3">
+          <h2 className=" text-2xl md:text-3xl font-bold mb-3" style={{color:'#0d53b7'}}>
             At Prefinn your success is our success.
           </h2>
-          <h3 className="text-blue-900 text-xl font-medium mt-4">
-            Happiness Delivered, Always
-          </h3>
           <div className="mt-4">
             <Link
               href="/AboutLoanAgainstProperty"
@@ -759,10 +750,10 @@ export default function PersonalLoans() {
       <Container fluid className="py-0 mt-0">
         {" "}
         {/* Full-width container */}
-        <h1 className="text-center mb-4 mt-0 fw-bold">
+        <h1 className="text-center mb-5 mt-0 fw-bold">
       <span
         style={{
-          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+          background: "#0d53b7",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -770,7 +761,7 @@ export default function PersonalLoans() {
           display: "inline-block",
         }}
       >
-      FAQ
+       Loan Against Property FAQ
       </span>
     </h1>
         {faqs.map((faq, index) => (

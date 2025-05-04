@@ -305,21 +305,23 @@ const ProcessSection = () => {
       <div className="ambak-container">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold">
-            <span
-              style={{
-                background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                display: "inline-block",
-                padding: "0.4rem 1.5rem",
-              }}
-            >
-              Our Stakeholders
-            </span>
+          <span
+  style={{
+    background: " #0d53b7 ",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    padding: "0.2rem 0.5rem",
+    fontWeight: "800",
+  }}
+ >
+   Our Value Chain Partners
+ </span>
           </h2>
         </div>
-
+     
         <div className="mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Corporate Channel Card */}
@@ -334,7 +336,7 @@ const ProcessSection = () => {
                 />
               </div>
               <h3 className="text-xl font-bold text-[#0d53b7] mb-4">
-                Corporate Channel
+              Institutional Channel
               </h3>
               <p className="text-gray-600 text-base">
                 Our success stems from robust corporate channels integrated with a cutting-edge tech enablement platform
@@ -382,22 +384,24 @@ const ProcessSection = () => {
         </div>
 
         {/* Service Providers Section */}
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold">
-            <span
-              style={{
-                background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                display: "inline-block",
-                padding: "0.4rem 1.5rem",
-              }}
-            >
-              Our Service Providers
-            </span>
-          </h2>
-        </div>
+        <div className="text-center mb-12"> 
+  <h1 className="text-3xl font-bold  ">
+  <span
+  style={{
+    background: " #0d53b7 ",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    padding: "0.2rem 0.5rem",
+    fontWeight: "800",
+  }}
+ >
+Our Service Providers
+ </span>
+  </h1>
+</div>
 
         <Marquee speed={70} gradient={false} className="py-4 gap-3">
           {banks.map((bank, index) => (

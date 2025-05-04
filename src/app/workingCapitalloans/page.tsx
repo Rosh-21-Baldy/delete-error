@@ -259,29 +259,25 @@ export default function workingCapitalloans() {
      
       
 
-   <Container fluid className="py-0 mt-10 mx-5 bg-white">
+   <Container fluid className="py-0 mt-8 mx-5 bg-white">
              <Row className="align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
                {/* Left Side - Text */}
                <Col md={6} className="text-center text-md-start px-4">
                <h1
                  className="fw-bold mb-4"
                  style={{
-                   color: '#3c4f84',
+                   color: '#0d53b7',
                    fontSize: '3.2rem',
                    fontWeight: '800',
-                   lineHeight: '1.2',
+                   lineHeight: '1.1',
                  }}
                >
-               Fuel Your Ambitions,<br /> Financed Today by<span style={{ color: '#38ad64' }}>Prefinn</span>
+               Fuel Your Ambitions,<br /> Financed Today by<span style={{ color: '#0d53b7' }}><br/>Prefinn</span>
                </h1>
            
                  {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#843c46' }}>
                  Efficiently Processed, Scaled for Growth
                  </h3> */}
-           
-                 <p className="text-muted mb-4" style={{ fontSize: '1.2rem' }}>
-                   Get the best loan deals, personalized for you — fast, secure, and fully digital.
-                 </p>
                </Col>
            
                {/* Right Side - Image */}
@@ -290,8 +286,8 @@ export default function workingCapitalloans() {
                    src="https://img.freepik.com/premium-vector/rupee-bundle-with-rupee-bag-with-coins-economy-growth-vector-illustration_667085-62.jpg?uid=R193913366&ga=GA1.1.56492630.1742847583&w=740"
                    alt="House Illustration"
                    style={{
-                     maxHeight: '450px',
-                     width: 'auto',
+                     maxHeight: '350px',
+                     width: '300px',
                      objectFit: 'contain',
                    }}
                  />
@@ -323,7 +319,7 @@ export default function workingCapitalloans() {
           style={{ backgroundColor: "#3262ad ", transition: "transform 0.3s, box-shadow 0.3s" }}
         >
           <Card.Body className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-            <h4 className="fw-bold  text-warning mb-3">Working Capital Support</h4>
+           
             <h2 className="fw-semibold mb-4">Fuel Your Business Expansion Smoothly</h2>
             <ul className="list-unstyled">
               <li>✔ Quick Funding to Bridge Cash Flow Gaps</li>
@@ -347,8 +343,7 @@ export default function workingCapitalloans() {
           style={{ backgroundColor: "#3262ad ", transition: "transform 0.3s, box-shadow 0.3s" }}
         >
         <Card.Body className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-            <h4 className="fw-bold text-warning mb-3">Working Capital Made Easy</h4>
-            <h2 className="fw-semibold mb-4">Fast Loans for Uninterrupted Operations</h2>
+            <h2 className="fw-semibold mb-4">Fueling Your Operations with Fast Finance</h2>
             <ul className="list-unstyled">
               <li>✔ Instant Online Application & Same-Day Approval</li>
               <li>✔ Dedicated Support from Loan Experts</li>
@@ -371,7 +366,6 @@ export default function workingCapitalloans() {
           style={{ backgroundColor: "#3262ad ", transition: "transform 0.3s, box-shadow 0.3s" }}
         >
           <Card.Body className="p-4 shadow-lg rounded-4 border-0" style={{  background: "#ffffff "}}>
-            <h4 className="fw-bold text-warning mb-3">Prefinn Capital Solutions</h4>
             <h2 className="fw-semibold mb-4">Instant Working Capital, Simplified</h2>
             <ul className="list-unstyled">
               <li>✔ Flexible Financing for Business Continuity</li>
@@ -400,10 +394,10 @@ export default function workingCapitalloans() {
     
     {/* Left Text Block */}
     <div className="text-center text-lg-start me-lg-5">
-      <h1 className="fw-bold text-dark mb-3">
+      <h1 className="fw-bold  mb-3 mt-0"style={{color:'#dark'}}>
         Fuel Your Business Growth, Every Step of the Way
       </h1>
-      <p style={{ color: "#007C91", fontSize: "1.1rem" }}>
+      <p style={{ color: "#0d53b7", fontSize: "1.1rem" }}>
         Smart & Flexible Working Capital Loans by Prefinn
       </p>
     </div>
@@ -418,93 +412,6 @@ export default function workingCapitalloans() {
     </div>
   </div>
 
-  {/* Features Section */}
-  <div className="container mt-5">
-  <h2 className="text-center fw-bold mb-5 "style={{color:'#0d3b66'}} data-aos="fade-down">Why Choose Prefinn?</h2>
-  <div className="row g-4 text-center text-lg-start">
-
-    <div className="col-md-6 col-lg-3" data-aos="zoom-in-up">
-      <div
-        className="p-4 border rounded-4 shadow-sm h-100 bg-white"
-        style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-8px)';
-          e.currentTarget.style.boxShadow = '0 12px 25px rgba(0, 124, 145, 0.15)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0, 0, 0, .075)';
-        }}
-      >
-        <i className="bi bi-cash-stack fs-1 text-primary mb-3 d-block"></i>
-        <p className="text-muted small mb-0">
-         Prefinn offers flexible working capital loans with <strong>zero collateral</strong>, empowering self-employed individuals & businesses.
-        </p>
-      </div>
-    </div>
-
-    <div className="col-md-6 col-lg-3" data-aos="zoom-in-up" data-aos-delay="100">
-      <div
-        className="p-4 border rounded-4 shadow-sm h-100 bg-white"
-        style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-8px)';
-          e.currentTarget.style.boxShadow = '0 12px 25px rgba(0, 124, 145, 0.15)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0, 0, 0, .075)';
-        }}
-      >
-        <i className="bi bi-lightning-charge-fill fs-1 text-primary mb-3 d-block"></i>
-        <p className="text-muted small mb-0">
-         Speedy approvals with minimal paperwork. Get funding up to ₹50 Lakhs using just your bank statements.
-        </p>
-      </div>
-    </div>
-
-    <div className="col-md-6 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200">
-      <div
-        className="p-4 border rounded-4 shadow-sm h-100 bg-white"
-        style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-8px)';
-          e.currentTarget.style.boxShadow = '0 12px 25px rgba(0, 124, 145, 0.15)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0, 0, 0, .075)';
-        }}
-      >
-        <i className="bi bi-graph-up-arrow fs-1 text-primary mb-3 d-block"></i>
-        <p className="text-muted small mb-0">
-           Unlock up to ₹50 Lakhs based on your GST filing history—<strong>No Collateral Needed</strong>.
-        </p>
-      </div>
-    </div>
-
-    <div className="col-md-6 col-lg-3" data-aos="zoom-in-up" data-aos-delay="300">
-      <div
-        className="p-4 border rounded-4 shadow-sm h-100 bg-white"
-        style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-8px)';
-          e.currentTarget.style.boxShadow = '0 12px 25px rgba(0, 124, 145, 0.15)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0, 0, 0, .075)';
-        }}
-      >
-        <i className="bi bi-check-circle-fill fs-1 text-primary mb-3 d-block"></i>
-        <p className="text-muted small mb-0">
-           Fast & seamless process. Minimal documentation, maximum convenience for securing working capital loans.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 
 </div>
@@ -513,7 +420,7 @@ export default function workingCapitalloans() {
   className="py-4 mt-0"
   style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }} 
 >
-  <h2 className="fw-bold mb-6 mt-6 py-0 text-center"style={{color:'#0d3b66'}}>
+  <h2 className="fw-bold mb-6 mt-6 py-0 text-center"style={{color:'#0d53b7'}}>
     Features & Benefits of Working Capital Loan
   </h2>
   <div className="row g-3">
@@ -565,10 +472,10 @@ export default function workingCapitalloans() {
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{ color: "#0d3b66 " }}>
+            <h2 className="fw-bold" style={{ color: "#0d53b7 " }}>
               The Prefinn Promise
             </h2>
-            <p className="text-muted">Boost Liquidity, Drive Growth Trusted Working Capital Financing</p>
+            {/* <p className="text-muted">Boost Liquidity, Drive Growth Trusted Working Capital Financing</p> */}
           </Col>
         </Row>
         <Row className="justify-content-center no-gutters">
@@ -624,7 +531,7 @@ export default function workingCapitalloans() {
         </Row>
       </Container>
       <Container className="p-5" >
-  <h2 className="text-success fw-bold">EMI Calculator</h2>
+  <h2 className="text-success fw-bold">Calculate EMI</h2>
   <Row>
     <Col md={7}>
       <Form>
@@ -698,9 +605,9 @@ export default function workingCapitalloans() {
         </Col>
 
         <Col xs={12} md={5} className="p-0">  {/* Full width on small screens */}
-  <Card className="p-4 shadow h-80" style={{ backgroundColor: "#3262ad", width: '100%' }}> {/* Ensure full width */}
-    <h5 className="fw-bold text-white">Your EMI</h5>
-    <div className="mt-3">
+  <Card className="p-4 shadow h-80" style={{ backgroundColor: "#ffffff", width: '100%' }}> {/* Ensure full width */}
+    <h5 className="fw-bold text-black"> EMI Summary</h5>
+    <div className="mt-3 ">
       <p><strong>Principal amount:</strong> <span className="text-dark fw-bold">₹ {loanAmount.toLocaleString()}</span></p>
       <p><strong>Interest amount:</strong> <span className="text-dark fw-bold">₹ {totalInterest.toFixed(0)}</span></p>
       <p><strong>Total amount payable:</strong> <span className="text-dark fw-bold">₹ {totalPayment.toFixed(0)}</span></p>
@@ -714,12 +621,9 @@ export default function workingCapitalloans() {
     <Container className="my-1">
       
     <div className="text-center mb-14">
-          <h2 className="text-blue-900 text-2xl md:text-3xl font-bold mb-4">
+          <h2 className=" text-2xl md:text-3xl font-bold mb-4"style={{color:'#0d53b7'}}>
             At Prefinn your success is our success.
           </h2>
-          <h3 className="text-blue-900 text-xl font-medium mt-1">
-            Happiness Delivered, Always
-          </h3>
           <div className="mt-6">
             <Link
               href="/AboutWorkingCapitalLoans"
@@ -732,10 +636,10 @@ export default function workingCapitalloans() {
       <Container fluid className="py-1 mt-0">
         {" "}
         {/* Full-width container */}
-        <h1 className="text-center mb-4 mt-0 fw-bold">
+        <h1 className="text-center mb-4 mt-4 fw-bold">
       <span
         style={{
-          background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+          background: "#0d53b7",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -743,7 +647,7 @@ export default function workingCapitalloans() {
           display: "inline-block",
         }}
       >
-      FAQ
+       Working Capital Loan FAQ
       </span>
     </h1>
         {faqs.map((faq, index) => (

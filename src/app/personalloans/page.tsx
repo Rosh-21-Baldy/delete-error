@@ -718,7 +718,7 @@ export default function PersonalLoans() {
             <h1
               className="fw-bold mb-4"
               style={{
-                color: "#3c4f84",
+                color: "#0d53b7",
                 fontSize: "3.2rem",
                 fontWeight: "800",
                 lineHeight: "1.2",
@@ -728,17 +728,12 @@ export default function PersonalLoans() {
                 Your Ambitions,
               </span>
               Priority Personal Loans by{" "}
-              <span style={{ color: "#38ad64" }}>Prefinn</span>
+              <span style={{ color: "#0d53b7" }}>Prefinn</span>
             </h1>
 
             {/* <h3 className="fw-bold mb-2" style={{ fontSize: '1.8rem', color: '#3b79d4' }}>
           tailored to your financial goals
           </h3> */}
-
-            <p className="text-muted mb-4" style={{ fontSize: "1.2rem" }}>
-              Get the best loan deals, personalized for you — fast, secure, and
-              fully digital.
-            </p>
           </Col>
 
           {/* Right Side - Image */}
@@ -767,7 +762,6 @@ export default function PersonalLoans() {
               className="p-4 shadow-lg rounded-4 border-0"
               style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
             >
-              <h4 className="fw-bold text-warning">No Hassle, No Delay</h4>
               <h2 className="fw-bold">100% SIMPLE PROCESS</h2>
               <ul className="list-unstyled mt-10">
                 <li>✔ PROVIDE YOUR BASIC INFORMATION </li>
@@ -788,9 +782,9 @@ export default function PersonalLoans() {
               className="img-fluid"
             />
             {/* <img src="https://img.freepik.com/free-photo/man-presenting-something_1368-3697.jpg?ga=GA1.1.56492630.1742847583&semt=ais_hybrid" alt="Loan Offer" className="img-fluid" /> */}
-            <h4 className="fw-bold text-blue-900 me-0 mt-3">
+            {/* <h4 className="fw-bold text-blue-900 me-0 mt-3">
               LOWEST INTEREST RATES
-            </h4>
+            </h4> */}
           </Col>
 
           {/* Right Side Form */}
@@ -799,7 +793,6 @@ export default function PersonalLoans() {
               className="p-4 shadow-lg rounded-4 border-0"
               style={{ background: "linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(222, 218, 218) 100%)" }}
             >
-              <h4 className="fw-bold text-warning">Fast & Easy</h4>
               <h2 className="fw-sm-bold">
                 Empower Yourself with Our Smart Solution
               </h2>
@@ -816,7 +809,7 @@ export default function PersonalLoans() {
       <Container fluid className="py-5 text-center mt-0">
         {" "}
         {/* Use fluid to make it full-width */}
-        <h2 style={{ fontWeight: "bold", color: "#0d3b66" }}>
+        <h2 style={{ fontWeight: "bold", color: "#0d53b7" }}>
           Fast Approvals, Safe Process That’s the Prefinn Promise
         </h2>
         <Row className="mt-4 no-gutters">
@@ -891,7 +884,7 @@ export default function PersonalLoans() {
         {/* Use fluid to make it full-width */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="fw-bold" style={{ color: "#0d3b66 " }}>
+            <h2 className="fw-bold" style={{ color: "#0d53b7 " }}>
               The Prefinn Promise
             </h2>
             <p className="text-muted">Smart Secure Personal Loans</p>
@@ -950,7 +943,7 @@ export default function PersonalLoans() {
         </Row>
       </Container>
       <Container className="p-5 px-2">
-        <h2 className="text-success fw-bold"> EMI Calculator</h2>
+        <h2 className="text-success fw-bold">Calculate EMI</h2>
         <Row>
           <Col md={7}>
             <Form>
@@ -1029,11 +1022,11 @@ export default function PersonalLoans() {
             {/* Full width on small screens */}
             <Card
               className="p-4 shadow h-100 px-5 "
-              style={{ backgroundColor: "#3262ad", width: "100%" }}
+              style={{ backgroundColor: "#ffffff", width: "100%" }}
             >
               {" "}
               {/* Ensure full width */}
-              <h5 className="fw-bold text-white">Your EMI</h5>
+              <h5 className="fw-bold text-black">Your EMI</h5>
               <div className="mt-3">
                 <p>
                   <strong>Principal amount:</strong>{" "}
@@ -1057,7 +1050,7 @@ export default function PersonalLoans() {
                   <strong>Tenure (Months):</strong>{" "}
                   <span className="fw-bold">{tenure}</span>
                 </p>
-                <h4 className="text-white fw-bold">
+                <h4 className="text-black fw-bold">
                   Monthly EMI: ₹ {emi.toFixed(0)}
                 </h4>
               </div>
@@ -1069,13 +1062,10 @@ export default function PersonalLoans() {
       <div className="text-center mb-14 mt-5">
         <h2
           className=" text-2xl md:text-3xl font-bold mb-4"
-          style={{ color: "#4B5EAA" }}
+          style={{ color: "#0d53b7" }}
         >
           At Prefinn your success is our success.
         </h2>
-        <h3 className=" text-xl font-medium mt-1" style={{ color: "#4B5EAA" }}>
-          Happiness Delivered, Always
-        </h3>
         <div className="mt-8">
           <Link
             href="/AboutPersonalLoans"
@@ -1092,7 +1082,7 @@ export default function PersonalLoans() {
         <h1 className="text-center mb-4 mt-0 fw-bold">
           <span
             style={{
-              background: "linear-gradient(135deg, #28a745 0%, #0d53b7 100%)",
+              background: "#0d53b7",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -1100,7 +1090,7 @@ export default function PersonalLoans() {
               display: "inline-block",
             }}
           >
-            FAQ
+            Personal Loan FAQ
           </span>
         </h1>
         {faqs.map((faq, index) => (
