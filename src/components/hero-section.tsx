@@ -72,7 +72,7 @@ const HeroSection = () => {
             <h1 className="fw-bold mb-3" style={{ color: "#0d53b7", fontSize: '3.2rem',
                    fontWeight: '800',
                    lineHeight: '1.2', }}>
-              We are Landers,
+              We are Prefinn
             </h1>
             <h1 className="fw-bold mb-4" style={{ fontSize: "1.70rem" }}>
               India’s Preferred Loan Distribution Platform
